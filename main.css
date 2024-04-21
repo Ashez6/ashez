@@ -2,8 +2,15 @@
 
 /* BASIC */
 
+:root {
+  --light: #dcf2f1;
+  --blue: #7fc7d9;
+  --navy: #365486;
+  --dark: #0f1035;
+}
+
 html {
-  background-color: #365486;
+  background-image: radial-gradient(#7fc7d9, #365486);
 }
 
 body {
@@ -244,7 +251,7 @@ input[type="text"]:placeholder {
 }
 
 .fadeIn.fourth {
-  background-color: #39ace7;
+  background-color: #426fbd;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;

@@ -300,7 +300,11 @@ body{
 }
 .header .logo {
 	float: left;
-	margin-top: 18px;
+	margin-top: 12px;
+}
+.header .bell {
+	float: right;
+	margin-top: 12px;
 }
 .header .navbar {
 	background: none;
@@ -605,6 +609,7 @@ body{
 }
 .slider .single-slider p {
 	color: #2C2D3F;
+	font-size: 20px;
 	margin-top: 27px;
 	font-weight: 400;
 }

@@ -24,12 +24,11 @@ dropdown-check-list {
   border: 1px solid #ccc;
 }
 
-.img-icon{
-  border-radius: 50%; 
-  height : 150px; 
+.img-icon {
+  border-radius: 50%;
+  height: 70px;
   border: 1px solid black;
-}  
-
+}
 
 .dropdown-check-list .anchor:after {
   position: absolute;
@@ -203,6 +202,15 @@ dropdown-check-list {
   box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
   border-radius: 10px;
   padding: 10px 35px;
+  gap: 2rem;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {

@@ -71,6 +71,10 @@ body {
   margin-left: -15px;
 }
 
+.sector-title{
+  background-color: var(--navy);
+}
+
 #nav-container {
   display: flex;
 }
@@ -745,11 +749,15 @@ body {
   background: #fff;
   margin: 0;
   padding: 0;
-  height: 230px;
+  height: 230px`;
 }
 .schedule .schedule-inner {
   position: relative;
   transform: translateY(-50%);
+  z-index: 9;
+}
+.schedule .schedule-inner-norm {
+  position: relative;
   z-index: 9;
 }
 .schedule .single-schedule {

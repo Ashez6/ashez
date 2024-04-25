@@ -34,7 +34,10 @@ confirmButton.addEventListener("click", (e) => {
       newPass2.style.border = "3px solid red";
     }
   } else {
-    if (newPass1.value == newPass2.value) {
+    if (
+      newPass1.value == newPass2.value &&
+      !(newPass1.value == newPass2.value && newPass2.value == oldPass.value)
+    ) {
       if (count == 0) {
         newDiv.style.color = "green";
         newDiv.innerText = "Confirmed";
@@ -42,9 +45,31 @@ confirmButton.addEventListener("click", (e) => {
         count++;
       }
     } else {
-      addText.removeChild(document.getElementById("new-div"));
-      if (count == 1) count--;
-      alert("please enter matching new password values");
+      if (newPass1.value != newPass2.value) {
+        addText.removeChild(document.getElementById("new-div"));
+        if (count == 1) count--;
+        alert("please enter matching new password values");
+      }
+      if (newPass1.value == newPass2.value && newPass2.value == oldPass.value) {
+        addText.removeChild(document.getElementById("new-div"));
+        if (count == 1) count--;
+        alert("old password can't be new password");
+      }
     }
+  }
+});
+
+const updateButton = document.getElementById("update-profile");
+
+let countUpdate = 0;
+
+updateButton.addEventListener("click", (e) => {
+  if (countUpdate == 0) {
+    countUpdate++;
+    const newDiv = document.createElement("div");
+    newDiv.innerText = "Profile updated";
+    newDiv.style.color = "green";
+    const profile = document.getElementById("profile");
+    profile.append(newDiv);
   }
 });

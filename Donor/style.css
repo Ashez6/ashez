@@ -94,6 +94,9 @@ body {
   color: var(--navy);
   font-size: 1.5rem;
 }
+.icon-container i:hover {
+  color: var(--dark);
+}
 
 .header-inner {
   display: flex;
@@ -407,6 +410,19 @@ body {
   margin-left: 1px;
   font-size: 13px;
 }
+
+.header .nav li a i {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: 13px;
+}
+
+#settings-gear,
+#profile-icon,
+#bell-icon {
+  font-size: 20px;
+}
+
 /* Middle Header */
 .header.style2 .header-inner {
   border-top: 1px solid #eee;

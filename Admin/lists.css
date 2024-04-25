@@ -24,13 +24,6 @@ dropdown-check-list {
   border: 1px solid #ccc;
 }
 
-.img-icon{
-  border-radius: 50%; 
-  height : 150px; 
-  border: 1px solid black;
-}  
-
-
 .dropdown-check-list .anchor:after {
   position: absolute;
   content: "";

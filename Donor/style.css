@@ -71,7 +71,7 @@ body {
   margin-left: -15px;
 }
 
-.sector-title{
+.sector-title {
   background-color: var(--navy);
 }
 
@@ -749,7 +749,7 @@ body {
   background: #fff;
   margin: 0;
   padding: 0;
-  height: 230px`;
+  height: 230px;
 }
 .schedule .schedule-inner {
   position: relative;

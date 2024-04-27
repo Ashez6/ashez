@@ -741,11 +741,11 @@ a {
 	color: inherit;
 }
 
-a:visited {
+/* a:visited {
 	color: inherit;
-}
+} */
 
-a:hover, a:focus, a:active {
+a:hover, a:active{
 	color: inherit;
 }
 

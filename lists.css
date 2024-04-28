@@ -238,6 +238,7 @@ ul {
     from(rgba(78, 99, 215, 0.9)),
     to(#5a85dd)
   );
+  
   background-image: linear-gradient(
     to right,
     rgba(78, 99, 215, 0.9) 0%,

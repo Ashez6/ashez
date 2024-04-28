@@ -1,5 +1,3 @@
-
-
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
 const viewDonation1Screen = document.getElementById("vdonation1-screen");
@@ -133,4 +131,72 @@ const CloseDonor4 = document.getElementsByClassName("close-donor")[3];
 CloseDonor4.addEventListener("click", (e) => {
   viewDonor4Screen.style.display = "none";
   viewDonor4Screen.style.visibility = "hidden";
+});
+
+//View Donor 5
+
+const viewDonor5 = document.getElementById("vdonor5"); //
+const viewDonor5Screen = document.getElementById("vdonor5-screen");
+
+viewDonor5.addEventListener("click", (e) => {
+  viewDonor5Screen.style.visibility = "visible";
+  viewDonor5Screen.style.display = "";
+});
+
+const CloseDonor5 = document.getElementsByClassName("close-donor")[4];
+
+CloseDonor5.addEventListener("click", (e) => {
+  viewDonor5Screen.style.display = "none";
+  viewDonor5Screen.style.visibility = "hidden";
+});
+
+//View Donor 6
+
+const viewDonor6 = document.getElementById("vdonor6"); //
+const viewDonor6Screen = document.getElementById("vdonor6-screen");
+
+viewDonor6.addEventListener("click", (e) => {
+  viewDonor6Screen.style.visibility = "visible";
+  viewDonor6Screen.style.display = "";
+});
+
+const CloseDonor6 = document.getElementsByClassName("close-donor")[5];
+
+CloseDonor6.addEventListener("click", (e) => {
+  viewDonor6Screen.style.display = "none";
+  viewDonor6Screen.style.visibility = "hidden";
+});
+
+//View Donor 7
+
+const viewDonor7 = document.getElementById("vdonor7"); //
+const viewDonor7Screen = document.getElementById("vdonor7-screen");
+
+viewDonor7.addEventListener("click", (e) => {
+  viewDonor7Screen.style.visibility = "visible";
+  viewDonor7Screen.style.display = "";
+});
+
+const CloseDonor7 = document.getElementsByClassName("close-donor")[6];
+
+CloseDonor7.addEventListener("click", (e) => {
+  viewDonor7Screen.style.display = "none";
+  viewDonor7Screen.style.visibility = "hidden";
+});
+
+//View Donor 8
+
+const viewDonor8 = document.getElementById("vdonor8"); //
+const viewDonor8Screen = document.getElementById("vdonor8-screen");
+
+viewDonor8.addEventListener("click", (e) => {
+  viewDonor8Screen.style.visibility = "visible";
+  viewDonor8Screen.style.display = "";
+});
+
+const CloseDonor8 = document.getElementsByClassName("close-donor")[7];
+
+CloseDonor8.addEventListener("click", (e) => {
+  viewDonor8Screen.style.display = "none";
+  viewDonor8Screen.style.visibility = "hidden";
 });

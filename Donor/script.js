@@ -20,17 +20,14 @@ confirmButton.addEventListener("click", (e) => {
     if (count == 1) count--;
     if (oldPass.value == "") {
       alert("please enter the old password");
-      oldPass.style.borderStyle = "solid";
       oldPass.style.border = "3px solid red";
     }
     if (newPass1.value == "") {
       alert("please enter the new password");
-      newPass1.style.borderStyle = "solid";
       newPass1.style.border = "3px solid red";
     }
     if (newPass2.value == "") {
       alert("please enter the confirmation for the new password");
-      newPass2.style.borderStyle = "solid";
       newPass2.style.border = "3px solid red";
     }
   } else {

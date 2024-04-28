@@ -2,6 +2,8 @@ const confirmButton = document.getElementById("confirm-button");
 
 let count = 0;
 
+console.log("hello world");
+
 confirmButton.addEventListener("click", (e) => {
   const oldPass = document.getElementById("old-pass");
   const newPass1 = document.getElementById("new-pass1");
@@ -72,4 +74,15 @@ updateButton.addEventListener("click", (e) => {
     const profile = document.getElementById("profile");
     profile.append(newDiv);
   }
+});
+
+const teddyDiv = document.getElementById("delete-teddy");
+
+const deleteButt = document.getElementById("delete-button1");
+
+const allFilt = document.querySelector("#all-filter");
+
+deleteButt.addEventListener("click", (e) => {
+  const parent = teddyDiv.parentNode;
+  parent.removeChild(teddyDiv);
 });

@@ -560,6 +560,10 @@ mark {
     list-style: none
 }
 
+.list-unstyled li{
+    font-size: 20px;
+}
+
 .list-inline {
     padding-left: 0;
     list-style: none

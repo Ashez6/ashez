@@ -30,3 +30,37 @@ CloseDonation2.addEventListener("click", (e) => {
   viewDonation2Screen.style.display = "none";
   viewDonation2Screen.style.visibility = "hidden";
 });
+
+//View Donation 3
+
+const viewDonation3 = document.getElementById("vdonation3"); //
+const viewDonation3Screen = document.getElementById("vdonation3-screen");
+
+viewDonation3.addEventListener("click", (e) => {
+  viewDonation3Screen.style.visibility = "visible";
+  viewDonation3Screen.style.display = "";
+});
+
+const CloseDonation3 = document.getElementsByClassName("close-donation")[2];
+
+CloseDonation3.addEventListener("click", (e) => {
+  viewDonation3Screen.style.display = "none";
+  viewDonation3Screen.style.visibility = "hidden";
+});
+
+//View Donation 4
+
+const viewDonation4 = document.getElementById("vdonation4"); //
+const viewDonation4Screen = document.getElementById("vdonation4-screen");
+
+viewDonation4.addEventListener("click", (e) => {
+  viewDonation4Screen.style.visibility = "visible";
+  viewDonation4Screen.style.display = "";
+});
+
+const CloseDonation4 = document.getElementsByClassName("close-donation")[3];
+
+CloseDonation4.addEventListener("click", (e) => {
+  viewDonation4Screen.style.display = "none";
+  viewDonation4Screen.style.visibility = "hidden";
+});

@@ -984,15 +984,14 @@ body {
   position: relative;
 }
 .fun-facts.section {
-  padding: 120px 0;
+  padding: 20px 0;
+  background-color: var(--navy);
 }
 .fun-facts {
-  background: url("img/fun-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.fun-facts .single-fun {
-}
+
 .fun-facts .single-fun i {
   position: absolute;
   left: 0;

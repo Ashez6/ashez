@@ -86,13 +86,13 @@ section {
     padding-left: 1.9rem;
 }
 .pb-1-9, .py-1-9 {
-    padding-bottom: 1.9rem;
+    padding-bottom: 1.5rem;
 }
 .pt-1-9, .py-1-9 {
-    padding-top: 1.9rem;
+    padding-top: 1.5rem;
 }
 .mb-1-9, .my-1-9 {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1 rem;
 }
 @media (min-width: 992px){
     .d-lg-inline-block {

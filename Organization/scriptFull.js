@@ -73,3 +73,71 @@ CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.display = "none";
   viewDonation4Screen.style.visibility = "hidden";
 });
+
+//View Donor 1
+
+const viewDonor1 = document.getElementById("vdonor1"); //
+const viewDonor1Screen = document.getElementById("vdonor1-screen");
+
+viewDonor1.addEventListener("click", (e) => {
+  viewDonor1Screen.style.visibility = "visible";
+  viewDonor1Screen.style.display = "";
+});
+
+const CloseDonor1 = document.getElementsByClassName("close-donor")[0];
+
+CloseDonor1.addEventListener("click", (e) => {
+  viewDonor1Screen.style.display = "none";
+  viewDonor1Screen.style.visibility = "hidden";
+});
+
+//View Donor 2
+
+const viewDonor2 = document.getElementById("vdonor2"); //
+const viewDonor2Screen = document.getElementById("vdonor2-screen");
+
+viewDonor2.addEventListener("click", (e) => {
+  viewDonor2Screen.style.visibility = "visible";
+  viewDonor2Screen.style.display = "";
+});
+
+const CloseDonor2 = document.getElementsByClassName("close-donor")[1];
+
+CloseDonor2.addEventListener("click", (e) => {
+  viewDonor2Screen.style.display = "none";
+  viewDonor2Screen.style.visibility = "hidden";
+});
+
+//View Donor 3
+
+const viewDonor3 = document.getElementById("vdonor3"); //
+const viewDonor3Screen = document.getElementById("vdonor3-screen");
+
+viewDonor3.addEventListener("click", (e) => {
+  viewDonor3Screen.style.visibility = "visible";
+  viewDonor3Screen.style.display = "";
+});
+
+const CloseDonor3 = document.getElementsByClassName("close-donor")[2];
+
+CloseDonor3.addEventListener("click", (e) => {
+  viewDonor3Screen.style.display = "none";
+  viewDonor3Screen.style.visibility = "hidden";
+});
+
+//View Donor 4
+
+const viewDonor4 = document.getElementById("vdonor4"); //
+const viewDonor4Screen = document.getElementById("vdonor4-screen");
+
+viewDonor4.addEventListener("click", (e) => {
+  viewDonor4Screen.style.visibility = "visible";
+  viewDonor4Screen.style.display = "";
+});
+
+const CloseDonor4 = document.getElementsByClassName("close-donor")[3];
+
+CloseDonor4.addEventListener("click", (e) => {
+  viewDonor4Screen.style.display = "none";
+  viewDonor4Screen.style.visibility = "hidden";
+});

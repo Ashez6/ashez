@@ -141,3 +141,9 @@ section {
     max-width:300px; /* you can use % */
     max-height: 300px;
 }
+
+.margin1{
+margin-left:5%;
+
+
+}

@@ -116,7 +116,6 @@
 <br><br>
 
 
-
 <section>
     <div class="container">
         <div class="row">
@@ -299,19 +298,26 @@
                                 <h3 class="h2 text-white mb-0">Case 12321</h3>
                                 <span class="text-primary">Blood Donations</span>
                             </div>
-                            <ul class="list-unstyled mb-1-9">
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name of Patient:</span> John Doe</li>
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Blood Type:</span> AB+</li>
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Name:</span> Cure Hospital</li>
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Area:</span> Maadi</li>
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Governorate:</span> Cairo</li>
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Address:</span> 14 El Nasr Street, Maadi, Cairo, Egypt</li>
-
-                                <!-- <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li> -->
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <ul class="list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name of Patient:</span> John Doe</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Blood Type:</span> AB+</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Name:</span> Cure Hospital</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Area:</span> Maadi</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Governorate:</span> Cairo</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Address:</span> 14 El Nasr Street, Maadi, Cairo, Egypt</li>
+        
+                                        <!-- <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li> -->
+                                            
+                                        <!-- <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>   -->
                                     
-                                <!-- <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>   -->
-                            
-                            </ul>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- add map here -->
+                                </div>
+                            </div>
                             <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
                                 <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
                                 <li><a href="#!"><i class="ti-facebook"></i></a></li>
@@ -534,5 +540,7 @@
 <!-- Main JS -->
 <script src="js/main.js"></script>
 <script src="bloodjs.js"></script>
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
 </body>
 </html>

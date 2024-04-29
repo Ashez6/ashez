@@ -105,6 +105,10 @@ body {
   /* border: 3px solid #000; */
 }
 
+#map {
+  height: 100%;
+}
+
 .delete-button:before {
   content: "";
   position: absolute;

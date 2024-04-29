@@ -1,5 +1,3 @@
-
-
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
 const viewDonation1Screen = document.getElementById("vdonation1-screen");
@@ -66,13 +64,3 @@ CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.display = "none";
   viewDonation4Screen.style.visibility = "hidden";
 });
-
-
-
-const CloseDonor2 = document.getElementsByClassName("close-donor")[1];
-
-CloseDonor2.addEventListener("click", (e) => {
-  viewDonor2Screen.style.display = "none";
-  viewDonor2Screen.style.visibility = "hidden";
-});
-

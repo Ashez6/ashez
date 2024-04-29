@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../popout.css">
 
 </head>
 <body>
@@ -115,7 +116,6 @@
 <br><br>
 
 
-
 <section>
     <div class="container">
         <div class="row">
@@ -178,7 +178,7 @@
                                     </label>
                                     <label class="option">
                                         <input type="checkbox" value="2">
-                                        <span>Somooha</span>
+                                        <span>Smouha</span>
                                     </label>
                                   </div>
                                 </div>
@@ -201,7 +201,7 @@
                                     
                                 </div>
                                 <div class="job-content">
-                                    <h5 class="text-center text-md-left">Patient 12321</h5>
+                                    <h5 class="text-center text-md-left">Case 12321</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="icofont-hospital"></i> Cure Hospital 
@@ -212,7 +212,7 @@
                                 </div>
                             </div>
                             <div class="job-right my-4 flex-shrink-0">
-                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">View Details</a>
+                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation1">View Details</a>
                             </div>
                         </div>
 
@@ -222,7 +222,7 @@
                                     
                                 </div>
                                 <div class="job-content">
-                                    <h5 class="text-center text-md-left">Patient 454545</h5>
+                                    <h5 class="text-center text-md-left">Case 454545</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="icofont-hospital"></i> People's Hospital 
@@ -233,7 +233,7 @@
                                 </div>
                             </div>
                             <div class="job-right my-4 flex-shrink-0">
-                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">View Details</a>
+                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation2">View Details</a>
                             </div>
                         </div>
 
@@ -243,18 +243,18 @@
                                     
                                 </div>
                                 <div class="job-content">
-                                    <h5 class="text-center text-md-left">Patient 27018</h5>
+                                    <h5 class="text-center text-md-left">Case 27018</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="icofont-hospital"></i> Healing Hands Hospital 
                                             <i class="icofont-world"></i> Alexandria 
-                                            <i class="icofont-location-pin"></i> Somooha
+                                            <i class="icofont-location-pin"></i> Smouha
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="job-right my-4 flex-shrink-0">
-                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">View Details</a>
+                                <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation3">View Details</a>
                             </div>
                         </div>
                         
@@ -270,6 +270,178 @@
     </div>
 
 </section>
+
+<!--view donation 1-->
+
+<div class="container pop-out" id = "vdonation1-screen">   
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/Patient1big.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Case 12321</h3>
+                                <span class="text-primary">Blood Donations</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <ul class="list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name of Patient:</span> John Doe</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Blood Type:</span> AB+</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Name:</span> Cure Hospital</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Area:</span> Maadi</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Governorate:</span> Cairo</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Address:</span> 14 El Nasr Street, Maadi, Cairo, Egypt</li>
+        
+                                        <!-- <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li> -->
+                                            
+                                        <!-- <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>   -->
+                                    
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- add map here -->
+                                </div>
+                            </div>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!--view donation 2-->
+
+<div class="container pop-out" id = "vdonation2-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/Patient2big.webp" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Case 454545</h3>
+                                <span class="text-primary">Blood Donations</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name of Patient:</span> Jane Smith</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Blood Type:</span> O+</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Name:</span> People's Hospital</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Area:</span> Zamalek</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Governorate:</span> Cairo</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Address:</span> 6 El Gezira Street, Zamalek, Cairo, Egypt</li>
+
+                                <!-- <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li> -->
+                                    
+                                <!-- <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>   -->
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!--view donation 3-->
+
+<div class="container pop-out" id = "vdonation3-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/Patient3big.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Case 27018</h3>
+                                <span class="text-primary">Blood Donations</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Name of Patient:</span> Sophia Adams</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Blood Type:</span> B-</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Name:</span> Healing Hands Hospital</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Area:</span> Smouha</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Governorate:</span> Alexandria</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Hospital Address:</span> 18 El-Horreya Street, Smouha, Alexandria, Egypt</li>
+        
+                                <!-- <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li> -->
+                                        
+                                <!-- <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>   -->
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
 
       <!-- Footer Area -->
 <footer id="footer" class="footer ">
@@ -367,5 +539,8 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- Main JS -->
 <script src="js/main.js"></script>
+<script src="bloodjs.js"></script>
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
 </body>
 </html>

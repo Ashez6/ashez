@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-:root {
+ :root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -558,6 +558,10 @@ mark {
 .list-unstyled {
     padding-left: 0;
     list-style: none
+}
+
+.list-unstyled li{
+    font-size: 20px;
 }
 
 .list-inline {
@@ -1374,6 +1378,11 @@ pre code {
         max-width: 33.333333%
     }
     .col-lg-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%
+    }
+    .col-lg-5v {
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 41.666667%;
         max-width: 41.666667%

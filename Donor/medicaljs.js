@@ -68,8 +68,8 @@ CloseDonation4.addEventListener("click", (e) => {
 
 //View Donation 5
 
-const viewDonor1 = document.getElementById("vdononation5"); //
-const viewDonor1Screen = document.getElementById("vdononation5-screen");
+const viewDonor1 = document.getElementById("vdonation5"); //
+const viewDonor1Screen = document.getElementById("vdonation5-screen");
 
 viewDonor1.addEventListener("click", (e) => {
   viewDonor1Screen.style.visibility = "visible";

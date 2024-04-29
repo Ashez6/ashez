@@ -147,7 +147,7 @@ dropdown-check-list {
   background-color: #fff;
   width: 100%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 99999999999;
 }
 
 .custom-dropdown .select-container:hover .dropdown-options {
@@ -197,6 +197,9 @@ dropdown-check-list {
   font-family: "Material-Design-Iconic-Font";
 }
 
+.filter-result{
+  margin-bottom: 300px;
+}
 .filter-result .job-box {
   background: #fff;
   -webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);

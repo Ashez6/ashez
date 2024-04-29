@@ -232,10 +232,7 @@
               <hr>
               <form>
                 <div class="form-group mb-0" id = "add-confirm">
-                  
-                    
                       <button class="btn btn-light btn-sm ml-auto" type="button" id = "confirm-button" >Confirm</button>
-
                   </ul>
                 </div>
               </form>
@@ -251,17 +248,16 @@
                   <div class="form-group small text-muted">
                     Specify the time slot you want your donations to be dropped off at.
                   </div>
-                  <input type="text" class="form-control" id = "old-pass" placeholder="FROM" value="9 AM" >
-                  <input type="text" class="form-control mt-1" id = "new-pass1"placeholder="TO"  value="5 PM">
+                  <label for="username">From Time</label>
+                  <input type="time" class="form-control" id = "from-time" placeholder="FROM" value="09:00" >
+                  <label for="username">To Time</label>
+                  <input type="time" class="form-control mt-1" id = "to-time" placeholder="TO" value="15:00">
                 </div>
               </form>
               <hr>
               <form>
-                <div class="form-group mb-0" id = "add-confirm">
-                  
-                    
-                      <button class="btn btn-light btn-sm ml-auto" type="button" id = "confirm-button" >Update</button>
-
+                <div class="form-group mb-0" id = "add-update">
+                      <button class="btn btn-light btn-sm ml-auto" type="button" id = "update-button" >Update</button>
                   </ul>
                 </div>
               </form>
@@ -330,7 +326,8 @@
 <!--/ End Footer Area -->
 
 <!-- jquery Min JS -->
-<script src="script.js"></script>
+
+<script src="scriptOrgSett.js"></script>
 
 <script src="js/jquery.min.js"></script>
 <!-- jquery Migrate JS -->

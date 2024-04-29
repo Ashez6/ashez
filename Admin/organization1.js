@@ -77,3 +77,15 @@ CloseDonor2.addEventListener("click", (e) => {
   viewDonor2Screen.style.visibility = "hidden";
 });
 
+const accept = document.getElementById("accept");
+
+
+accept.addEventListener("click", (e) => {
+
+    const newDiv = document.createElement("div");
+    newDiv.innerText = "Organization Accepted to the system ";
+    newDiv.style.color = "green";
+    const profile = document.getElementById("append-here");
+    profile.append(newDiv);
+  
+});

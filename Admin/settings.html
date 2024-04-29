@@ -149,18 +149,18 @@
               <form>
                 <div class="form-group">
                   <label class="d-block">Change Password</label>
-                  <input type="text" class="form-control" placeholder="Enter your old password" type = "password" >
-                  <input type="text" class="form-control mt-1" placeholder="New password">
-                  <input type="text" class="form-control mt-1" placeholder="Confirm new password">
+                  <input type="text" class="form-control" id = "old-pass" placeholder="Enter your old password" type = "password" >
+                  <input type="text" class="form-control mt-1" id = "new-pass1"placeholder="New password">
+                  <input type="text" class="form-control mt-1" id = new-pass2 placeholder="Confirm new password">
                 </div>
               </form>
               <hr>
               <form>
-                <div class="form-group mb-0">
+                <div class="form-group mb-0" id = "add-confirm">
                   
                     
-                      <button class="btn btn-light btn-sm ml-auto" type="button" >Confirm</button>
-                    
+                      <button class="btn btn-light btn-sm ml-auto" type="button" id = "confirm-button" >Confirm</button>
+
                   </ul>
                 </div>
               </form>
@@ -209,6 +209,7 @@
   </div>
   <!--/ End Footer Top -->
 
+<script src="settings.js"></script>
 <!-- jquery Min JS -->
 <script src="js/jquery.min.js"></script>
 <!-- jquery Migrate JS -->

@@ -22,7 +22,6 @@ loginButton.addEventListener("click", function (event) {
   );
 
   if (matchedUser) {
-    // Redirect based on user role
     switch (matchedUser.username) {
       case "admin":
         window.location.href = "Admin/admin_home.html";

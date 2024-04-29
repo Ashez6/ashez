@@ -78,12 +78,39 @@ body {
   margin-left: -15px;
 }
 .delete-button {
-  background-color: red;
+  background-color: darkred;
 }
 
 .green-button {
   background-color: #2e8b57;
 }
+
+
+.green-button1 {
+  background-color: #2e8b57;
+  margin-bottom: 10%;
+}
+.green-button1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #32cd32;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+}
+
+
+
 
 .xbutton {
   color: red;
@@ -113,7 +140,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: darkred;
+  background: red;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -123,6 +150,8 @@ body {
   transition: all 0.4s ease;
   border-radius: 4px;
 }
+
+
 
 .green-button:before {
   content: "";

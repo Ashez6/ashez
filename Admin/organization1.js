@@ -1,5 +1,3 @@
-
-
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
 const viewDonation1Screen = document.getElementById("vdonation1-screen");
@@ -33,7 +31,6 @@ CloseDonation2.addEventListener("click", (e) => {
   viewDonation2Screen.style.visibility = "hidden";
 });
 
-
 //View Donation 3
 
 const viewDonation3 = document.getElementById("vdonation3"); //
@@ -50,7 +47,6 @@ CloseDonation3.addEventListener("click", (e) => {
   viewDonation3Screen.style.display = "none";
   viewDonation3Screen.style.visibility = "hidden";
 });
-
 
 //View Donation 4
 
@@ -69,23 +65,20 @@ CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.visibility = "hidden";
 });
 
-
-const CloseDonor2 = document.getElementsByClassName("close-donor")[1];
-
-CloseDonor2.addEventListener("click", (e) => {
-  viewDonor2Screen.style.display = "none";
-  viewDonor2Screen.style.visibility = "hidden";
-});
-
 const accept = document.getElementById("accept");
 
-
 accept.addEventListener("click", (e) => {
+  alert("Organization Accepted");
+  const hope = document.getElementById("hope-horizon-row");
+  viewDonation1Screen.remove();
+  hope.remove();
+});
 
-    const newDiv = document.createElement("div");
-    newDiv.innerText = "Organization Accepted to the system ";
-    newDiv.style.color = "green";
-    const profile = document.getElementById("append-here");
-    profile.append(newDiv);
-  
+const deleteHope = document.getElementById("delete-hope");
+
+deleteHope.addEventListener("click", (e) => {
+  alert("Organization Rejected and Removed");
+  const hope = document.getElementById("hope-horizon-row");
+  viewDonation1Screen.remove();
+  hope.remove();
 });

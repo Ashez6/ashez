@@ -77,7 +77,7 @@
                                         </ul>
                                     </li>
                                     
-                                    <li><a href="../Donor/aboutus.html">About Us</a></li>
+                                    <li><a href="aboutusorg.html">About Us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -127,6 +127,11 @@
               <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Security
               </a>
+
+              <a href="#dropoff" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"></path><polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line></svg>     Dropoff
+                            </a>
+
             </nav>
           </div>
         </div>
@@ -154,22 +159,35 @@
               <hr>
               <form>
                 <div class="form-group">
-                  <label for="fullName">Full Name</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="Erling Haaland" >
+                  <label for="username">First Name</label>
+                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your first name" value="Omar">
+                </div>
+
+                <div class="form-group">
+                  <label for="username">Last Name</label>
+                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your last name" value="Karim">
+                </div>
+
+                <div class="form-group">
+                  <label for="fullName">Organization Name</label>
+                  <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter Your Organization Name" value="Gratitude Gateway Foundation" >
                   <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are mentioned. You can change or remove it at any time.</small>
                 </div>
+
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="theyAintBelieveInUs">
+                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="org1">
+                </div>
+
+                <div class="form-group">
+                  <label for="username">Gender</label>
+                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your gender" value="Male">
                 </div>
                 
-                <div class="form-group">
-                  <label for="bio">Your Bio</label>
-                  <textarea class="form-control autosize" id="bio" placeholder="Write something about you" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;">I'm a blue just like my dad. Now I'm at the Etihad, and I love to donate</textarea>
-                </div>
+                
                 <div class="form-group">
                   <label for="url">Email</label>
-                  <input type="text" class="form-control" id="email" placeholder="Enter your email address" value="haaland9@gmail.com" >
+                  <input type="text" class="form-control" id="email" placeholder="Enter your email address" value="gateway@gmail.com" >
                 </div>
                 <div class="form-group">
                   <label for="url">Phone Number</label>
@@ -177,7 +195,22 @@
                 </div>
                 <div class="form-group">
                   <label for="location">Address</label>
-                  <input type="text" class="form-control" id="location" placeholder="Enter your location" value="Manchester City FC Etihad Stadium Tours: Etihad Stadium, Sportcity, Manchester, M11 3FF1." >
+                  <input type="text" class="form-control" id="location" placeholder="Enter your Organization Address" value="23 july street" >
+                </div>
+
+                <div class="form-group">
+                  <label for="location">Area</label>
+                  <input type="text" class="form-control" id="location" placeholder="Enter your Organization Area" value="Zamalek" >
+                </div>
+
+                <div class="form-group">
+                  <label for="location">Governorate</label>
+                  <input type="text" class="form-control" id="location" placeholder="Enter your Organization Address" value="Cairo" >
+                </div>
+
+                <div class="form-group">
+                  <label for="location">Address</label>
+                  <input type="text" class="form-control" id="location" placeholder="Enter your Organization Type" value="Orphanage" >
                 </div>
                 <div class="form-group small text-muted">
                   All of the fields on this page are optional and can be deleted at any time, and by filling them out, you're giving us consent to share this data wherever your user profile appears.
@@ -207,6 +240,33 @@
                 </div>
               </form>
             </div>
+
+            <div class="tab-pane" id="dropoff">
+              <h6> DROPOFF SETTINGS</h6>
+              <hr>
+              <form>
+                <div class="form-group">
+                  <label class="d-block">Change Dropoff time</label>
+
+                  <div class="form-group small text-muted">
+                    Specify the time slot you want your donations to be dropped off at.
+                  </div>
+                  <input type="text" class="form-control" id = "old-pass" placeholder="FROM" value="9 AM" >
+                  <input type="text" class="form-control mt-1" id = "new-pass1"placeholder="TO"  value="5 PM">
+                </div>
+              </form>
+              <hr>
+              <form>
+                <div class="form-group mb-0" id = "add-confirm">
+                  
+                    
+                      <button class="btn btn-light btn-sm ml-auto" type="button" id = "confirm-button" >Update</button>
+
+                  </ul>
+                </div>
+              </form>
+            </div>
+
           </div>
         </div>
       </div>
@@ -226,7 +286,7 @@
                           <div class="col-lg-6 col-md-6 col-12">
                               <ul>
                                   <li><a href="homepageorg.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-                                  <li><a href="../Donor/aboutus.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                  <li><a href="aboutusorg.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
                                   <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Settings</a></li>
                               </ul>
                           </div>

@@ -67,7 +67,7 @@ CloseDonation4.addEventListener("click", (e) => {
 
 const accept = document.getElementById("accept");
 
-accept.addEventListener("click", (e) => {
+  accept.addEventListener("click", (e) => {
   alert("Organization Accepted");
   const hope = document.getElementById("hope-horizon-row");
   viewDonation1Screen.remove();
@@ -76,9 +76,10 @@ accept.addEventListener("click", (e) => {
 
 const deleteHope = document.getElementById("delete-hope");
 
-deleteHope.addEventListener("click", (e) => {
+  deleteHope.addEventListener("click", (e) => {
   alert("Organization Rejected and Removed");
   const hope = document.getElementById("hope-horizon-row");
   viewDonation1Screen.remove();
   hope.remove();
 });
+

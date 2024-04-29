@@ -1,4 +1,41 @@
+//Filter
 
+const keywordsInput = document.getElementById('keywords');
+const filter1Checkboxes = document.querySelectorAll('.filter1');
+
+const filterButton = document.getElementById('contact-submit');
+function applyFilters() {
+  const keywords = keywordsInput.value.toLowerCase();
+  const selected1 = Array.from(filter1Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
+ 
+  
+
+  // Filter logic here
+  const jobBoxes = document.querySelectorAll('.job-box');
+  jobBoxes.forEach(jobBox => {
+      const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
+      const shouldDisplay = matchKeywords(keywords, Name) && matchSelected(selected1, Name) ;
+      jobBox.style.display = shouldDisplay ? "" : "none";
+  });
+}
+
+function matchKeywords(keywords, text) {
+  return keywords === '' || text.includes(keywords);
+}
+
+function matchSelected(selected, Name) {
+  if(selected.length === 0){
+    return true;
+  }
+  for(let i=0;i<selected.length;i++){
+    if(Name.includes(selected[i])){
+      return true;
+    }
+  }
+  return false;
+}
+
+filterButton.addEventListener('click', applyFilters);
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //

@@ -333,3 +333,74 @@ CloseDonation12.addEventListener("click", (e) => {
   viewDonation12Screen.style.display = "none";
   viewDonation12Screen.style.visibility = "hidden";
 });
+
+
+//View Donation 1
+
+const viewDonation13 = document.getElementById("vdonation13"); //
+const viewDonation13Screen = document.getElementById("vdonation13-screen");
+
+viewDonation13.addEventListener("click", (e) => {
+  viewDonation13Screen.style.visibility = "visible";
+  viewDonation13Screen.style.display = "";
+});
+
+const CloseDonation13 = document.getElementsByClassName("close-donation")[12];
+
+CloseDonation13.addEventListener("click", (e) => {
+  viewDonation13Screen.style.display = "none";
+  viewDonation13Screen.style.visibility = "hidden";
+});
+
+
+//View Donation 2
+
+const viewDonation14 = document.getElementById("vdonation14"); //
+const viewDonation14Screen = document.getElementById("vdonation14-screen");
+
+viewDonation14.addEventListener("click", (e) => {
+  viewDonation14Screen.style.visibility = "visible";
+  viewDonation14Screen.style.display = "";
+});
+
+const CloseDonation14 = document.getElementsByClassName("close-donation")[13];
+
+CloseDonation14.addEventListener("click", (e) => {
+  viewDonation14Screen.style.display = "none";
+  viewDonation14Screen.style.visibility = "hidden";
+});
+
+
+//View Donation 3
+
+const viewDonation15 = document.getElementById("vdonation15"); //
+const viewDonation15Screen = document.getElementById("vdonation15-screen");
+
+viewDonation15.addEventListener("click", (e) => {
+  viewDonation15Screen.style.visibility = "visible";
+  viewDonation15Screen.style.display = "";
+});
+
+const CloseDonation15 = document.getElementsByClassName("close-donation")[14];
+
+CloseDonation15.addEventListener("click", (e) => {
+  viewDonation15Screen.style.display = "none";
+  viewDonation15Screen.style.visibility = "hidden";
+});
+
+//View Donation 4
+
+const viewDonation16 = document.getElementById("vdonation16"); //
+const viewDonation16Screen = document.getElementById("vdonation16-screen");
+
+viewDonation16.addEventListener("click", (e) => {
+  viewDonation16Screen.style.visibility = "visible";
+  viewDonation16Screen.style.display = "";
+});
+
+const CloseDonation16 = document.getElementsByClassName("close-donation")[15];
+
+CloseDonation16.addEventListener("click", (e) => {
+  viewDonation16Screen.style.display = "none";
+  viewDonation16Screen.style.visibility = "hidden";
+});

@@ -379,6 +379,27 @@
 </footer>
 <!--/ End Footer Area -->
     
+<script>
+
+const cardToBeChanged = document.getElementById("card-change");
+document.addEventListener("DOMContentLoaded", (e) => {
+  const type = localStorage.getItem("type");
+  const dropDownToBeChanged = document.getElementById("dropdown-change");
+
+  if (type == "teacher") {
+    cardToBeChanged.innerHTML =
+      "<h4>Provide Probono Services</h4> <p>Since you are a teacher, you can view posted requests for sessions that meet your expertise using the link below</p><a href='teacher.html'>View Teaching Posts <i class='fa fa-long-arrow-righ'></i> </a> <br>";
+     }
+
+  if (type == "doctor") {
+    cardToBeChanged.innerHTML =
+    "<h4>Provide Probono Services</h4> <p>Since you are a doctor, you can view posted requests for cases that meet your expertise using the link below</p><a href='doctor.html'>View Requested Cases <i class='fa fa-long-arrow-righ'></i> </a> <br>";
+    }   
+
+});
+
+
+</script>
 <script src="home.js"></script>
 <!-- jquery Min JS -->
 <script src="js/jquery.min.js"></script>

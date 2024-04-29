@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+    <link rel="stylesheet" href="../popout.css">
 </head>
 <body>
     <!-- Header Area -->
@@ -122,7 +122,7 @@
 
 
                     <div class="filter-result">
-                        <p class="mb-30 ff-montserrat">Total Organizations : 4</p>
+                        <br><br>
 
                         <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
@@ -223,43 +223,216 @@
 </section>
 
 
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
-                <div class="card card-style1 border-0">
-                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 mb-4 mb-lg-0">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+<!--view donation 1-->
+
+<div class="container pop-out" id = "vdonation1-screen"> 
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="img/Monopolybig.jpg" alt="">
                             </div>
-                            <div class="col-lg-6 px-xl-10">
-                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                    <h3 class="h2 text-white mb-0">[First Name] [Last Name]</h3>
-                                    <span class="text-primary">Position</span>
-                                </div>
-                                <ul class="list-unstyled mb-1-9">
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Position:</span> Coach</li>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Experience:</span> 10 Years</li>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> edith@mail.com</li>
-                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Website:</span> www.example.com</li>
-                                    <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> 507 - 541 - 4567</li>
-                                </ul>
-                                <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
-                                    <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#!"><i class="ti-pinterest"></i></a></li>
-                                    <li><a href="#!"><i class="ti-instagram"></i></a></li>
-                                </ul>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Monopoly</h3>
+                                <span class="text-primary">Toys</span>
                             </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 18+</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Unisex</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Category:</span> Board Games</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 5</li>
+
+                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                    
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                                
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        
         </div>
+    
     </div>
-</section>
+</div>
+
+<!--view donation 2-->
+
+<div class="container pop-out" id = "vdonation2-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="img/teddybig.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Teddy Bear</h3>
+                                <span class="text-primary">Toys</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 0-4</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Unisex</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Category:</span> Stuffed Toys</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 15</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                    
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!--view donation 3-->
+
+<div class="container pop-out" id = "vdonation3-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="img/barbiebig.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Barbie Doll</h3>
+                                <span class="text-primary">Toys</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 5-11</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Female</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Category:</span> Dolls</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 15</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                    
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+<!--view donation 4-->
+
+<div class="container pop-out" id = "vdonation4-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="img/ballbig.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Football</h3>
+                                <span class="text-primary">Toys</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 12-18</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Male</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Category:</span> Sports</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 10</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                    
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
 
 <!-- Footer Area -->
 <footer id="footer" class="footer ">

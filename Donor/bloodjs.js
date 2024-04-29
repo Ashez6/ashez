@@ -49,37 +49,5 @@ CloseDonation3.addEventListener("click", (e) => {
   viewDonation3Screen.style.visibility = "hidden";
 });
 
-//View Donation 4
 
-const viewDonation4 = document.getElementById("vdonation4"); //
-const viewDonation4Screen = document.getElementById("vdonation4-screen");
-
-viewDonation4.addEventListener("click", (e) => {
-  viewDonation4Screen.style.visibility = "visible";
-  viewDonation4Screen.style.display = "";
-});
-
-const CloseDonation4 = document.getElementsByClassName("close-donation")[3];
-
-CloseDonation4.addEventListener("click", (e) => {
-  viewDonation4Screen.style.display = "none";
-  viewDonation4Screen.style.visibility = "hidden";
-});
-
-//View Donation 5
-
-const viewDonor1 = document.getElementById("vdonation5"); //
-const viewDonor1Screen = document.getElementById("vdonation5-screen");
-
-viewDonor1.addEventListener("click", (e) => {
-  viewDonor1Screen.style.visibility = "visible";
-  viewDonor1Screen.style.display = "";
-});
-
-const CloseDonor1 = document.getElementsByClassName("close-donor")[0];
-
-CloseDonor1.addEventListener("click", (e) => {
-  viewDonor1Screen.style.display = "none";
-  viewDonor1Screen.style.visibility = "hidden";
-});
 

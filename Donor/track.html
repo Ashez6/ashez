@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtering Function with Dropdown List</title>
+  <style>
+    /* Some basic styling for demonstration */
+    .item {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="filterInput" placeholder="Filter items...">
+<label>Filter by Length:</label>
+<div id="checkboxes">
+  <label><input type="checkbox" class="length-filter" value="short"> Short</label>
+  <label><input type="checkbox" class="length-filter" value="medium"> Medium</label>
+  <label><input type="checkbox" class="length-filter" value="long"> Long</label>
+</div>
+<div id="items">
+  <div class="item">Apple</div>
+  <div class="item">Banana</div>
+  <div class="item">Orange</div>
+  <div class="item">Grapes</div>
+  <div class="item">Pineapple</div>
+</div>
+
+<script>
+  // JavaScript code for filtering items
+  const filterInput = document.getElementById('filterInput');
+  const checkboxes = document.querySelectorAll('.length-filter');
+  const itemsContainer = document.getElementById('items');
+  const items = itemsContainer.getElementsByClassName('item');
+
+  filterInput.addEventListener('input', applyFilters);
+  checkboxes.forEach(checkbox => checkbox.addEventListener('change', applyFilters));
+
+  function applyFilters() {
+    const filterValue = filterInput.value.toLowerCase();
+    const selectedOptions = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      const itemName = item.textContent.toLowerCase();
+      const itemLength = itemName.length;
+
+      let shouldDisplay = true;
+
+      if (filterValue && !itemName.includes(filterValue)) {
+        shouldDisplay = false;
+      }
+
+      if (selectedOptions.length > 0) {
+        if (selectedOptions.includes('short') && itemLength > 5) {
+          shouldDisplay = false;
+        }
+        if (selectedOptions.includes('medium') && (itemLength <= 5 || itemLength > 10)) {
+          shouldDisplay = false;
+        }
+        if (selectedOptions.includes('long') && itemLength <= 10) {
+          shouldDisplay = false;
+        }
+      }
+
+      item.style.display = shouldDisplay ? 'inline-block' : 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

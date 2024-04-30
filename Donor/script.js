@@ -68,8 +68,12 @@ updateButton.addEventListener("click", function (event) {
 
   const firstName = document.getElementById("fullName").value;
   const lastName = document.getElementById("lastName").value;
+  const username = document.getElementById("username").value;
   const phoneNumber = document.getElementById("phone").value;
   const email = document.getElementById("email").value;
+  const address = document.getElementById("address");
+  const area = document.getElementById("area");
+  const governorate = document.getElementById("governorate");
 
   const nameRegex = /^[A-Za-z\s]+$/;
   if (!nameRegex.test(firstName)) {
@@ -79,6 +83,11 @@ updateButton.addEventListener("click", function (event) {
   if (!nameRegex.test(lastName)) {
     document.getElementById("lastName").style.border = "1px solid red";
     r += "Last name must be provided and not contain only letters.<br>";
+  }
+
+  if (username == "") {
+    document.getElementById("username").style.border = "1px solid red";
+    r += "Please enter a username.<br>";
   }
 
   const phoneRegex = /^\+?\d{10,}$/;
@@ -91,6 +100,21 @@ updateButton.addEventListener("click", function (event) {
   if (!emailRegex.test(email) || email == "") {
     document.getElementById("email").style.border = "1px solid red";
     r += "Please enter a valid email address.<br>";
+  }
+
+  if (address.value == "") {
+    address.style.border = "1px solid red";
+    r += "Please enter your address.<br>";
+  }
+
+  if (area.value == "") {
+    area.style.border = "1px solid red";
+    r += "Please enter your area.<br>";
+  }
+
+  if (governorate.value == "") {
+    governorate.style.border = "1px solid red";
+    r += "Please enter your governorate.<br>";
   }
 
   if (r != "") {
@@ -115,5 +139,21 @@ updateButton.addEventListener("click", function (event) {
     newDiv.style.marginTop = "5%";
     const profile = document.getElementById("profile");
     profile.append(newDiv);
+  }
+});
+
+const teachButt = document.getElementById("teacher-butt");
+const submitFile = document.getElementById("submitFile");
+teachButt.addEventListener("click", function () {
+  document.getElementById("file-upload").style.display = "";
+});
+
+submitFile.addEventListener("click", function () {
+  const fileInput = document.getElementById("fileInput");
+  if (fileInput.files.length > 0) {
+    // Handle the uploaded file here (e.g., send it to the server)
+    alert("File uploaded successfully!");
+  } else {
+    alert("Please choose a file to upload.");
   }
 });

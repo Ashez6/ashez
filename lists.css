@@ -92,10 +92,11 @@ dropdown-check-list {
   border-radius: 5px;
   min-width: 100px;
   min-height: 50px;
+  padding: 28px 10px;
 }
 
 .eta2 {
-  background-color: #0094ff;
+  background-color: #365486;
   min-width: 100px;
   min-height: 50px;
   border-radius: 10px;

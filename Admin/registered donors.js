@@ -70,83 +70,44 @@ CloseDonation4.addEventListener("click", (e) => {
 
 
 
+const delete1 = document.getElementById("delete1");
 
-
-const accept1 = document.getElementById("accept1");
-
-  accept1.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("teacher1");
+  delete1.addEventListener("click", (e) => {
+  alert("Account deleted");
+  const del= document.getElementById("donor1");
   viewDonation1Screen.remove();
-  acc.remove();
-});
-
-const reject1 = document.getElementById("reject1");
-
-  reject1.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("teacher1");
-  viewDonation1Screen.remove();
-  rej.remove();
+  del.remove();
 });
 
 
 
+const delete2 = document.getElementById("delete2");
 
-const accept2 = document.getElementById("accept2");
-
-  accept2.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("teacher2");
+  delete2.addEventListener("click", (e) => {
+  alert("Account deleted");
+  const del= document.getElementById("donor2");
   viewDonation2Screen.remove();
-  acc.remove();
-});
-
-const reject2 = document.getElementById("reject2");
-
-  reject2.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("teacher2");
-  viewDonation2Screen.remove();
-  rej.remove();
+  del.remove();
 });
 
 
-const accept3 = document.getElementById("accept3");
+const delete3 = document.getElementById("delete3");
 
-  accept3.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("teacher3");
+  delete3.addEventListener("click", (e) => {
+  alert("Account deleted");
+  const del= document.getElementById("donor3");
   viewDonation3Screen.remove();
-  acc.remove();
-});
-
-const reject3 = document.getElementById("reject3");
-
-  reject3.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("teacher3");
-  viewDonation3Screen.remove();
-  rej.remove();
+  del.remove();
 });
 
 
+const delete4 = document.getElementById("delete4");
 
-const accept4 = document.getElementById("accept4");
-
-  accept4.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("teacher4");
+  delete4.addEventListener("click", (e) => {
+  alert("Account deleted");
+  const del= document.getElementById("donor4");
   viewDonation4Screen.remove();
-  acc.remove();
+  del.remove();
 });
 
-const reject4 = document.getElementById("reject4");
-
-  reject4.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("teacher4");
-  viewDonation4Screen.remove();
-  rej.remove();
-});
 

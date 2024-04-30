@@ -78,9 +78,24 @@ body {
   margin-left: -15px;
 }
 
+.myrow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .delete-button {
   background-color: darkred;
 }
+
+#log-out {
+  background-color: darkred;
+  padding: 10px 25px;
+}
+
 
 .green-button {
   background-color: #2e8b57;

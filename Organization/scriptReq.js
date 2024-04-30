@@ -1,8 +1,9 @@
 const keywordsInput = document.getElementById('keywords');
 const filterButton = document.getElementById('contact-submit');
+
 function applyFilters() {
   const keywords = keywordsInput.value.toLowerCase();
-  // Filter logic here
+  // search logic here
   const jobBoxes = document.querySelectorAll('.job-box');
   jobBoxes.forEach(jobBox => {
       const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
@@ -15,17 +16,7 @@ function matchKeywords(keywords, text) {
   return keywords === '' || text.includes(keywords);
 }
 
-function matchSelected(selected, Name) {
-  if(selected.length === 0){
-    return true;
-  }
-  for(let i=0;i<selected.length;i++){
-    if(Name.includes(selected[i])){
-      return true;
-    }
-  }
-  return false;
-}
+
 
 filterButton.addEventListener('click', applyFilters);
 

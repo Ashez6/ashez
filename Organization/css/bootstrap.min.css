@@ -6200,7 +6200,7 @@ a.bg-dark:hover {
     }
     .d-md-flex {
         display: -ms-flexbox!important;
-        display: flex!important
+        display: flex
     }
     .d-md-inline-flex {
         display: -ms-inline-flexbox!important;

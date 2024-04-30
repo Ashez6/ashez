@@ -65,21 +65,75 @@ CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.visibility = "hidden";
 });
 
-const accept = document.getElementById("accept");
+const accept1 = document.getElementById("accept1");
 
-  accept.addEventListener("click", (e) => {
-  alert("Organization Accepted");
+  accept1.addEventListener("click", (e) => {
+  alert("Organization accepted and removed from requesting organizations ");
   const hope = document.getElementById("hope-horizon-row");
   viewDonation1Screen.remove();
   hope.remove();
 });
 
-const deleteHope = document.getElementById("delete-hope");
+const delete1= document.getElementById("delete1");
 
-  deleteHope.addEventListener("click", (e) => {
-  alert("Organization Rejected and Removed");
+  delete1.addEventListener("click", (e) => {
+  alert("Organization rejected and removed from requesting organizations");
   const hope = document.getElementById("hope-horizon-row");
   viewDonation1Screen.remove();
   hope.remove();
 });
 
+
+const accept2 = document.getElementById("accept2");
+
+  accept2.addEventListener("click", (e) => {
+  alert("Organization accepted and removed from requesting organizations ");
+  const ser = document.getElementById("ser-row");
+  viewDonation2Screen.remove();
+  ser.remove();
+});
+
+const delete2 = document.getElementById("delete2");
+
+  delete2.addEventListener("click", (e) => {
+  alert("Organization rejected and removed from requesting organizations");
+  const ser = document.getElementById("ser-row");
+  viewDonation2Screen.remove();
+  ser.remove();
+});
+
+const accept3 = document.getElementById("accept3");
+
+  accept3.addEventListener("click", (e) => {
+  alert("Organization accepted and removed from requesting organizations ");
+  const heart = document.getElementById("heart-row");
+  viewDonation3Screen.remove();
+  heart.remove();
+});
+
+const delete3 = document.getElementById("delete3");
+
+  delete3.addEventListener("click", (e) => {
+  alert("Organization rejected and removed from requesting organizations");
+  const heart = document.getElementById("heart-row");
+  viewDonation3Screen.remove();
+  heart.remove();
+});
+
+const accept4 = document.getElementById("accept4");
+
+  accept4.addEventListener("click", (e) => {
+  alert("Organization accepted and removed from requesting organizations ");
+  const harmony = document.getElementById("harmony-row");
+  viewDonation4Screen.remove();
+  harmony.remove();
+});
+
+const delete4 = document.getElementById("delete4");
+
+  delete4.addEventListener("click", (e) => {
+  alert("Organization rejected and removed from requesting organizations");
+  const harmony = document.getElementById("harmony-row");
+  viewDonation4Screen.remove();
+  harmony.remove();
+});

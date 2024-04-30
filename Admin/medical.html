@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lists</title>
+    <title>Pro Bono Medical Requests</title>
     <link rel="stylesheet" href="../lists.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Favicon -->
@@ -61,14 +61,7 @@
                                 <ul class="nav menu" >
                                     <li ><a href="admin_home.html">Home</i></a>
                                     </li>
-                                    <li><a href="#">Sectors <i class="icofont-rounded-down"></i></a> 
-                                        <ul class="dropdown">
-                                        <li>
-                                            <a href="homepage.html">All</a>
-                                            <a href="homepage.html">Health Sector</a>
-                                            <a href="homepage.html">Schools</a>
-                                            <a href="homepage.html">Refugees</a>
-                                            <a href="homepage.html">Orphanages</a>
+                                    
                                         </ul>
                            
                             </nav>
@@ -77,13 +70,12 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-12" id = "icon-column">
                         <div class="icon-container">
-                          <nav class="navigation">
-                            <ul class="nav menu" >
-                    
-                                <li ><a href="settings.html" ><i class="bi bi-gear ashez-icon" id = "settings-gear"></i></a></li>
-                               
-                            </ul>
-                        </nav>
+                            <nav class="navigation">
+                                <ul class="nav menu" style="display: flex; align-items: center;" >
+                                    <li ><a href="settings.html" ><i class="bi bi-gear ashez-icon" id = "settings-gear"></i></a></li>
+                                    <a href="../index.html" class=" logoutbtn  d-block w-100 d-sm-inline-block btn-light delete-button" style="max-width: 96px; max-height: 45px;" id="log-out" >Logout</a>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
 
@@ -124,7 +116,7 @@
                     <div class="filter-result">
                         <br><br>
 
-                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto">
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto" id="doctor1">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
 
                                 <div class="img-container">
@@ -149,7 +141,7 @@
                             </div>
                         </div>
 
-                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto">
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto" id="doctor2">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
                                 <img src="img/dr5.png" alt="" class="img-icon" >
                                 <div class="job-content">
@@ -169,7 +161,7 @@
                             </div>
                         </div>
 
-                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto">
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto" id="doctor3">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
                                 <img src="img/dr3.png" alt="" class="img-icon">
                                 <div class="job-content">
@@ -190,7 +182,7 @@
                             </div>
                         </div>
 
-                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto">
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 col-lg-10 mx-auto" id="doctor4">
                             <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
                                 <img src="img/dr6.png" alt="" class="img-icon">
                                 <div class="job-content">
@@ -259,15 +251,15 @@
                                         <div class="col-lg-6">  
                                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;">View Documents</a>                             
  
-                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" >Accept</a>
+                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" id="accept1">Accept</a>
                                         </div>
                                         <div class="col-lg-6">
                                             <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;" >Download Documents</a>
-                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Reject</a>
+                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;"  id="reject1"> Reject</a>
                                         </div>
                                     </div>
                                     <div class="row" style="display: flex;justify-content: center;">
-                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Delete Account</a>
+                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="delete1">Delete Account</a>
                                     </div>
                                 </div>
 
@@ -322,15 +314,15 @@
                                         <div class="col-lg-6">  
                                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;">View Documents</a>                             
  
-                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" >Accept</a>
+                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;"  id="accept2">Accept</a>
                                         </div>
                                         <div class="col-lg-6">
                                             <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;" >Download Documents</a>
-                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Reject</a>
+                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="reject2" >Reject</a>
                                         </div>
                                     </div>
                                     <div class="row" style="display: flex;justify-content: center;">
-                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Delete Account</a>
+                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="delete2">Delete Account</a>
                                     </div>
                                 </div>
 
@@ -385,15 +377,15 @@
                                         <div class="col-lg-6">  
                                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;">View Documents</a>                             
  
-                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" >Accept</a>
+                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" id="accept3" >Accept</a>
                                         </div>
                                         <div class="col-lg-6">
                                             <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;" >Download Documents</a>
-                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Reject</a>
+                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="reject3" >Reject</a>
                                         </div>
                                     </div>
                                     <div class="row" style="display: flex;justify-content: center;">
-                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Delete Account</a>
+                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="delete3" >Delete Account</a>
                                     </div>
                                 </div>
 
@@ -448,15 +440,15 @@
                                         <div class="col-lg-6">  
                                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;">View Documents</a>                             
  
-                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" >Accept</a>
+                                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 200px;" id="accept4" >Accept</a>
                                         </div>
                                         <div class="col-lg-6">
                                             <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button1" style="max-height: 50px; max-width: 250px;" >Download Documents</a>
-                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Reject</a>
+                                            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="reject4" >Reject</a>
                                         </div>
                                     </div>
                                     <div class="row" style="display: flex;justify-content: center;">
-                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" >Delete Account </a>
+                                        <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px;" id="delete4" >Delete Account </a>
                                     </div>
                                 </div>
 

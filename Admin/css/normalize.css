@@ -448,6 +448,30 @@ Preloader Area CSS
 	border-radius: 0;
 	border-radius:4px;
 }
+
+.logoutbtn{
+	color: #fff;
+	padding: 13px 25px;
+	font-size: 14px;
+	text-transform: capitalize;
+	font-weight: 500;
+	background: #1A76D1;
+	position: relative;
+	box-shadow: none;
+	display: inline-block;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	border: none;
+	border-radius: 0;
+	border-radius:4px;
+
+
+}
+
+
 .btn:hover{
 	color:#fff;
 }
@@ -470,6 +494,33 @@ Preloader Area CSS
 	border-radius:4px;
 }
 .btn:hover:before{
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+
+.logoutbtn:hover{
+	color:#ffffff;
+}
+.logoutbtn:before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #2C2D3F;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+	border-radius:4px;
+}
+.logoutbtn:hover:before{
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }

@@ -168,6 +168,7 @@ body {
   z-index: 999;
   visibility: hidden;
   display: inline;
+  
   /* complimenting your modal colors */
   /* border: 3px solid #000; */
 }

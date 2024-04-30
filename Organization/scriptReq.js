@@ -1,3 +1,5 @@
+const divloc=document.getElementById("savepop");
+
 const keywordsInput = document.getElementById('keywords');
 const filterButton = document.getElementById('contact-submit');
 
@@ -21,15 +23,19 @@ function matchKeywords(keywords, text) {
 filterButton.addEventListener('click', applyFilters);
 
 
+const savebtns=document.querySelectorAll(".btn-success");
+const newdiv=document.createElement("div");
+const popout=document.querySelectorAll(".pop-out");
 
 
-
-
-
-
-
-
-
+for(let i=0;i<savebtns.length;i++){
+  savebtns[i].addEventListener('click',(e)=>{
+    newdiv.innerHTML='<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    popout[i].style.display="none";
+    popout[i].style.visibility="hidden";
+    divloc.append(newdiv);
+  });
+}
 
 
 

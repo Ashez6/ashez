@@ -30,11 +30,18 @@ function matchSelected(selected, Name) {
     return true;
   }
   for(let i=0;i<selected.length;i++){
-    if(Name.includes(selected[i])){
-      return true;
+    if(selected[i]=="male"){
+      if(Name.includes("male") && !Name.includes("female")){
+        return true;
+      }
+    }
+    else{
+      if(Name.includes(selected[i])){
+        return true;
+      }
     }
   }
-  return false;
+  return false;
 }
 
 filterButton.addEventListener('click', applyFilters);

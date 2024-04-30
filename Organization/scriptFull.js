@@ -1,3 +1,32 @@
+const keywordsInput = document.getElementById('keywords');
+const filterButton = document.getElementById('contact-submit');
+
+function applyFilters() {
+  const keywords = keywordsInput.value.toLowerCase();
+  // search logic here
+  const jobBoxes = document.querySelectorAll('.job-box');
+  jobBoxes.forEach(jobBox => {
+      const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
+      const shouldDisplay = matchKeywords(keywords, Name);
+      jobBox.style.display = shouldDisplay ? "" : "none";
+  });
+}
+
+function matchKeywords(keywords, text) {
+  return keywords === '' || text.includes(keywords);
+}
+
+
+
+filterButton.addEventListener('click', applyFilters);
+
+
+
+
+
+
+
+
 const deleteButts = document.querySelectorAll(".delete-button");
 const jobBox = document.querySelectorAll(".job-box");
 

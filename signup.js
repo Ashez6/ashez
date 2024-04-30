@@ -1,26 +1,27 @@
-const signInTab = document.getElementById("SignIn"); 
-const signUpTab = document.getElementById("SignUp");
-const signInForm = document.getElementById("signInForm");
-const signUpForm = document.getElementById("signUpForm");
-signUpTab.addEventListener("click", function (event){
-  signInTab.classList.remove("active");
-  signInTab.classList.add("inactive");
+const donorH2 = document.getElementById("Donor");
+const orgH2 = document.getElementById("Organization");
 
-  signUpTab.classList.remove("inactive");
-  signUpTab.classList.add("active");
+// Get references to the form sections
+const donorForm = document.getElementById("signUpDonorForm");
+const orgForm = document.getElementById("signUpOrgForm");
 
-} 
-)
-signInTab.addEventListener("click", function () {
-  // Make the Sign In tab active
-  signInTab.classList.remove("inactive");
-  signInTab.classList.add("active");
+// Add click event listeners to the h2 elements
+donorH2.addEventListener("click", () => {
+    donorForm.style.display = "block"; // Show donor form
+    orgForm.style.display = "none"; // Hide organization form
+    donorH2.classList.remove("inactive");
+    donorH2.classList.add("active");
+    orgH2.classList.remove("active");
+    orgH2.classList.add("inactive");
+});
 
-  // Make the Sign Up tab inactive
-  signUpTab.classList.remove("active");
-  signUpTab.classList.add("inactive");
-
-
+orgH2.addEventListener("click", () => {
+    orgForm.style.display = "block"; // Show organization form
+    donorForm.style.display = "none"; // Hide donor form
+    donorH2.classList.remove("active");
+    donorH2.classList.add("inactive");
+    orgH2.classList.remove("inactive");
+    orgH2.classList.add("active");
 });
 
 const signupForm = document.getElementById("signUpForm");

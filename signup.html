@@ -12,33 +12,55 @@
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
-        <h2 class="active" id="SignIn" href="index.html">Sign In</h2>
-        <h2 class="inactive underlineHover" id="SignUp" href=>Sign Up</h2>
+        <h2 class ="active" id="Donor" style="cursor: pointer">Donor</h2>
+        <h2 class ="inactive" id="Organization" style="cursor: pointer">Organization</h2>
 
 
-  <!-- Sign Up Form -->
-<section id="signUpForm">
-  <form>
-    <input type="text" id="first-name" placeholder="First Name*" required />
-    <input type="text" id="last-name" placeholder="Last Name*" required />
+  <!-- Sign Up Donor Form -->
+<section id="signUpDonorForm">
+    <form>
+        <input type="text" id="first-name" placeholder="First Name*" required />
+        <input type="text" id="last-name" placeholder="Last Name*" required />
+        <select class=" nice-select form-control" id="gender* " style="margin-left: 31%; margin-top: 10px;">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="text" id="email1" placeholder="Email*" required />
+        <input type="text" id="signup-password1" placeholder="Password*" required />
+        <input type="text" id="contact-number1" placeholder="Contact Number*" required />
+        <input type="text" id="address1" placeholder="Address*" required />
+        <input type="text" id="area1" placeholder="Area*" required />
+        <input type="text" id="governorate1" placeholder="Governorate*" required />
     
-    <select class=" nice-select form-control" id="gender* " style="margin-left: 31%; margin-top: 10px;">
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-    </select>
-    <input type="text" id="email" placeholder="Email*" required />
-    <input type="text" id="contact-number" placeholder="Contact Number*" required />
-    <input type="text" id="signup-password" placeholder="Password*" required />
-    <input type="text" id="address" placeholder="Address*" required />
-    <input type="text" id="area" placeholder="Area*" required />
-    <input type="text" id="governorate" placeholder="Governorate*" required />
-
-    <input type="submit" value="Sign Up" />
-
-  </form>
+        <input type="submit" class="fadeIn fourth" value="Sign Up" />
+    
+      </form>
 </section>
-
+ <!-- Sign Up Organization Form -->
+ <section id="signUpOrgForm" style="display: none;">
+    <form>
+        <input type="text" id="first-name" placeholder="First Name*" required />
+        <input type="text" id="last-name" placeholder="Last Name*" required />
+        
+        <select class=" nice-select form-control" id="gender* " style="margin-left: 31%; margin-top: 10px;">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="text" id="email2" placeholder="Email*" required />
+        <input type="text" id="signup-password2" placeholder="Password*" required />
+        <input type="text" id="contact-number2" placeholder="Contact Number*" required />
+        <input type="text" id="org-name2" placeholder="Organization Name*" required />
+        <input type="text" id="org-type2" placeholder="Organization Type*" required />
+        <input type="text" id="address2" placeholder="Organization Address*" required />
+        <input type="text" id="area2" placeholder="Area*" required />
+        <input type="text" id="governorate2" placeholder="Governorate*" required />
+    
+        <input type="submit" class="fadeIn fourth" value="Sign Up" />
+    
+      </form>
+ </section>
 
     <script src="signup.js"></script>
   </body>

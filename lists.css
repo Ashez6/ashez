@@ -76,6 +76,27 @@ dropdown-check-list {
   padding: 0 16px;
 }
 
+.mytrack li{
+  font-size: 16px;
+  color:#082353;
+  
+
+}
+
+.eta {
+  background-color:#0094ff ;
+  border-radius: 5px;
+  min-width: 100px;
+  min-height: 50px;
+  
+
+ }
+
+ .eta2{
+  min-width: 100px;
+  min-height: 50px;
+
+ }
 .donation-container {
   font-family: Arial, sans-serif;
   width: 300px;

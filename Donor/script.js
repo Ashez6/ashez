@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", (e) => {
+  const navBar = document.querySelector(".nav-drop");
+  let type = localStorage.getItem("type");
+
+  if (type == "doctor" || type == "teacher") {
+    navBar.style.display = "none";
+  }
+});
+
 const confirmButton = document.getElementById("confirm-button");
 
 let count = 0;
@@ -58,9 +67,11 @@ confirmButton.addEventListener("click", (e) => {
 
 const updateButton = document.getElementById("update-profile");
 
-let countUpdate = 0;
-
 // Profile info validation
+
+let countUpdate = 0;
+let teacherClick = false;
+let doctorClick = false;
 updateButton.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -74,6 +85,16 @@ updateButton.addEventListener("click", function (event) {
   const address = document.getElementById("address");
   const area = document.getElementById("area");
   const governorate = document.getElementById("governorate");
+  const fileInput = document.getElementById("fileInput");
+
+  document.getElementById("fullName").style.border = "";
+  document.getElementById("lastName").style.border = "";
+  document.getElementById("username").style.border = "";
+  document.getElementById("phone").style.border = "";
+  document.getElementById("email").style.border = "";
+  address.style.border = "";
+  area.style.border = "";
+  governorate.style.border = "";
 
   const nameRegex = /^[A-Za-z\s]+$/;
   if (!nameRegex.test(firstName)) {
@@ -134,8 +155,28 @@ updateButton.addEventListener("click", function (event) {
   if (countUpdate == 0) {
     countUpdate++;
     const newDiv = document.createElement("div");
-    newDiv.innerHTML =
-      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    let type = localStorage.getItem("type");
+
+    if (type == "teacher" || type == "doctor") {
+      newDiv.innerHTML =
+        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+      newDiv.style.marginTop = "5%";
+      const profile = document.getElementById("profile");
+      profile.append(newDiv);
+      return;
+    }
+    if (teacherClick && fileInput.files.length > 0) {
+      localStorage.setItem("type", "teacher");
+      newDiv.innerHTML =
+        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a teacher!</div>';
+    } else if (doctorClick && fileInput.files.length > 0) {
+      localStorage.setItem("type", "doctor");
+      newDiv.innerHTML =
+        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a doctor!</div>';
+    } else {
+      newDiv.innerHTML =
+        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You are currently a donor who is not a teacher or a doctor. </div>';
+    }
     newDiv.style.marginTop = "5%";
     const profile = document.getElementById("profile");
     profile.append(newDiv);
@@ -143,17 +184,31 @@ updateButton.addEventListener("click", function (event) {
 });
 
 const teachButt = document.getElementById("teacher-butt");
-const submitFile = document.getElementById("submitFile");
+
 teachButt.addEventListener("click", function () {
+  const dropDowntext = document.getElementById("dropdown-text");
+  dropDowntext.innerText = "Teacher";
   document.getElementById("file-upload").style.display = "";
+  teacherClick = true;
+  doctorClick = false;
 });
 
-submitFile.addEventListener("click", function () {
-  const fileInput = document.getElementById("fileInput");
-  if (fileInput.files.length > 0) {
-    // Handle the uploaded file here (e.g., send it to the server)
-    alert("File uploaded successfully!");
-  } else {
-    alert("Please choose a file to upload.");
-  }
+const doctButt = document.getElementById("doctor-butt");
+
+doctButt.addEventListener("click", function () {
+  const dropDowntext = document.getElementById("dropdown-text");
+  dropDowntext.innerText = "Doctor";
+  document.getElementById("file-upload").style.display = "";
+  teacherClick = false;
+  doctorClick = true;
+});
+
+const neither = document.getElementById("neither");
+
+neither.addEventListener("click", function () {
+  const dropDowntext = document.getElementById("dropdown-text");
+  dropDowntext.innerText = "Neither";
+  document.getElementById("file-upload").style.display = "none";
+  teacherClick = false;
+  doctorClick = false;
 });

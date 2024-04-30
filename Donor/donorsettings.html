@@ -210,22 +210,23 @@
                 </div>
 
                 
-                <div class="form-group" style="margin-bottom: 20%;">
+                <div class="form-group" style="margin-bottom: 25%;">
 
                 <nav class = "nav-drop">
                   <ul>
-                    <li><a href="javascript:void(0);">Choose your profession<div id="down-triangle"></div></a>
+                    <li><a href="javascript:void(0);" ><p id = "dropdown-text">Choose your profession</p><div id="down-triangle"></div></a>
                       <ul>
                         <li><a href="javascript:void(0);" id = "teacher-butt">Teacher</a></li>
                         <li><a href="javascript:void(0);" id = "doctor-butt">Doctor</a></li>
+                        <li><a href="javascript:void(0);" id = "neither">Neither</a></li>
+
                       </ul>
                     </li>
                   </ul>
                 </nav>
 
                 <div id="file-upload" style="display: none;">
-                  <button class="btn btn-light"  action = '/upload'>Upload your teaching certificate</button>
-                    <button id="submitFile" class="btn btn-light">Submit</button>
+                    <input type="file" class="btn btn-light" id="fileInput">
                 </div>
 
 

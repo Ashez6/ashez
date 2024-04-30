@@ -24,25 +24,47 @@ orgH2.addEventListener("click", () => {
     orgH2.classList.add("active");
 });
 
-const signupForm = document.getElementById("signUpForm");
-signupForm.addEventListener("submit", function (event) {
-  event.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const contactNumber = document.getElementById("contact-number").value;
+ // Validate email format
+ function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+}
 
-  // Regular expression for email validation
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email.");
-    return;
-  }
+// Validate phone number format (10 digits)
+function validatePhoneNumber(phoneNumber) {
+    const phonePattern = /^\d{10}$/;
+    return phonePattern.test(phoneNumber);
+}
 
-  // Regular expression for contact number validation
-  const contactNumberRegex = /^[0-9]{10}$/;
-  if (!contactNumberRegex.test(contactNumber)) {
-    alert("Please enter a valid contact number.");
-    document.getElementById("contact-number").style.border = "1px solid red";
-    return;
-  }
+// Add event listener for form submission
+document.getElementById('signUpDonorForm').addEventListener('click', function (event) {
+    const emailInput = document.getElementById('email1');
+    const phoneNumberInput = document.getElementById('contact-number1');
+
+    // Validate email and phone number
+    if (!validateEmail(emailInput.value)) {
+        emailInput.style.border = '2px solid red';
+        event.preventDefault();
+    } else {
+        emailInput.style.border = ''; // Clear red border
+    }
+
+    if (!validatePhoneNumber(phoneNumberInput.value)) {
+        phoneNumberInput.style.border = '2px solid red';
+        event.preventDefault();
+    } else {
+        phoneNumberInput.style.border = ''; // Clear red border
+    }
+});
+
+// Inside the form submission event listener
+document.getElementById('signUpDonorForm').addEventListener('click', function (event) {
+    // ... other validation code ...
+
+    // If all validations pass, show success message and redirect
+    if (validateEmail(emailInput.value) && validatePhoneNumber(phoneNumberInput.value)) {
+        alert('Account created successfully!');
+        window.location.href = 'homepage.html'; // Replace with your actual homepage URL
+    }
 });

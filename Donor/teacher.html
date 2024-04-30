@@ -123,7 +123,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 mx-auto">
+            <div class="col-lg-12 mx-auto">
                 <div class="career-search mb-60">
                     <form action="#" class="career-form mb-60">
                         <div class="row justify-content-between">
@@ -132,23 +132,68 @@
                                     <input type="text" class="form-control" placeholder="Enter Your Keywords" id="keywords">
                                 </div>
                             </div>
-                            <div class="custom-dropdown col-md-6 col-lg-3 my-3">
+                            <div class="custom-dropdown col-md-6 col-lg-2 my-3">
                                 <div class="select-container">
                                   <div class="dropdown-label">Subject</div>
                                     <div class="dropdown-options">
                                         <label class="option">
-                                            <input type="checkbox" value="1">
+                                            <input type="checkbox" class="filter1" value="Math">
                                             <span>Math</span>
                                         </label>
                                         <label class="option">
-                                            <input type="checkbox" value="2">
+                                            <input type="checkbox" class="filter1" value="Computer Science">
                                             <span>Computer Science</span>
                                         </label> 
                                   </div>
                                 </div>
                             </div>
+
+                            <div class="custom-dropdown col-md-6 col-lg-2 my-3">
+                                <div class="select-container">
+                                  <div class="dropdown-label">Area</div>
+                                  <div class="dropdown-options">
+                                    <label class="option">
+                                      <input type="checkbox" class="filter2" value="Downtown">
+                                      <span>Downtown</span>
+                                    </label>
+                                    <label class="option">
+                                      <input type="checkbox" class="filter2" value="Somoha">
+                                      <span>Somoha</span>
+                                    </label>
+
+                                    <label class="option">
+                                        <input type="checkbox" class="filter2" value="Zamalek">
+                                        <span>Zamalek</span>
+                                      </label>
+                                      <label class="option">
+                                        <input type="checkbox" class="filter2" value="Elmontaza">
+                                        <span>Elmontaza</span>
+                                      </label>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="custom-dropdown col-md-6 col-lg-3 my-3">
+                                <div class="select-container">
+                                  <div class="dropdown-label">Governerate</div>
+                                  <div class="dropdown-options">
+                                    <label class="option">
+                                      <input type="checkbox" class="filter3" value="Cairo">
+                                      <span>Cairo</span>
+                                    </label>
+                                    <label class="option">
+                                      <input type="checkbox" class="filter3" value="Alexandria">
+                                      <span>Alexandria</span>
+                                  
+                                  </div>
+                                </div>
+                            </div>
+
+
+
+                            
                               
-                            <div class="col-md-6 col-lg-3 my-3" style="align-self: flex-end;">
+                            <div class="col-md-6 col-lg-2 my-3" style="align-self: flex-end;">
                                 <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
                                     Search
                                 </button>
@@ -168,7 +213,13 @@
                                     <h5 class="text-center text-md-left">Trigonometry</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
-                                            <i class="icofont-camping-vest"></i> Math
+                                            <i class="bi bi-book"></i> Math
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-location-pin"></i> Zamalek
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Cairo
                                         </li>
                                          
                                     </ul>
@@ -188,8 +239,15 @@
                                     <h5 class="text-center text-md-left">Advanced Algorithms</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
-                                            <i class="icofont-camping-vest"></i></i> Computer Science
+                                            <i class="bi bi-book"></i> Computer Science
                                         </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-location-pin"></i> Somoha
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Alexandria
+                                        </li>
+                                         
                                     </ul>
                                 </div>
                             </div>
@@ -207,8 +265,15 @@
                                     <h5 class="text-center text-md-left">Calculus</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
-                                            <i class="icofont-camping-vest"></i></i> Math
+                                            <i class="bi bi-book"></i> Math
                                         </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-location-pin"></i> Downtown
+                                        </li>
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Cairo
+                                        </li>
+                                         
                                     </ul>
                                 </div>
                             </div>
@@ -259,7 +324,11 @@
                             </div>
                             <ul class="list-unstyled mb-1-9">
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Math</li>
-                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Accept</a>  
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Governorate:</span> Zamalek</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Area:</span> Cairo</li>
+
+                              
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
                         </div>
@@ -300,7 +369,10 @@
                             </div>
                             <ul class="list-unstyled mb-1-9">
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Computer Science</li>
-                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Accept</a>  
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Governorate:</span> Somoha</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Area:</span> Alexandria</li>
+
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
                             <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
@@ -347,8 +419,10 @@
                             </div>
                             <ul class="list-unstyled mb-1-9">
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Math</li>
-                                    
-                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Accept</a>  
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Governorate:</span> Downtown</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Area:</span> Cairo</li>
+ 
+                                <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
                             <ul class="social-icon-style1 list-unstyled mb-0 ps-0">

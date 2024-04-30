@@ -68,11 +68,15 @@ CloseDonation4.addEventListener("click", (e) => {
 });
 
 
+
+
+
+
 const accept1 = document.getElementById("accept1");
 
   accept1.addEventListener("click", (e) => {
   alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("doctor1");
+  const acc = document.getElementById("teacher1");
   viewDonation1Screen.remove();
   acc.remove();
 });
@@ -81,7 +85,7 @@ const reject1 = document.getElementById("reject1");
 
   reject1.addEventListener("click", (e) => {
   alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("doctor1");
+  const rej= document.getElementById("teacher1");
   viewDonation1Screen.remove();
   rej.remove();
 });
@@ -93,7 +97,7 @@ const accept2 = document.getElementById("accept2");
 
   accept2.addEventListener("click", (e) => {
   alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("doctor2");
+  const acc = document.getElementById("teacher2");
   viewDonation2Screen.remove();
   acc.remove();
 });
@@ -102,7 +106,7 @@ const reject2 = document.getElementById("reject2");
 
   reject2.addEventListener("click", (e) => {
   alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("doctor2");
+  const rej= document.getElementById("teacher2");
   viewDonation2Screen.remove();
   rej.remove();
 });
@@ -112,7 +116,7 @@ const accept3 = document.getElementById("accept3");
 
   accept3.addEventListener("click", (e) => {
   alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("doctor3");
+  const acc = document.getElementById("teacher3");
   viewDonation3Screen.remove();
   acc.remove();
 });
@@ -121,7 +125,7 @@ const reject3 = document.getElementById("reject3");
 
   reject3.addEventListener("click", (e) => {
   alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("doctor3");
+  const rej= document.getElementById("teacher3");
   viewDonation3Screen.remove();
   rej.remove();
 });
@@ -132,7 +136,7 @@ const accept4 = document.getElementById("accept4");
 
   accept4.addEventListener("click", (e) => {
   alert("Pro Bono request accepted and removed from pending requests ");
-  const acc = document.getElementById("doctor4");
+  const acc = document.getElementById("teacher4");
   viewDonation4Screen.remove();
   acc.remove();
 });
@@ -141,7 +145,7 @@ const reject4 = document.getElementById("reject4");
 
   reject4.addEventListener("click", (e) => {
   alert("Pro Bono request rejected  and removed from pending requests");
-  const rej= document.getElementById("doctor4");
+  const rej= document.getElementById("teacher4");
   viewDonation4Screen.remove();
   rej.remove();
 });

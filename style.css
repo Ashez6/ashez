@@ -91,6 +91,12 @@ body {
   background-color: darkred;
 }
 
+#log-out {
+  background-color: darkred;
+  padding: 10px 25px;
+}
+
+
 .green-button {
   background-color: #2e8b57;
 }

@@ -78,6 +78,15 @@ body {
   margin-left: -15px;
 }
 
+.myrow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .delete-button {
   background-color: darkred;
 }

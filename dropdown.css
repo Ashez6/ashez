@@ -1,0 +1,82 @@
+:root {
+  --light: #dcf2f1;
+  --blue: #7fc7d9;
+  --navy: #365486;
+  --dark: #0f1035;
+}
+
+.nav-drop {
+  margin-bottom: 150px;
+  margin-top: 20px;
+  margin-left: 0;
+  text-align: center;
+  max-width: 300px;
+}
+
+.nav-drop ul {
+  margin-left: 0;
+  padding-left: 0;
+  width: 300px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+
+.nav-drop ul ul {
+  display: none;
+}
+
+.nav-drop ul li:hover > ul {
+  display: block;
+}
+
+.nav-drop ul li {
+  float: left;
+  width: 300px;
+  text-align: left;
+  border-bottom: 3px solid var(--navy);
+}
+
+.nav-drop ul li:hover {
+  background: #f2f2f2;
+}
+
+.nav-drop ul li a {
+  display: block;
+  padding: 15px 10px;
+  color: #2a2a2a;
+  text-decoration: none;
+}
+
+.nav-drop ul ul {
+  border-radius: 0px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.nav-drop ul ul li {
+  float: none;
+  border-bottom: 2px solid #eaeaea;
+  position: relative;
+}
+
+.nav-drop ul ul li a {
+  padding: 15px 10px;
+  color: #838383;
+}
+
+.nav-drop ul ul li a:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+#down-triangle {
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 10px;
+  border-top: 10px solid var(--navy);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}

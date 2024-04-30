@@ -78,6 +78,34 @@ body {
   margin-left: -15px;
 }
 
+.thickrow {
+  height: 50 px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.radio-btn{
+  background-color: var(--light);
+  width: 100%;
+  border-radius: 20px;
+}
+.radio-btn input[type="radio"] {
+  /* display: none; Hide the actual radio button */
+}
+
+.radio-btn img {
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  border: 2px solid transparent; /* Initial border color */
+}
+
+.radio-btn input[type="radio"]:checked + .vehicle{
+  color: var(--navy); /* Change border color when the radio button is checked */
+}
+
 .myrow {
   display: -ms-flexbox;
   display: flex;

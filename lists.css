@@ -76,27 +76,30 @@ dropdown-check-list {
   padding: 0 16px;
 }
 
-.mytrack li{
+.mytrack li {
   font-size: 16px;
-  color:#082353;
-  
-
+  color: #082353;
 }
 
+.nopadding {
+  padding: 0 !important ;
+}
+
+.nomargin {
+  margin: 0 !important  ;
+}
 .eta {
-  background-color:#0094ff ;
   border-radius: 5px;
   min-width: 100px;
   min-height: 50px;
-  
+}
 
- }
-
- .eta2{
+.eta2 {
+  background-color: #0094ff;
   min-width: 100px;
   min-height: 50px;
-
- }
+  border-radius: 10px;
+}
 .donation-container {
   font-family: Arial, sans-serif;
   width: 300px;
@@ -218,7 +221,7 @@ dropdown-check-list {
   font-family: "Material-Design-Iconic-Font";
 }
 
-.filter-result{
+.filter-result {
   margin-bottom: 300px;
 }
 .filter-result .job-box {
@@ -262,7 +265,7 @@ ul {
     from(rgba(78, 99, 215, 0.9)),
     to(#5a85dd)
   );
-  
+
   background-image: linear-gradient(
     to right,
     rgba(78, 99, 215, 0.9) 0%,

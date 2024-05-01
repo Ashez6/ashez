@@ -561,6 +561,10 @@ mark {
     display: inline-block
 }
 
+.list-unstyled li {
+    font-size: 20px;
+}
+
 .list-inline-item:not(:last-child) {
     margin-right: 5px
 }

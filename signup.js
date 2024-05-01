@@ -1,14 +1,14 @@
+document.addEventListener("DOMContentLoaded", (e) => {});
+
 const donorH2 = document.getElementById("Donor");
 const orgH2 = document.getElementById("Organization");
-
 
 const donorForm = document.getElementById("signUpDonorForm");
 const orgForm = document.getElementById("signUpOrgForm");
 
-
 donorH2.addEventListener("click", () => {
-  donorForm.style.display = "block"; 
-  orgForm.style.display = "none"; 
+  donorForm.style.display = "block";
+  orgForm.style.display = "none";
   donorH2.classList.remove("inactive");
   donorH2.classList.add("active");
   orgH2.classList.remove("active");
@@ -16,20 +16,20 @@ donorH2.addEventListener("click", () => {
 });
 
 orgH2.addEventListener("click", () => {
-  orgForm.style.display = "block"; 
-  donorForm.style.display = "none"; 
+  map.invalidateSize();
+
+  orgForm.style.display = "block";
+  donorForm.style.display = "none";
   donorH2.classList.remove("active");
   donorH2.classList.add("inactive");
   orgH2.classList.remove("inactive");
   orgH2.classList.add("active");
 });
 
-
 function validateEmail(email) {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(email);
 }
-
 
 function validatePhoneNumber(phoneNumber) {
   const phonePattern = /^\d{11}$/;
@@ -41,14 +41,15 @@ function validateName(name) {
   return namePattern.test(name);
 }
 
-
-
 const donorSignUpButt = document.getElementById("sign-up-donor");
 const donorTypeSelect = document.getElementById("donor-type");
 const verificationFileInput = document.getElementById("verification-file");
 
 donorTypeSelect.addEventListener("change", function () {
-  if (donorTypeSelect.value === "teacher" || donorTypeSelect.value === "doctor") {
+  if (
+    donorTypeSelect.value === "teacher" ||
+    donorTypeSelect.value === "doctor"
+  ) {
     verificationFileInput.style.display = "block";
   } else {
     verificationFileInput.style.display = "none";
@@ -57,11 +58,10 @@ donorTypeSelect.addEventListener("change", function () {
 
 verificationFileInput.addEventListener("change", function () {
   if (verificationFileInput.files.length > 0) {
-    verificationFileInput.nextElementSibling.textContent = "Verification Uploaded";
+    verificationFileInput.nextElementSibling.textContent =
+      "Verification Uploaded";
   }
 });
-
-
 
 donorSignUpButt.addEventListener("click", function (event) {
   const genderSelect = document.getElementById("gender1");
@@ -73,10 +73,11 @@ donorSignUpButt.addEventListener("click", function (event) {
   const address = document.getElementById("address1");
   const area = document.getElementById("area1");
   const governorate = document.getElementById("governorate1");
+  const gender = document.getElementById("gender1");
+
+  console.log(gender.value);
+
   let isValid = true;
-
-
-
 
   firstName.style.border = "";
   lastName.style.border = "";
@@ -87,7 +88,6 @@ donorSignUpButt.addEventListener("click", function (event) {
   area.style.border = "";
   governorate.style.border = "";
 
-  
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";
     isValid = false;
@@ -129,25 +129,33 @@ donorSignUpButt.addEventListener("click", function (event) {
     number.style.border = "1px solid red";
     isValid = false;
   }
-  
-  if ((donorTypeSelect.value === "teacher" || donorTypeSelect.value === "doctor") && verificationFileInput.files.length === 0) {
+
+  if (
+    (donorTypeSelect.value === "teacher" ||
+      donorTypeSelect.value === "doctor") &&
+    verificationFileInput.files.length === 0
+  ) {
     alert("Please upload your verification file.");
     isValid = false;
   }
-  
+
+  if (gender.value == "null") {
+    gender.style.border = "1px solid red";
+    isValid = false;
+  }
+
   if (!isValid) {
     event.preventDefault();
-  }else {
+  } else {
     alert("Your account has been created!");
     window.location.href = "./Donor/homepage.html";
   }
-
-  
 });
 
 const orgSignUpButt = document.getElementById("sign-up-org");
-const orgVerificationFileInput = document.getElementById("org-verification-file");
-
+const orgVerificationFileInput = document.getElementById(
+  "org-verification-file"
+);
 
 orgSignUpButt.addEventListener("click", function (event) {
   const firstName = document.getElementById("first-name2");
@@ -160,7 +168,7 @@ orgSignUpButt.addEventListener("click", function (event) {
   const address = document.getElementById("address2");
   const area = document.getElementById("area2");
   const governorate = document.getElementById("governorate2");
-
+  const gender = document.getElementById("gender2");
 
   firstName.style.border = "";
   lastName.style.border = "";
@@ -182,7 +190,7 @@ orgSignUpButt.addEventListener("click", function (event) {
   } else {
     orgVerificationFileInput.style.border = ""; // reset border if validation passes
   }
-  
+
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";
     isValid = false;
@@ -233,6 +241,10 @@ orgSignUpButt.addEventListener("click", function (event) {
     isValid = false;
   }
 
+  if (gender.value == "") {
+    gender.style.border = "1px solid red";
+    isValid = false;
+  }
 
   if (!isValid) {
     event.preventDefault();
@@ -241,9 +253,3 @@ orgSignUpButt.addEventListener("click", function (event) {
     window.location.href = "./Organization/homepageorg.html";
   }
 });
-
-
-
-
-
-

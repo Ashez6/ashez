@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+
 		<!-- Favicon -->
         <link rel="icon" href="img/ashez_transparent.png">
 		
@@ -40,11 +45,20 @@
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
 		
+        <style>
+          #map {
+           width: 100%;
+           height: 400px;
+           margin-bottom: 10%;
+       }
+       
+       </style>     
+
 
 </head>
 <body>
  <!-- Header Area -->
- <header class="header" >
+ <header class="header"  style="z-index: 999999;">
     <!-- Header Inner -->
     <div class="header-inner" >
         <div class="container" >
@@ -178,6 +192,14 @@
                   <br>
 
                   <div class="form-group">
+                    <label for="username">Pin your address here: </label>
+
+                    <div id = 'map'></div>
+                    </div>
+
+                  <br>
+
+                  <div class="form-group">
                     <label for="username">Medical Speciality</label>
                     <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter Speciality here">
                   </div>
@@ -187,6 +209,8 @@
                     <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter case description here">
                   </div>
                   <br>
+
+
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
               </form>
@@ -299,6 +323,53 @@
 <!--/ End Footer Area -->
 
 <!-- jquery Min JS -->
+
+<script>
+
+  let count = 0; 
+
+  const map = L.map('map').setView([30.083153, 31.663866], 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+  
+          map.on('click', function (e) {
+          if (count === 0) {
+            count++; 
+            
+          
+            
+          const latlng = e.latlng;
+          console.log('Selected location:', latlng);
+  
+          const marker = L.marker(latlng).addTo(map).bindPopup('Hello, Leaflet!');
+  
+          // Listen for the marker's click event
+          marker.on('click', function () {
+              count--; 
+              map.removeLayer(marker); // Remove the marker when clicked
+          });
+
+        }
+  
+      
+  });
+  
+          const searchControl = L.Control.geocoder({
+          defaultMarkGeocode: false, 
+  }).addTo(map);
+  
+  // Listen for a result (location) selection
+  searchControl.on('markgeocode', function (e) {
+      latlng = e.geocode.center;
+      console.log('Selected location:', latlng);
+      map.setView(latlng, 13)
+  
+    });
+  
+  
+  </script>
+
 <script src="postdoctor.js"></script>
 
 <script src="js/jquery.min.js"></script>

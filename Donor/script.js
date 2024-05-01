@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
   if (type == "teacher") {
     navBar.style.display = "none";
     const teacherForm = document.getElementById("teacher-form");
+    const teacherForm1 = document.getElementById("teacher-form1");
+
     teacherForm.style.display = "";
+    teacherForm1.style.display = "";
   }
 });
 
@@ -169,11 +172,19 @@ updateButton.addEventListener("click", function (event) {
 
   if (type == "teacher") {
     const classes = document.getElementById("pro-classes");
+    const subjects = document.getElementById("subjects");
 
     classes.style.border = "";
+    subjects.style.border = "";
+
     if (classes.value == "") {
       classes.style.border = "1px solid red";
       r += "Please enter your the number of classes.<br>";
+    }
+
+    if (subjects.value == "") {
+      subjects.style.border = "1px solid red";
+      r += "Please enter the subjects that you can teach.<br>";
     }
   }
 

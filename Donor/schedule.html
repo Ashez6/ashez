@@ -111,7 +111,7 @@
         <div class="col-lg-2"></div>
     </div>
     <br>
-    <section>
+    <section >
         <div class="row">
             <div class="col-lg-4 " style=" display:flex; justify-content: center;">
                 <label class="radio-btn" style=" display:flex;justify-content: center;">
@@ -132,11 +132,35 @@
                 </label>
             </div>
         </div>
+        <div id="verror" style="display: flex;justify-content: center;margin-bottom: 30px;">
+        </div>
     </section>
-    <section>
+
+    <section style="margin-bottom: 5%;">
+        <div class="row" style="justify-content: center;margin-bottom: 20px;">
+            <div class="col-lg-7" style="display: flex;  justify-content: center;">
+                <label for="time-slot-select" style="font-size: 20px; color: #0f1035;margin-top: 0.5%;margin-right: 2%;">Select Preferred Time Slot:</label>
+                <select class="nice-select1" id="time-slot-select" >
+                    <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                    <option value="afternoon">Afternoon (12:00 PM - 3:00 PM)</option>
+                    <option value="evening">Evening (3:00 PM - 6:00 PM)</option>
+                    <option value="night">Night (6:00 PM - 9:00 PM)</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="justify-content: center;">
+            <h6 style="text-align: center;">Once confirming, the requesting organisation will be notified of your fulfillment of their request.<br> Pick-up and delivery of donated items are completely free of charge.</h6>
+            <br>
+            <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px; margin-left: 478px;" id="confirmbtn">Confirm Donation</a>
+        </div>
+        
         
     </section>
-       
+    
+
+    
+    
     
 
       <!-- Footer Area -->
@@ -237,6 +261,8 @@
     <script src="js/main.js"></script>
 
     <script src="home.js"></script>
+    <script src="schedulejs.js"></script>
+    
     
 </body>
 </html>

@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="../popout.css">
+    <link rel="stylesheet" href="../alert.css">
 
 </head>
 <body>
@@ -137,20 +138,20 @@
                                   <div class="dropdown-label">Season</div>
                                     <div class="dropdown-options">
                                         <label class="option">
-                                            <input type="checkbox" value="1">
+                                            <input type="checkbox" class="filter1" value="Spring">
                                             <span>Spring</span>
                                         </label>
                                         <label class="option">
-                                            <input type="checkbox" value="2">
+                                            <input type="checkbox" class="filter1" value="Summer">
                                             <span>Summer</span>
                                         </label> 
                                         <label class="option">
-                                            <input type="checkbox" value="3">
+                                            <input type="checkbox" class="filter1" value="Fall">
                                             <span>Fall</span>
                                         </label>
                                         
                                         <label class="option">
-                                            <input type="checkbox" value="4">
+                                            <input type="checkbox" class="filter1" value="Winter">
                                             <span>Winter</span>
                                         </label>
                                   </div>
@@ -163,15 +164,15 @@
                                   <div class="dropdown-label">Gender</div>
                                     <div class="dropdown-options">
                                         <label class="option">
-                                            <input type="checkbox" value="1">
+                                            <input type="checkbox" class="filter2" value="Male">
                                             <span>Male</span>
                                         </label>
                                         <label class="option">
-                                            <input type="checkbox" value="2">
+                                            <input type="checkbox" class="filter2" value="Female">
                                             <span>Female</span>
                                         </label> 
                                         <label class="option">
-                                            <input type="checkbox" value="2">
+                                            <input type="checkbox" class="filter2" value="Both">
                                             <span>Both</span>
                                         </label> 
                                   </div>
@@ -309,7 +310,7 @@
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 20-30</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Male</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Season:</span>Winter</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
@@ -353,7 +354,7 @@
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 30-50</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Male</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Season:</span> Summer</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" > <div class="error"></div></li>
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
@@ -403,7 +404,7 @@
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 20-35</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Both</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Seson:</span> Fall</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                     
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
@@ -454,7 +455,7 @@
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age:</span> 10-25</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> Female</li>
                                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Season:</span> Spring</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                     
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             

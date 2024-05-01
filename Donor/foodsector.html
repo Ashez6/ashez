@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../popout.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../alert.css">
 
 </head>
 <body>
@@ -135,27 +136,28 @@
                             </div>
                             <div class="custom-dropdown col-md-6 col-lg-3 my-3">
                                 <div class="select-container">
-                                  <div class="dropdown-label">Filter Food</div>
+                                  <div class="dropdown-label">Food Type</div>
                                   <div class="dropdown-options">
                                     <label class="option">
-                                      <input type="checkbox" value="1">
+                                      <input type="checkbox" class="filter1" value="Fruits and Vegetables">
                                       <span>Fruits and Vegetables</span>
                                     </label>
                                     <label class="option">
-                                        <input type="checkbox" value="2">
+                                        <input type="checkbox" class="filter1" value="Canned Food">
                                         <span>Canned Food</span>
                                       </label> 
                                       <label class="option">
-                                        <input type="checkbox" value="2">
+                                        <input type="checkbox" class="filter1" value="Fresh Meals">
                                         <span>Fresh Meals</span>
                                       </label> 
                                       <label class="option">
-                                        <input type="checkbox" value="2">
+                                        <input type="checkbox" class="filter1" value="Baked Goods">
                                         <span>Baked Goods</span>
                                       </label> 
                                   </div>
                                 </div>
-                            </div>                       
+                            </div> 
+                            <div class="col-md-6 col-lg-3 my-3"></div>                      
                             <div class="col-md-6 col-lg-3 my-3">
                                 <button type="button" class="btn btn-lg btn-block btn-light btn-custom job-right" id="contact-submit">
                                     Search
@@ -287,8 +289,8 @@
                                 <span class="text-primary">Fresh Meals</span>
                             </div>
                             <ul class="list-unstyled mb-1-9">
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Quantity Required:</span> 50</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 50</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
@@ -329,8 +331,8 @@
                                 <span class="text-primary">Baked Goods</span>
                             </div>
                             <ul class="list-unstyled mb-1-9">
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Quantity Required:</span> 100</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 100</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
                             </ul>
@@ -377,8 +379,8 @@
                                 <span class="text-primary">Fruits and Vegetables</span>
                             </div>
                             <ul class="list-unstyled mb-1-9">
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Quantity Required:</span> 50 KG</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 50 KG</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter kilograms to donate" ><div class="error"></div></li>
                                     
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             
@@ -426,8 +428,8 @@
                                 <span class="text-primary">Canned Food</span>
                             </div>
                             <ul class="list-unstyled mb-1-9">
-                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Quantity Required:</span> 70</li>
-                                <li class="mb-2 mb-xl-3 display-28"><input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ></li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Amount Needed:</span> 70</li>
+                                <li class="mb-2 mb-xl-3 display-28"><input type="number" min="0" class="form-control quantity" style="height: 50px; width: 250px;" placeholder="Enter quantity to donate" ><div class="error"></div></li>
                                     
                                 <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
                             

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const docs = document.getElementsByClassName("doc");
     for (let i = 0; i < 3; i++) {
       docs[i].style.display = "";
+      map.invalidateSize();
     }
   }
 
@@ -85,6 +86,8 @@ updateButton.addEventListener("click", function (event) {
 
   let r = "";
 
+  let type = localStorage.getItem("type");
+
   const firstName = document.getElementById("fullName").value;
   const lastName = document.getElementById("lastName").value;
   const username = document.getElementById("username").value;
@@ -146,10 +149,27 @@ updateButton.addEventListener("click", function (event) {
     r += "Please enter your governorate.<br>";
   }
 
+  if (type == "doctor") {
+    const speciality = document.getElementById("speciality");
+    const cases = document.getElementById("pro-cases");
+
+    speciality.style.border = "";
+    cases.style.border = "";
+    if (speciality.value == "") {
+      speciality.style.border = "1px solid red";
+      r += "Please enter your speciality.<br>";
+    }
+    if (cases.value == "") {
+      cases.style.border = "1px solid red";
+      r += "Please enter your the number of cases you can take.<br>";
+    }
+  }
+
   if (r != "") {
     countUpdate--;
     const newDiv = document.createElement("div");
     console.log(r);
+
     newDiv.innerHTML =
       '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
       r +
@@ -160,35 +180,39 @@ updateButton.addEventListener("click", function (event) {
     return;
   }
 
-  if (countUpdate == 0) {
-    countUpdate++;
-    const newDiv = document.createElement("div");
-    let type = localStorage.getItem("type");
+  const newDiv = document.createElement("div");
 
-    if (type == "teacher" || type == "doctor") {
-      newDiv.innerHTML =
-        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
-      newDiv.style.marginTop = "5%";
-      const profile = document.getElementById("profile");
-      profile.append(newDiv);
-      return;
-    }
-    if (teacherClick && fileInput.files.length > 0) {
-      localStorage.setItem("type", "teacher");
-      newDiv.innerHTML =
-        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a teacher!</div>';
-    } else if (doctorClick && fileInput.files.length > 0) {
-      localStorage.setItem("type", "doctor");
-      newDiv.innerHTML =
-        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a doctor!</div>';
-    } else {
-      newDiv.innerHTML =
-        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You are currently a donor who is not a teacher or a doctor. </div>';
-    }
+  if (type == "teacher" || type == "doctor") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     newDiv.style.marginTop = "5%";
     const profile = document.getElementById("profile");
     profile.append(newDiv);
+
+    return;
   }
+  if (teacherClick && fileInput.files.length > 0) {
+    localStorage.setItem("type", "teacher");
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a teacher!</div>';
+  } else if (doctorClick && fileInput.files.length > 0) {
+    localStorage.setItem("type", "doctor");
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a doctor!</div>';
+  } else {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You are currently a donor who is not a teacher or a doctor. </div>';
+  }
+  newDiv.style.marginTop = "5%";
+  const profile = document.getElementById("profile");
+  profile.append(newDiv);
+  newDiv.style.transition = "opacity 5s ease-out";
+
+  // Schedule the opacity to change after a short delay
+  setTimeout(function () {
+    newDiv.style.opacity = "0";
+    newDiv.maxHeight = "0";
+  }, 100); // 100 milliseconds delay
 });
 
 const teachButt = document.getElementById("teacher-butt");

@@ -26,14 +26,22 @@ filterButton.addEventListener('click', applyFilters);
 
 const savebtns=document.querySelectorAll(".btn-success");
 const popout=document.querySelectorAll(".donorpop");
+const expresstext=document.querySelectorAll(".express");
+const experror=document.querySelectorAll(".experror");
 
 
 for(let i=0;i<savebtns.length;i++){
    savebtns[i].addEventListener('click',(e)=>{
-    newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Message is sent to donor successfully</div>';
-    popout[i].style.display="none";
-    popout[i].style.visibility="hidden";
-    divloc.append(newdiv);
+    if(expresstext[i].value==""){
+      experror[i].innerHTML="Kindly enter a message.";
+    }
+    else{
+      experror[i].innerHTML="";
+      newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Message is sent to donor successfully</div>';
+      popout[i].style.display="none";
+      popout[i].style.visibility="hidden";
+      divloc.append(newdiv);
+    }
   });
 }
 

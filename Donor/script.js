@@ -229,13 +229,6 @@ updateButton.addEventListener("click", function (event) {
   newDiv.style.marginTop = "5%";
   const profile = document.getElementById("profile");
   profile.append(newDiv);
-  newDiv.style.transition = "opacity 5s ease-out";
-
-  // Schedule the opacity to change after a short delay
-  setTimeout(function () {
-    newDiv.style.opacity = "0";
-    newDiv.maxHeight = "0";
-  }, 100); // 100 milliseconds delay
 });
 
 const teachButt = document.getElementById("teacher-butt");

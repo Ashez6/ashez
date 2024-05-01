@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Toys</title>
+  <title>Request Medical Supplies</title>
   <link rel="stylesheet" href="../settings.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -130,7 +130,7 @@
           </div>
           <div class="card-body tab-content" >
             <div class="tab-pane active" id="profile" >
-              <h6>REQUEST TOYS</h6>
+              <h6>REQUEST MEDICAL SUPPLIES</h6>
               <hr>
               <form >
                 <div class="form-group">
@@ -138,60 +138,34 @@
                   <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
-
-                <div class="form-group" >
-                    <label for="username">Select the age group in which the toy is for</label>
-                    <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Age" selected>Age</option>
-                        <option value="0-4" >0-4</option>
-                        <option value="5-11">5-11</option>
-                        <option value="12-18">12-18</option>
-                        <option value="18+">18+</option>
-                    </select>
-                </div>
-                <br>
-                <br>
-
-                <div class="form-group" >
-                    <label for="username">Select the gender which the toy is for</label>
-                    <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="gender" selected>gender</option>
-                        <option value="Male" >Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Unisex">Unisex</option>
-                    </select>
-                </div>
-            <br>
-            <br>
-
-                <div class="form-group" style="margin-top: 2%;">
+                <div class="form-group">
+                    <label for="username">Usage</label>
+                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter usage here">
+                  </div>
+                  <br>
+                  <div class="form-group" style="margin-top: 2%;">
                     <label for="username">Quantity</label>
                     <br>
                     
-                    <input type="number" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
+                    <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity required">
                 </div>
                 <br>
-                
 
                 <div class="form-group" >
-                    <label for="username">Select the category of the toy requested</label>
+                    <label for="username">Type</label>
                     <br>
                     <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Unisex"selected>category</option>
-                        <option value="gender" >Dolls</option>
-                        <option value="Male" >Outdoor</option>
-                        <option value="Female">Sports</option>
-                        <option value="Unisex">Board Games</option>
-                        <option value="Unisex">Stuffed Toys</option>
-                        <option value="Unisex">Cars</option>
-
-
+                        <option value="Unisex"selected>Type</option>
+                        <option value="Medications" >Medications</option>
+                        <option value="Medical Supplies" >Medical Supplies</option>
                     </select>
                 </div>
             <br>
             <br>
+
+            
+           
+
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
               </form>
@@ -304,7 +278,7 @@
 <!--/ End Footer Area -->
 
 <!-- jquery Min JS -->
-<script src="posttoys.js"></script>
+<script src="postmed.js"></script>
 
 <script src="js/jquery.min.js"></script>
 <!-- jquery Migrate JS -->

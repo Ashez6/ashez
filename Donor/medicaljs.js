@@ -1,3 +1,4 @@
+
 //Filter
 
 const keywordsInput = document.getElementById('keywords');
@@ -36,6 +37,24 @@ function matchSelected(selected, Name) {
 }
 
 filterButton.addEventListener('click', applyFilters);
+
+const amounts=document.querySelectorAll(".amount");
+const quantities=document.querySelectorAll(".quantity");
+const fulfill=document.querySelectorAll(".btn-success");
+
+for(let i=0;i<fulfill.length;i++){
+  fulfill[i].addEventListener('click',(e)=>{
+    if(){
+
+    }
+    else if(){
+
+    }
+    else{
+
+    }
+  });
+}
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //

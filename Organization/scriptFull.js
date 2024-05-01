@@ -36,6 +36,7 @@ for(let i=0;i<savebtns.length;i++){
       experror[i].innerHTML="Kindly enter a message.";
     }
     else{
+      expresstext[i].value="";
       experror[i].innerHTML="";
       newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Message is sent to donor successfully</div>';
       popout[i].style.display="none";
@@ -146,6 +147,7 @@ viewDonor1.addEventListener("click", (e) => {
 const CloseDonor1 = document.getElementsByClassName("close-donor")[0];
 
 CloseDonor1.addEventListener("click", (e) => {
+  experror[0].innerHTML="";
   newdiv.innerHTML="";
   viewDonor1Screen.style.display = "none";
   viewDonor1Screen.style.visibility = "hidden";
@@ -165,6 +167,7 @@ viewDonor2.addEventListener("click", (e) => {
 const CloseDonor2 = document.getElementsByClassName("close-donor")[1];
 
 CloseDonor2.addEventListener("click", (e) => {
+  experror[1].innerHTML="";
   newdiv.innerHTML="";
   viewDonor2Screen.style.display = "none";
   viewDonor2Screen.style.visibility = "hidden";
@@ -184,6 +187,7 @@ viewDonor3.addEventListener("click", (e) => {
 const CloseDonor3 = document.getElementsByClassName("close-donor")[2];
 
 CloseDonor3.addEventListener("click", (e) => {
+  experror[2].innerHTML="";
   newdiv.innerHTML="";
   viewDonor3Screen.style.display = "none";
   viewDonor3Screen.style.visibility = "hidden";
@@ -203,6 +207,7 @@ viewDonor4.addEventListener("click", (e) => {
 const CloseDonor4 = document.getElementsByClassName("close-donor")[3];
 
 CloseDonor4.addEventListener("click", (e) => {
+  experror[3].innerHTML="";
   newdiv.innerHTML="";
   viewDonor4Screen.style.display = "none";
   viewDonor4Screen.style.visibility = "hidden";

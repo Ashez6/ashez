@@ -36,10 +36,35 @@ function validatePhoneNumber(phoneNumber) {
   return phonePattern.test(phoneNumber);
 }
 
+function validateName(name) {
+  const namePattern = /^[a-zA-Z]+$/;
+  return namePattern.test(name);
+}
+
+
+
 const donorSignUpButt = document.getElementById("sign-up-donor");
+const donorTypeSelect = document.getElementById("donor-type");
+const verificationFileInput = document.getElementById("verification-file");
+
+donorTypeSelect.addEventListener("change", function () {
+  if (donorTypeSelect.value === "teacher" || donorTypeSelect.value === "doctor") {
+    verificationFileInput.style.display = "block";
+  } else {
+    verificationFileInput.style.display = "none";
+  }
+});
+
+verificationFileInput.addEventListener("change", function () {
+  if (verificationFileInput.files.length > 0) {
+    verificationFileInput.nextElementSibling.textContent = "Verification Uploaded";
+  }
+});
+
 
 
 donorSignUpButt.addEventListener("click", function (event) {
+  const genderSelect = document.getElementById("gender1");
   const firstName = document.getElementById("first-name1");
   const lastName = document.getElementById("last-name1");
   const email = document.getElementById("email1");
@@ -48,7 +73,9 @@ donorSignUpButt.addEventListener("click", function (event) {
   const address = document.getElementById("address1");
   const area = document.getElementById("area1");
   const governorate = document.getElementById("governorate1");
-  
+  let isValid = true;
+
+
 
 
   firstName.style.border = "";
@@ -60,7 +87,7 @@ donorSignUpButt.addEventListener("click", function (event) {
   area.style.border = "";
   governorate.style.border = "";
 
-  let isValid = true;
+  
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";
     isValid = false;
@@ -85,6 +112,14 @@ donorSignUpButt.addEventListener("click", function (event) {
     governorate.style.border = "1px solid red";
     isValid = false;
   }
+  if (!validateName(firstName.value)) {
+    firstName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validateName(lastName.value)) {
+    lastName.style.border = "1px solid red";
+    isValid = false;
+  }
 
   if (!validateEmail(email.value)) {
     email.style.border = "1px solid red";
@@ -94,13 +129,20 @@ donorSignUpButt.addEventListener("click", function (event) {
     number.style.border = "1px solid red";
     isValid = false;
   }
-
+  
+  if ((donorTypeSelect.value === "teacher" || donorTypeSelect.value === "doctor") && verificationFileInput.files.length === 0) {
+    alert("Please upload your verification file.");
+    isValid = false;
+  }
+  
   if (!isValid) {
     event.preventDefault();
   }else {
     alert("Your account has been created!");
     window.location.href = "./Donor/homepage.html";
   }
+
+  
 });
 
 const orgSignUpButt = document.getElementById("sign-up-org");
@@ -130,6 +172,7 @@ orgSignUpButt.addEventListener("click", function (event) {
   governorate.style.border = "";
 
   let isValid = true;
+  
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";
     isValid = false;
@@ -162,6 +205,15 @@ orgSignUpButt.addEventListener("click", function (event) {
     governorate.style.border = "1px solid red";
     isValid = false;
   }
+
+  if (!validateName(firstName.value)) {
+    firstName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validateName(lastName.value)) {
+    lastName.style.border = "1px solid red";
+    isValid = false;
+  }
   if (!validateEmail(email.value)) {
     email.style.border = "1px solid red";
     isValid = false;
@@ -179,4 +231,9 @@ orgSignUpButt.addEventListener("click", function (event) {
     window.location.href = "./Organization/homepageorg.html";
   }
 });
+
+
+
+
+
 

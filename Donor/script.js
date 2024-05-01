@@ -2,7 +2,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const navBar = document.querySelector(".nav-drop");
   let type = localStorage.getItem("type");
 
-  if (type == "doctor" || type == "teacher") {
+  if (type == "doctor") {
+    navBar.style.display = "none";
+    const docs = document.getElementsByClassName("doc");
+    for (let i = 0; i < 3; i++) {
+      docs[i].style.display = "";
+    }
+  }
+
+  if (type == "teacher") {
     navBar.style.display = "none";
   }
 });

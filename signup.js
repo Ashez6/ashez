@@ -1,14 +1,14 @@
 const donorH2 = document.getElementById("Donor");
 const orgH2 = document.getElementById("Organization");
 
-// Get references to the form sections
+
 const donorForm = document.getElementById("signUpDonorForm");
 const orgForm = document.getElementById("signUpOrgForm");
 
-// Add click event listeners to the h2 elements
+
 donorH2.addEventListener("click", () => {
-  donorForm.style.display = "block"; // Show donor form
-  orgForm.style.display = "none"; // Hide organization form
+  donorForm.style.display = "block"; 
+  orgForm.style.display = "none"; 
   donorH2.classList.remove("inactive");
   donorH2.classList.add("active");
   orgH2.classList.remove("active");
@@ -16,64 +16,167 @@ donorH2.addEventListener("click", () => {
 });
 
 orgH2.addEventListener("click", () => {
-  orgForm.style.display = "block"; // Show organization form
-  donorForm.style.display = "none"; // Hide donor form
+  orgForm.style.display = "block"; 
+  donorForm.style.display = "none"; 
   donorH2.classList.remove("active");
   donorH2.classList.add("inactive");
   orgH2.classList.remove("inactive");
   orgH2.classList.add("active");
 });
 
-// Validate email format
+
 function validateEmail(email) {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(email);
 }
 
-// Validate phone number format (10 digits)
+
 function validatePhoneNumber(phoneNumber) {
-  const phonePattern = /^\d{10}$/;
+  const phonePattern = /^\d{11}$/;
   return phonePattern.test(phoneNumber);
 }
 
 const donorSignUpButt = document.getElementById("sign-up-donor");
 
-// Add event listener for form submission
 
 donorSignUpButt.addEventListener("click", function (event) {
-  const emailInput = document.getElementById("email1");
-  const phoneNumberInput = document.getElementById("contact-number1");
-  const firstName = document.getElementById("first-name");
+  const firstName = document.getElementById("first-name1");
+  const lastName = document.getElementById("last-name1");
+  const email = document.getElementById("email1");
+  const password = document.getElementById("signup-password1");
+  const number = document.getElementById("contact-number1");
+  const address = document.getElementById("address1");
+  const area = document.getElementById("area1");
+  const governorate = document.getElementById("governorate1");
+  
+
 
   firstName.style.border = "";
-  emailInput.style.border = "";
-  phoneNumberInput.style.border = "";
+  lastName.style.border = "";
+  email.style.border = "";
+  password.style.border = "";
+  number.style.border = "";
+  address.style.border = "";
+  area.style.border = "";
+  governorate.style.border = "";
 
+  let isValid = true;
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";
+    isValid = false;
   }
-  // Validate email and phone number
-  if (!validateEmail(emailInput.value)) {
-    emailInput.style.border = "1px solid red";
+  if (lastName.value == "") {
+    lastName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (password.value == "") {
+    password.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (address.value == "") {
+    address.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (area.value == "") {
+    area.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (governorate.value == "") {
+    governorate.style.border = "1px solid red";
+    isValid = false;
   }
 
-  if (!validatePhoneNumber(phoneNumberInput.value)) {
-    phoneNumberInput.style.border = "1px solid red";
+  if (!validateEmail(email.value)) {
+    email.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validatePhoneNumber(number.value)) {
+    number.style.border = "1px solid red";
+    isValid = false;
+  }
+
+  if (!isValid) {
+    event.preventDefault();
+  }else {
+    alert("Your account has been created!");
+    window.location.href = "./Donor/homepage.html";
   }
 });
 
-// Inside the form submission event listener
-// document
-//   .getElementById("signUpDonorForm")
-//   .addEventListener("click", function (event) {
-//     // ... other validation code ...
+const orgSignUpButt = document.getElementById("sign-up-org");
 
-//     // If all validations pass, show success message and redirect
-//     if (
-//       validateEmail(emailInput.value) &&
-//       validatePhoneNumber(phoneNumberInput.value)
-//     ) {
-//       alert("Account created successfully!");
-//       window.location.href = "homepage.html"; // Replace with your actual homepage URL
-//     }
-//   });
+orgSignUpButt.addEventListener("click", function (event) {
+  const firstName = document.getElementById("first-name2");
+  const lastName = document.getElementById("last-name2");
+  const email = document.getElementById("email2");
+  const password = document.getElementById("signup-password2");
+  const number = document.getElementById("contact-number2");
+  const orgName = document.getElementById("org-name2");
+  const orgType = document.getElementById("org-type2");
+  const address = document.getElementById("address2");
+  const area = document.getElementById("area2");
+  const governorate = document.getElementById("governorate2");
+
+
+  firstName.style.border = "";
+  lastName.style.border = "";
+  email.style.border = "";
+  password.style.border = "";
+  number.style.border = "";
+  orgName.style.border = "";
+  orgType.style.border = "";
+  address.style.border = "";
+  area.style.border = "";
+  governorate.style.border = "";
+
+  let isValid = true;
+  if (firstName.value == "") {
+    firstName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (lastName.value == "") {
+    lastName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (password.value == "") {
+    password.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (orgName.value == "") {
+    orgName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (orgType.value == "") {
+    orgType.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (address.value == "") {
+    address.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (area.value == "") {
+    area.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (governorate.value == "") {
+    governorate.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validateEmail(email.value)) {
+    email.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validatePhoneNumber(number.value)) {
+    number.style.border = "1px solid red";
+    isValid = false;
+  }
+
+
+  if (!isValid) {
+    event.preventDefault();
+  } else {
+    alert("Your account has been created!");
+    window.location.href = "./Organization/homepageorg.html";
+  }
+});
+

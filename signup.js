@@ -157,6 +157,8 @@ const orgVerificationFileInput = document.getElementById(
   "org-verification-file"
 );
 
+
+
 orgSignUpButt.addEventListener("click", function (event) {
   const firstName = document.getElementById("first-name2");
   const lastName = document.getElementById("last-name2");

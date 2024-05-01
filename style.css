@@ -88,7 +88,7 @@ body {
   margin-left: -15px;
 }
 
-.radio-btn{
+.radio-btn {
   background-color: var(--light);
   width: 100%;
   border-radius: 20px;
@@ -102,7 +102,7 @@ body {
   border: 2px solid transparent; /* Initial border color */
 }
 
-.radio-btn input[type="radio"]:checked + .vehicle{
+.radio-btn input[type="radio"]:checked + .vehicle {
   color: var(--navy); /* Change border color when the radio button is checked */
 }
 
@@ -123,7 +123,6 @@ body {
   background-color: darkred;
   padding: 10px 25px;
 }
-
 
 .green-button {
   background-color: #2e8b57;
@@ -161,14 +160,14 @@ body {
 
 .pop-out {
   position: fixed;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10%;
   z-index: 999;
   visibility: hidden;
   display: inline;
-  
+
   /* complimenting your modal colors */
   /* border: 3px solid #000; */
 }

@@ -9,6 +9,11 @@
     <!-- Favicon -->
     <link rel="icon" href="img/ashez_transparent.png">
 		
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
@@ -39,6 +44,20 @@
     <link rel="stylesheet" href="../popout.css">
     <link rel="stylesheet" href="../alert.css">
 
+    <style>
+        #map {
+         width: 300px; 
+         height: 250px;
+         margin-bottom: 10%;
+     }
+
+     #map1 {
+         width: 300px; 
+         height: 250px;
+         margin-bottom: 10%;
+     }
+     
+     </style>     
 
 </head>
 <body>
@@ -532,15 +551,7 @@
                                                 <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Patient Age:  </span>
                                                 <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Patient Age" value="21" >
                                              </div>
-                                             
-              
-                                
-                                        </li>
-                                    </ul>
-
-                                    <ul class="list-unstyled mb-1-9 col-lg-6">
-                                        <li class="mb-2 mb-xl-3 display-28">
-                                            <div class="myrow" style="margin-top: 1%;">
+                                             <div class="myrow" style="margin-top: 1%;">
                                                 <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Patient Weight:  </span>
                                                 <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Patient Weight" value="70 KG" >
                                              </div>
@@ -554,10 +565,24 @@
                                                     <!-- Add more gender options as needed -->
                                                 </select>
                                             </div>
+                                            
+                                             
+              
+                                
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-unstyled mb-1-9 col-lg-6">
+                                        <li class="mb-2 mb-xl-3 display-28">
                                             <div class="myrow" style="margin-top: 1%;">
                                                 <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Patient Address:  </span>
-                                                <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Patient Address" value="New Cairo, Cairo" >
+                                                <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Patient Address" value="Cairo, Madinaty" >
                                              </div>
+                                             <br>
+                                           
+                                             <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Location Pin:  </span>
+
+                                             <div id = 'map1'></div>
                                         </li>
                                     </ul>
                                     
@@ -627,42 +652,58 @@
                             </div>
                             <div>
                                     <ul class="list-unstyled mb-1-9">
-                                        <li class="mb-2 mb-xl-3 display-28">
-                                            <div class="myrow" style="margin-top: 2%;">
-                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Title:  </span>
-                                                <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Title" value="Differential Equations Session" >
-                                             </div>
-
-                                             <div class="myrow" style="margin-top: 2%;" >
-                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 1%; margin-right: 4%;">Sector:</span>
-                                                <select class="form-select" style="height: 50px; width: 250px;">
-                                                    <option value="5-11" selected>Teachers</option>
-                                                    <option value="12-18">School Supplies</option>
-                                                    <option value="19-30">Toys</option>
-                                                    <option value="19-30">Clothes</option>
-                                                    <option value="19-30">Food</option>
-                                                    <option value="19-30">Blood</option>
-                                                    <option value="19-30">Doctors</option>
-                                                    <option value="19-30">Medical Supplies</option>
-                                                    <!-- Add more age ranges as needed -->
-                                                </select>
-                                            </div>
-                                            <div class="myrow" >
-                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Number Of Students:</span>
-                                                <input type="number"min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Number Of Students" value="15">
-                                            </div>
-                                             <div class="myrow" style="margin-top: 2%;">
-                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Address:  </span>
-                                                <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Address" value="5th Settlement, Cairo" >
-                                             </div>
-                                             <div class="myrow" style="margin-top: 2%;">
-                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Subject:  </span>
-                                                <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Subject" value="Mathematics" >
-                                             </div>
+                                        <div class="row">
                                            
-                                            
-                                
-                                        </li>
+
+                                            <div  class="col-md-9 col-lg-6 my-3">
+                                                <li class="mb-2 mb-xl-3 display-28">
+                                                    <div class="myrow" style="margin-top: 2%;">
+                                                        <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Title:  </span>
+                                                        <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Title" value="Differential Equations Session" >
+                                                     </div>
+                                                     <br>
+                                                     <div class="myrow" style="margin-top: 2%;" >
+                                                        <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 1%; margin-right: 4%;">Sector:</span>
+                                                        <select class="form-select" style="height: 50px; width: 250px;">
+                                                            <option value="5-11" selected>Teachers</option>
+                                                            <option value="12-18">School Supplies</option>
+                                                            <option value="19-30">Toys</option>
+                                                            <option value="19-30">Clothes</option>
+                                                            <option value="19-30">Food</option>
+                                                            <option value="19-30">Blood</option>
+                                                            <option value="19-30">Doctors</option>
+                                                            <option value="19-30">Medical Supplies</option>
+                                                        </select>
+                                                    </div>
+                                                
+                                                     <div class="myrow" style="margin-top: 2%;">
+                                                        <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Address:  </span>
+                                                        <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Address" value="5th Settlement, Cairo" >
+                                                     </div>
+                                                     <br>
+                                                     <div class="myrow" style="margin-top: 2%;">
+                                                        <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Subject:  </span>
+                                                        <input type="text" class="form-control" style="height: 50px; width: 250px;" placeholder="Subject" value="Mathematics" >
+                                                     </div>
+                                                     <br>
+                                                     <div class="myrow" >
+                                                        <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Number Of Students:</span>
+                                                        <input type="number"min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Number Of Students" value="15">
+                                                    </div>
+                                                
+                                                
+                                                </li>
+                                            </div>
+
+                                            <div  class="col-md-3 col-lg-6 my-3">
+
+                                                <span class="display-26 text-secondary me-2 font-weight-600" style="margin-top: 2%; margin-right: 4%;">Location pin:</span>
+
+                                                <div id = 'map'></div>
+                                                
+                                            </div>
+
+                                        </div>
                                     </ul>
                                 
                                 <div class="row">
@@ -852,6 +893,111 @@
     <!--/ End Copyright -->
 </footer>
 <!--/ End Footer Area -->
+
+
+
+<script>
+
+    //map 
+    let count = 1; 
+  
+    const map = L.map('map').setView([30.00, 31.43], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+  
+            const defMarker = L.marker([30.00, 31.43]).addTo(map).bindPopup('Hello, Leaflet!');
+  
+    
+            defMarker.on('click', function () {
+                count--; 
+                map.removeLayer(defMarker); // Remove the marker when clicked
+            });
+  
+            map.on('click', function (e) {
+            if (count === 0) {
+              count++; 
+              
+            
+              
+            const latlng = e.latlng;
+            console.log('Selected location:', latlng);
+    
+            const marker = L.marker(latlng).addTo(map).bindPopup('Hello, Leaflet!');
+    
+            // Listen for the marker's click event
+            marker.on('click', function () {
+                count--; 
+                map.removeLayer(marker); // Remove the marker when clicked
+            });
+  
+          }
+    
+        
+    });
+    
+            const searchControl = L.Control.geocoder({
+            defaultMarkGeocode: false, 
+    }).addTo(map);
+    
+    searchControl.on('markgeocode', function (e) {
+        latlng = e.geocode.center;
+        console.log('Selected location:', latlng);
+        map.setView(latlng, 13)
+    
+      });
+
+
+    //map1  
+    let count1 = 0; 
+  
+  const map1 = L.map('map1').setView([30.09, 31.63], 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map1);
+
+          const defMarker1 = L.marker([30.09, 31.63]).addTo(map1).bindPopup('Hello, Leaflet!');
+
+  
+          defMarker1.on('click', function () {
+              map1.removeLayer(defMarker1); // Remove the marker when clicked
+          });
+
+          map1.on('click', function (e) {
+          if (count1 === 0) {
+            count1++; 
+            
+          
+            
+          const latlng1 = e.latlng;
+          console.log('Selected location:', latlng1);
+  
+          const marker1 = L.marker(latlng1).addTo(map1).bindPopup('Hello, Leaflet!');
+  
+          // Listen for the marker's click event
+          marker1.on('click', function () {
+              count1--; 
+              map1.removeLayer(marker1); // Remove the marker when clicked
+          });
+
+        }
+  
+      
+  });
+  
+          const searchControl1 = L.Control.geocoder({
+          defaultMarkGeocode: false, 
+  }).addTo(map1);
+  
+  searchControl1.on('markgeocode', function (e) {
+      latlng1 = e.geocode.center;
+      console.log('Selected location:', latlng1);
+      map1.setView(latlng1, 13)
+  
+    });
+
+    
+    </script>
 
 <script src="scriptReq.js"></script>
 <!-- jquery Min JS -->

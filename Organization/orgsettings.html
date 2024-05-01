@@ -347,7 +347,7 @@
 
 <script>
 
-  let count = 0; 
+  let count = 1; 
 
   const map = L.map('map').setView([30.05, 31.22], 13);
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -358,6 +358,7 @@
 
   
           defMarker.on('click', function () {
+            count--; 
               map.removeLayer(defMarker); // Remove the marker when clicked
           });
 

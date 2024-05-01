@@ -146,6 +146,8 @@ donorSignUpButt.addEventListener("click", function (event) {
 });
 
 const orgSignUpButt = document.getElementById("sign-up-org");
+const orgVerificationFileInput = document.getElementById("org-verification-file");
+
 
 orgSignUpButt.addEventListener("click", function (event) {
   const firstName = document.getElementById("first-name2");
@@ -172,6 +174,14 @@ orgSignUpButt.addEventListener("click", function (event) {
   governorate.style.border = "";
 
   let isValid = true;
+
+  if (orgVerificationFileInput.files.length === 0) {
+    alert("Please upload your verification file.");
+    orgVerificationFileInput.style.border = "1px solid red";
+    isValid = false;
+  } else {
+    orgVerificationFileInput.style.border = ""; // reset border if validation passes
+  }
   
   if (firstName.value == "") {
     firstName.style.border = "1px solid red";

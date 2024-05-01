@@ -33,7 +33,7 @@ const experror=document.querySelectorAll(".experror");
 for(let i=0;i<savebtns.length;i++){
    savebtns[i].addEventListener('click',(e)=>{
     if(expresstext[i].value==""){
-      experror[i].innerHTML="Kindly enter a message.";
+      experror[i].innerHTML='<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Kindly enter a message.</div>';
     }
     else{
       expresstext[i].value="";

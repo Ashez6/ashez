@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   if (type == "teacher") {
     navBar.style.display = "none";
+    const teacherForm = document.getElementById("teacher-form");
+    teacherForm.style.display = "";
   }
 });
 
@@ -162,6 +164,16 @@ updateButton.addEventListener("click", function (event) {
     if (cases.value == "") {
       cases.style.border = "1px solid red";
       r += "Please enter your the number of cases you can take.<br>";
+    }
+  }
+
+  if (type == "teacher") {
+    const classes = document.getElementById("pro-classes");
+
+    classes.style.border = "";
+    if (classes.value == "") {
+      classes.style.border = "1px solid red";
+      r += "Please enter your the number of classes.<br>";
     }
   }
 

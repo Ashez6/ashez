@@ -1,59 +1,80 @@
-
 //Filter
 
-const keywordsInput = document.getElementById('keywords');
-const filter1Checkboxes = document.querySelectorAll('.filter1');
-const filter2Checkboxes = document.querySelectorAll('.filter2');
+const keywordsInput = document.getElementById("keywords");
+const filter1Checkboxes = document.querySelectorAll(".filter1");
+const filter2Checkboxes = document.querySelectorAll(".filter2");
+const filter3Checkboxes = document.querySelectorAll(".filter3");
 
-const filterButton = document.getElementById('contact-submit');
-filterButton.addEventListener('click',applyFilters);
+const filterButton = document.getElementById("contact-submit");
+filterButton.addEventListener("click", applyFilters);
 function applyFilters() {
   const keywords = keywordsInput.value.toLowerCase();
-  const selected1 = Array.from(filter1Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase()); 
-  const selected2 = Array.from(filter2Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());   
+  const selected1 = Array.from(filter1Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
+  const selected2 = Array.from(filter2Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
+
+  const selected3 = Array.from(filter3Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
 
   // Filter logic here
-  const jobBoxes = document.querySelectorAll('.job-box');
-  jobBoxes.forEach(jobBox => {
-      const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
-      const shouldDisplay = matchKeywords(keywords, Name) && matchSelected(selected1, Name) && matchSelected(selected2, Name);
-      jobBox.style.display = shouldDisplay ? "" : "none";
+  const jobBoxes = document.querySelectorAll(".job-box");
+  jobBoxes.forEach((jobBox) => {
+    const Name = jobBox.querySelector(".job-content").textContent.toLowerCase();
+    const shouldDisplay =
+      matchKeywords(keywords, Name) &&
+      matchSelected(selected1, Name) &&
+      matchSelected(selected2, Name) &&
+      matchSelected(selected3, Name);
+    jobBox.style.display = shouldDisplay ? "" : "none";
   });
 }
 
 function matchKeywords(keywords, text) {
-  return keywords === '' || text.includes(keywords);
+  return keywords === "" || text.includes(keywords);
 }
 
 function matchSelected(selected, Name) {
-  if(selected.length === 0){
+  if (selected.length === 0) {
     return true;
   }
-  for(let i=0;i<selected.length;i++){
-      if(Name.includes(selected[i])){
+  for (let i = 0; i < selected.length; i++) {
+    if (selected[i] == "male") {
+      if (
+        (Name.includes("male") && !Name.includes("female")) ||
+        Name.includes("unisex")
+      ) {
         return true;
       }
+    } else if (selected[i] == "female") {
+      if (Name.includes(selected[i]) || Name.includes("unisex")) return true;
+    } else {
+      if (Name.includes(selected[i])) {
+        return true;
+      }
+    }
   }
   return false;
 }
 
+const quantities = document.querySelectorAll(".quantity");
+const fulfill = document.querySelectorAll(".btn-success");
+const errorlocs = document.querySelectorAll(".error");
 
-const quantities=document.querySelectorAll(".quantity");
-const fulfill=document.querySelectorAll(".btn-success");
-const errorlocs=document.querySelectorAll(".error");
-
-for(let i=0;i<fulfill.length;i++){
-  fulfill[i].addEventListener('click',(e)=>{
-    if(quantities[i].value<=0){
-      errorlocs[i].innerHTML='<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
-    }
-    else{
-      errorlocs[i].innerHTML="";
-      window.location.href = 'schedule.html';
+for (let i = 0; i < fulfill.length; i++) {
+  fulfill[i].addEventListener("click", (e) => {
+    if (quantities[i].value <= 0) {
+      errorlocs[i].innerHTML =
+        '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+    } else {
+      errorlocs[i].innerHTML = "";
+      window.location.href = "schedule.html";
     }
   });
 }
-
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //

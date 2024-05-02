@@ -1,7 +1,7 @@
 
 const confirmButton = document.getElementById("confirm-button");
 
-let count1 = 0;
+let count2 = 0;
 
 confirmButton.addEventListener("click", (e) => {
   const oldPass = document.getElementById("old-pass");
@@ -18,7 +18,7 @@ confirmButton.addEventListener("click", (e) => {
 
   if (oldPass.value == "" || newPass1.value == "" || newPass2.value == "") {
     addText.removeChild(document.getElementById("new-div"));
-    if (count1 == 1) count--;
+    if (count2 == 1) count2--;
     if (oldPass.value == "") {
       alert("please enter the old password");
       oldPass.style.border = "3px solid red";
@@ -36,21 +36,21 @@ confirmButton.addEventListener("click", (e) => {
       newPass1.value == newPass2.value &&
       !(newPass1.value == newPass2.value && newPass2.value == oldPass.value)
     ) {
-      if (count1 == 0) {
+      if (count2 == 0) {
         newDiv.style.color = "green";
         newDiv.innerText = "Confirmed";
         addText.appendChild(newDiv);
-        count1++;
+        count2++;
       }
     } else {
       if (newPass1.value != newPass2.value) {
         addText.removeChild(document.getElementById("new-div"));
-        if (count1 == 1) count--;
+        if (count2 == 1) count2--;
         alert("please enter matching new password values");
       }
       if (newPass1.value == newPass2.value && newPass2.value == oldPass.value) {
         addText.removeChild(document.getElementById("new-div"));
-        if (count1 == 1) count--;
+        if (count2 == 1) count2--;
         alert("old password can't be new password");
       }
     }

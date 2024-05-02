@@ -91,5 +91,3 @@ CloseDonation3.addEventListener("click", (e) => {
   viewDonation3Screen.style.visibility = "hidden";
 });
 
-
-

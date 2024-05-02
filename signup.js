@@ -16,7 +16,6 @@ donorH2.addEventListener("click", () => {
 });
 
 orgH2.addEventListener("click", () => {
-  map.invalidateSize();
 
   orgForm.style.display = "block";
   donorForm.style.display = "none";
@@ -24,6 +23,9 @@ orgH2.addEventListener("click", () => {
   donorH2.classList.add("inactive");
   orgH2.classList.remove("inactive");
   orgH2.classList.add("active");
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 0);
 });
 
 function validateEmail(email) {
@@ -44,6 +46,7 @@ function validateName(name) {
 const donorSignUpButt = document.getElementById("sign-up-donor");
 const donorTypeSelect = document.getElementById("donor-type");
 const verificationFileInput = document.getElementById("verification-file");
+const verificationLabel = document.getElementById("verificationLabel")
 
 donorTypeSelect.addEventListener("change", function () {
   if (
@@ -51,8 +54,11 @@ donorTypeSelect.addEventListener("change", function () {
     donorTypeSelect.value === "doctor"
   ) {
     verificationFileInput.style.display = "block";
+    verificationLabel.style.display = "block";
+
   } else {
     verificationFileInput.style.display = "none";
+    verificationLabel.style.display = "none";
   }
 });
 

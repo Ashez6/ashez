@@ -57,6 +57,7 @@ for(let i=0;i<fulfill.length;i++){
     }
     else{
       errorlocs[i].innerHTML="";
+      window.location.href = 'schedule.html';
     }
   });
 }

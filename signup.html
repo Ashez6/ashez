@@ -15,7 +15,7 @@
 
   <style>
     #map {
-      width: 80%;
+      width: 80%;  
       height: 300px;
       margin:auto;
         }
@@ -63,14 +63,14 @@
       <label for="governorate1">Governorate:</label>
       <input type="text" id="governorate1" placeholder="Governorate*" required />
   
-      <select class="nice-select form-control" id="donor-type" style="margin-left: 27%; margin-top: 10px;">
+      <select class="nice-select form-control" id="donor-type" style="margin-left: 27%; margin-top: 10px; margin-right: 20%;">
         <option value="">Select Donor Type</option>
         <option value="teacher">Teacher</option>
         <option value="doctor">Doctor</option>
         <option value="neither">Neither</option>
     </select>
-  
-    <input type="file" id="verification-file" style="display: none;" />
+    <label for="verification-file" id="verificationLabel" style="display: none; margin-bottom: 10px;">Upload your documents of verification:</label>
+    <input type="file" id="verification-file" style="display: none; margin-left: 8rem; margin-bottom: 10px;" />
     <input type="button" class="fadeIn fourth" value="Sign Up" style="cursor: pointer" id="sign-up-donor"/>
     </form>
   </section>
@@ -111,9 +111,11 @@
         <input type="text" id="governorate2" placeholder="Governorate*" required />
         <label for="org-verification-file">Upload your documents of verification:</label>
         <br>
-        <input type="file" id="org-verification-file">
+        <input type="file" id="org-verification-file" style="margin-left: 4rem;">
         <br>
         <label for="map">Select your Organization location on the map below</label>
+        <br>
+        
         <div id = 'map'></div>
 
         <input type="button" class="fadeIn fourth" value="Sign Up" style="cursor: pointer" id="sign-up-org"/>

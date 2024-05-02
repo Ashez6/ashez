@@ -1,4 +1,6 @@
-
+const deldiv= document.getElementById("deldiv");
+const newdiv=document.createElement("div");
+deldiv.append(newdiv);
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
@@ -63,6 +65,7 @@ viewDonation4.addEventListener("click", (e) => {
 const CloseDonation4 = document.getElementsByClassName("close-donation")[3];
 
 CloseDonation4.addEventListener("click", (e) => {
+  newdiv.innerHTML="";
   viewDonation4Screen.style.display = "none";
   viewDonation4Screen.style.visibility = "hidden";
 });
@@ -73,10 +76,11 @@ CloseDonation4.addEventListener("click", (e) => {
 const delete1 = document.getElementById("delete1");
 
   delete1.addEventListener("click", (e) => {
-  alert("Account deleted");
   const del= document.getElementById("donor1");
   viewDonation1Screen.remove();
   del.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
+
 });
 
 
@@ -84,30 +88,33 @@ const delete1 = document.getElementById("delete1");
 const delete2 = document.getElementById("delete2");
 
   delete2.addEventListener("click", (e) => {
-  alert("Account deleted");
   const del= document.getElementById("donor2");
   viewDonation2Screen.remove();
   del.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
+
 });
 
 
 const delete3 = document.getElementById("delete3");
 
   delete3.addEventListener("click", (e) => {
-  alert("Account deleted");
   const del= document.getElementById("donor3");
   viewDonation3Screen.remove();
   del.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
+
 });
 
 
 const delete4 = document.getElementById("delete4");
 
   delete4.addEventListener("click", (e) => {
-  alert("Account deleted");
   const del= document.getElementById("donor4");
   viewDonation4Screen.remove();
   del.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
+
 });
 
 

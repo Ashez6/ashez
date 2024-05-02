@@ -126,12 +126,11 @@ CloseDonation4.addEventListener("click", (e) => {
 
 const delete1 = document.getElementById("delete1");
 
-
-delete1.addEventListener("click", (e) => {
+  delete1.addEventListener("click", (e) => {
   const del = document.getElementById("org1");
   viewDonation1Screen.remove();
   del.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organisation has been deleted successfully.</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been deleted successfully.</div>';
 });
 
 const delete2 = document.getElementById("delete2");
@@ -140,18 +139,17 @@ const delete2 = document.getElementById("delete2");
   const del = document.getElementById("org2");
   viewDonation2Screen.remove();
   del.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organisation has been deleted successfully.</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been deleted successfully.</div>';
 
 });
 
 const delete3 = document.getElementById("delete3");
 
   delete3.addEventListener("click", (e) => {
-
   const del = document.getElementById("org3");
   viewDonation3Screen.remove();
   del.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organisation has been deleted successfully.</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been deleted successfully.</div>';
 
 });
 
@@ -161,6 +159,6 @@ const delete4 = document.getElementById("delete4");
   const del = document.getElementById("org4");
   viewDonation4Screen.remove();
   del.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organisation has been deleted successfully.</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been deleted successfully.</div>';
 
 });

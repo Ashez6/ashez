@@ -1,4 +1,7 @@
 
+const deldiv= document.getElementById("deldiv");
+const newdiv=document.createElement("div");
+deldiv.append(newdiv);
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
@@ -61,8 +64,8 @@ viewDonation4.addEventListener("click", (e) => {
 });
 
 const CloseDonation4 = document.getElementsByClassName("close-donation")[3];
-
-CloseDonation4.addEventListener("click", (e) => {
+  newdiv.innerHTML="";
+  CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.display = "none";
   viewDonation4Screen.style.visibility = "hidden";
 });
@@ -71,19 +74,21 @@ CloseDonation4.addEventListener("click", (e) => {
 const accept1 = document.getElementById("accept1");
 
   accept1.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
   const acc = document.getElementById("doctor1");
   viewDonation1Screen.remove();
   acc.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+
 });
 
 const reject1 = document.getElementById("reject1");
 
   reject1.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
   const rej= document.getElementById("doctor1");
   viewDonation1Screen.remove();
   rej.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+
 });
 
 
@@ -92,38 +97,42 @@ const reject1 = document.getElementById("reject1");
 const accept2 = document.getElementById("accept2");
 
   accept2.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
   const acc = document.getElementById("doctor2");
   viewDonation2Screen.remove();
   acc.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+
 });
 
 const reject2 = document.getElementById("reject2");
 
   reject2.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
   const rej= document.getElementById("doctor2");
   viewDonation2Screen.remove();
   rej.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+
 });
 
 
 const accept3 = document.getElementById("accept3");
 
   accept3.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
   const acc = document.getElementById("doctor3");
   viewDonation3Screen.remove();
   acc.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+
 });
 
 const reject3 = document.getElementById("reject3");
 
   reject3.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
   const rej= document.getElementById("doctor3");
   viewDonation3Screen.remove();
   rej.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+
 });
 
 
@@ -131,18 +140,20 @@ const reject3 = document.getElementById("reject3");
 const accept4 = document.getElementById("accept4");
 
   accept4.addEventListener("click", (e) => {
-  alert("Pro Bono request accepted and removed from pending requests ");
   const acc = document.getElementById("doctor4");
   viewDonation4Screen.remove();
   acc.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+
 });
 
 const reject4 = document.getElementById("reject4");
 
   reject4.addEventListener("click", (e) => {
-  alert("Pro Bono request rejected  and removed from pending requests");
   const rej= document.getElementById("doctor4");
   viewDonation4Screen.remove();
   rej.remove();
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+
 });
 

@@ -6,12 +6,14 @@
     <title>Registered Organizations</title>
     <link rel="stylesheet" href="../lists.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
     <!-- Favicon -->
     <link rel="icon" href="img/ashez_transparent.png">
 		
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
+   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Nice Select CSS -->
@@ -37,69 +39,77 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="../popout.css">
-    <link rel="stylesheet" href="../alert.css">
-    
     <style>
-        #map{
-            min-height: 180px;
-            margin-bottom: 5% 
-        }
-        #map1{
-            min-height: 180px;
-            margin-bottom: 5% 
-        }
-        #map2{
-            min-height: 180px;
-            margin-bottom: 5% 
-        }
-    </style>
+    #map {
+         width: 100%;
+         height: 200px;
+         margin-bottom: 10%;
+     }
+     #map1 {
+         width: 100%;
+         height: 200px;
+         margin-bottom: 10%;
+     }
+     #map2 {
+         width: 100%;
+         height: 200px;
+         margin-bottom: 10%;
+     }
+     #map3 {
+         width: 100%;
+         height: 200px;
+         margin-bottom: 10%;
+     }
+     
+     </style>    
 
 </head>
 <body>
     <!-- Header Area -->
- <header class="header" >
-    <!-- Header Inner -->
-    <div class="header-inner" >
-        <div class="container" >
-            <div class="inner"  >
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-12">
-                        <!-- Start Logo -->
-                        <div class="logo">
-                        <a href="homepage.html"><img src="img/ASHEZ.png" alt="#"></a>
+    <header class="header" >
+        <!-- Header Inner -->
+        <div class="header-inner" >
+            <div class="container" >
+                <div class="inner"  >
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <!-- Start Logo -->
+                            <div class="logo">
+                            <a href="homepage.html"><img src="img/ASHEZ.png" alt="#"></a>
+                            </div>
+                            <!-- End Logo -->
                         </div>
-                        <!-- End Logo -->
-                    </div>
-                    <div class="col-lg-7 col-md-9 col-12">
-                        <!-- Main Menu -->
-                        <div class="main-menu">
-                            <nav class="navigation" style="align-self: flex-start;">
-                                <ul class="nav menu" >
-                                    <li ><a href="admin_home.html">Home</i></a>
-                                    </li>
-                                   
-                                        </ul>
-                           
-                            </nav>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <!-- Main Menu -->
+                            <div class="main-menu">
+                                <nav class="navigation" style="align-self: flex-start;">
+                                    <ul class="nav menu" >
+                                        <li ><a href="admin_home.html">Home</i></a>
+                                        </li>
+                                     
+                            
+                                            </ul>
+                               
+                                </nav>
+                            </div>
+                            <!--/ End Main Menu -->
                         </div>
-                        <!--/ End Main Menu -->
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-12" id = "icon-column">
-                        <div class="icon-container">
-                            <nav class="navigation">
-                                <ul class="nav menu" style="display: flex; align-items: center;" >
-                                    <li ><a href="settings.html" ><i class="bi bi-gear ashez-icon" id = "settings-gear"></i></a></li>
-                                    <a href="../index.html" class=" logoutbtn  d-block w-100 d-sm-inline-block btn-light delete-button" style="max-width: 96px; max-height: 45px;" id="log-out" >Logout</a>
-                                </ul>
-                            </nav>
+                        <div class="col-lg-3 col-md-3 col-12" id = "icon-column">
+                            <div class="icon-container">
+                                <nav class="navigation">
+                                    <ul class="nav menu" style="display: flex; align-items: center;" >
+                                        <li ><a href="settings.html" ><i class="bi bi-gear ashez-icon" id = "settings-gear"></i></a></li>
+                                        <a href="../index.html" class=" logoutbtn  d-block w-100 d-sm-inline-block btn-light delete-button" style="max-width: 96px; max-height: 45px;" id="log-out" >Logout</a>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
+                        
                     </div>
-                    
                 </div>
             </div>
         </div>
-    </div>
-    <!--/ End Header Inner -->
+        <!--/ End Header Inner -->
 </header>
 <!-- End Header Area -->  
 
@@ -117,10 +127,10 @@
        </div>
     </div>
 </section>
-
 <div id="deldiv">
 
 </div>
+
 
 <br><br>
                     <div class="filter-result">
@@ -358,16 +368,22 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> dreambuilders@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 7 Talaat Harb Street , Downtown Cairo,Egypt</li>
                                         <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; max-width: 300px;" id="delete1">Delete Organization</a>  
-                                </div>
 
+                                </div>
 
                                 <div class="col-lg-4">
                                     <ul class="list-unstyled mb-1-9">
                                                                         
-                                        <div id="map"></div>
+                                        <div class="form-group">
+
+                                            <div id = "map"></div>
+                                          </div>
+                                          <br>
+                        
                                      </ul>
                                     
                                 </div>
+                          
 
                             </div>
                             
@@ -417,7 +433,18 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 18 El-Horreya Street,Smouha,Alexandria,Egypt</li>
                                         <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; max-width: 300px;" id="delete2">Delete Organization</a> 
                                 </div>
-                            
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map1"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
 
                             </div>
                             
@@ -468,6 +495,18 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> gratitudegateway@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 6 El Gezira Street,Zamalek,Cairo,Egypt</li>
                                         <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; max-width: 300px;"  id="delete3">Delete Organization</a> 
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map2"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
                                 </div>
               
 
@@ -520,6 +559,18 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 123 El Montaza Street, Alexandria,Egypt</li>
                                         <a href = "#" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; max-width: 300px;" id="delete4">Delete Organization</a> 
                                 </div>
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map3"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
             
 
                             </div>
@@ -533,6 +584,82 @@
     
     </div>
 </div>
+
+
+<script>
+
+  
+  
+    const map = L.map('map').setView([30.045648769723908, 31.23675169473278], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+    
+            const latlng =[30.045648769723908, 31.23675169473278];
+            console.log('Selected location:', latlng);
+    
+            const marker = L.marker(latlng).addTo(map).bindPopup(' 7 Talaat Harb Street , Downtown Cairo,Egypt');
+
+    
+    
+    </script>
+
+
+
+
+<script>
+
+  
+    const map1 = L.map('map1').setView([31.21799764770058, 29.94234199001446], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map1);
+    
+            const latlng1 =[31.21799764770058, 29.94234199001446];
+            console.log('Selected location:', latlng1);
+    
+            const marker1 = L.marker(latlng1).addTo(map1).bindPopup('18 El-Horreya Street,Smouha,Alexandria,Egypt');
+
+    
+    
+    </script>
+    
+
+
+    <script>
+
+  
+        const map2 = L.map('map2').setView([30.06188542601274, 31.218938454752227], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map2);
+        
+                const latlng2 =[30.06188542601274, 31.218938454752227];
+                console.log('Selected location:', latlng2);
+        
+                const marker2 = L.marker(latlng2).addTo(map2).bindPopup('6 El Gezira Street,Zamalek,Cairo,Egypt');
+    
+        
+        
+        </script>
+
+<script>
+
+  
+            const map3 = L.map('map3').setView([31.288146971919964, 30.015282449306987], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map3);
+    
+            const latlng3 =[31.288146971919964, 30.015282449306987];
+            console.log('Selected location:', latlng3);
+    
+            const marker3 = L.marker(latlng3).addTo(map3).bindPopup('123 El Montaza Street, Alexandria,Egypt');
+
+    
+    
+    </script>
+
 <!-- Footer Area -->
 <footer id="footer" class="footer ">
     <!-- Footer Top -->

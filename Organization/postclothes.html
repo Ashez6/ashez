@@ -39,6 +39,8 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
+
 		
 
 </head>
@@ -105,6 +107,7 @@
 </header>
 <!-- End Header Area -->   
 
+
 <div class="container">
 
 
@@ -117,7 +120,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id = "file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -135,20 +138,20 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="username">Type</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter type of clothes">
+                    <input type="text" class="form-control" id="type" aria-describedby="usernameHelp" placeholder="Enter type of clothes">
                   </div>
                   <br>
 
                 <div class="form-group" >
                     <label for="username">Select the age group in which the clothes will be suitable for</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Age" selected>Age</option>
+                    <select class="form-select" style="height: 50px; width: 250px;" id = 'age' >
+                        <option value="" selected>Age</option>
                         <option value="0-4" >0-4</option>
                         <option value="5-11">5-11</option>
                         <option value="12-18">12-18</option>
@@ -161,8 +164,8 @@
                 <div class="form-group" >
                     <label for="username">Select the gender which the clothes is for</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="gender" selected>gender</option>
+                    <select class="form-select" style="height: 50px; width: 250px;" id = "gender" >
+                        <option value="" selected>Gender</option>
                         <option value="Male" >Male</option>
                         <option value="Female">Female</option>
                         <option value="Unisex">Unisex</option>
@@ -174,8 +177,8 @@
             <div class="form-group" >
                 <label for="username">Select the season which the clothes is for</label>
                 <br>
-                <select class="form-select" style="height: 50px; width: 250px;" >
-                    <option value="gender" selected>Season</option>
+                <select class="form-select" id = "season" style="height: 50px; width: 250px;" >
+                    <option value="" selected>Season</option>
                     <option value="Winter" >Winter</option>
                     <option value="Summer">Summer</option>
                     <option value="Spring">Spring</option>
@@ -186,7 +189,7 @@
         <br>
         <div class="form-group">
             <label for="username">Material</label>
-            <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter material of the clothes">
+            <input type="text" class="form-control" id="material" aria-describedby="usernameHelp" placeholder="Enter material of the clothes">
           </div>   
         
     
@@ -194,10 +197,12 @@
             <label for="username">Quantity</label>
             <br>
             
-            <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
+            <input type="number" min="0" id = "quantity" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
         </div>
 
             <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+            <div id = "append-here"></div>
+
             </form>
             </div>
             <div class="tab-pane" id="security">

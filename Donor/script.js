@@ -218,7 +218,10 @@ updateButton.addEventListener("click", function (event) {
       "</div>";
     newDiv.style.marginTop = "5%";
     const profile = document.getElementById("profile");
-    profile.append(newDiv);
+    if (profile.hasChildNodes()) {
+      profile.removeChild(profile.firstChild);
+    }
+    profile.appendChild(newDiv);
     return;
   }
 
@@ -229,7 +232,11 @@ updateButton.addEventListener("click", function (event) {
       '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     newDiv.style.marginTop = "5%";
     const profile = document.getElementById("profile");
-    profile.append(newDiv);
+
+    if (profile.hasChildNodes()) {
+      profile.removeChild(profile.firstChild);
+    }
+    profile.appendChild(newDiv);
 
     return;
   }
@@ -247,7 +254,10 @@ updateButton.addEventListener("click", function (event) {
   }
   newDiv.style.marginTop = "5%";
   const profile = document.getElementById("profile");
-  profile.append(newDiv);
+  if (profile.hasChildNodes()) {
+    profile.removeChild(profile.firstChild);
+  }
+  profile.appendChild(newDiv);
 });
 
 const teachButt = document.getElementById("teacher-butt");

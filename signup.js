@@ -16,7 +16,6 @@ donorH2.addEventListener("click", () => {
 });
 
 orgH2.addEventListener("click", () => {
-
   orgForm.style.display = "block";
   donorForm.style.display = "none";
   donorH2.classList.remove("active");
@@ -34,7 +33,7 @@ function validateEmail(email) {
 }
 
 function validatePhoneNumber(phoneNumber) {
-  const phonePattern = /^\d{11}$/;
+  const phonePattern = /^\+?\d{10,}$/;
   return phonePattern.test(phoneNumber);
 }
 
@@ -46,7 +45,7 @@ function validateName(name) {
 const donorSignUpButt = document.getElementById("sign-up-donor");
 const donorTypeSelect = document.getElementById("donor-type");
 const verificationFileInput = document.getElementById("verification-file");
-const verificationLabel = document.getElementById("verificationLabel")
+const verificationLabel = document.getElementById("verificationLabel");
 
 donorTypeSelect.addEventListener("change", function () {
   if (
@@ -55,7 +54,6 @@ donorTypeSelect.addEventListener("change", function () {
   ) {
     verificationFileInput.style.display = "block";
     verificationLabel.style.display = "block";
-
   } else {
     verificationFileInput.style.display = "none";
     verificationLabel.style.display = "none";
@@ -73,6 +71,7 @@ donorSignUpButt.addEventListener("click", function (event) {
   const genderSelect = document.getElementById("gender1");
   const firstName = document.getElementById("first-name1");
   const lastName = document.getElementById("last-name1");
+  const username = document.getElementById("username1");
   const email = document.getElementById("email1");
   const password = document.getElementById("signup-password1");
   const number = document.getElementById("contact-number1");
@@ -87,6 +86,7 @@ donorSignUpButt.addEventListener("click", function (event) {
 
   firstName.style.border = "";
   lastName.style.border = "";
+  username.style.border = "";
   email.style.border = "";
   password.style.border = "";
   number.style.border = "";
@@ -102,6 +102,12 @@ donorSignUpButt.addEventListener("click", function (event) {
     lastName.style.border = "1px solid red";
     isValid = false;
   }
+
+  if (username.value == "") {
+    username.style.border = "1px solid red";
+    isValid = false;
+  }
+
   if (password.value == "") {
     password.style.border = "1px solid red";
     isValid = false;
@@ -130,9 +136,11 @@ donorSignUpButt.addEventListener("click", function (event) {
   if (!validateEmail(email.value)) {
     email.style.border = "1px solid red";
     isValid = false;
+    alert("Please enter a valid email");
   }
   if (!validatePhoneNumber(number.value)) {
     number.style.border = "1px solid red";
+    alert("Please enter a valid phone number. [+country code][10 digits]");
     isValid = false;
   }
 
@@ -163,12 +171,11 @@ const orgVerificationFileInput = document.getElementById(
   "org-verification-file"
 );
 
-
-
 orgSignUpButt.addEventListener("click", function (event) {
   const firstName = document.getElementById("first-name2");
   const lastName = document.getElementById("last-name2");
   const email = document.getElementById("email2");
+  const username = document.getElementById("username2");
   const password = document.getElementById("signup-password2");
   const number = document.getElementById("contact-number2");
   const orgName = document.getElementById("org-name2");
@@ -180,6 +187,7 @@ orgSignUpButt.addEventListener("click", function (event) {
 
   firstName.style.border = "";
   lastName.style.border = "";
+  username.style.border = "";
   email.style.border = "";
   password.style.border = "";
   number.style.border = "";
@@ -207,6 +215,12 @@ orgSignUpButt.addEventListener("click", function (event) {
     lastName.style.border = "1px solid red";
     isValid = false;
   }
+
+  if (username.value == "") {
+    username.style.border = "1px solid red";
+    isValid = false;
+  }
+
   if (password.value == "") {
     password.style.border = "1px solid red";
     isValid = false;
@@ -242,10 +256,12 @@ orgSignUpButt.addEventListener("click", function (event) {
   }
   if (!validateEmail(email.value)) {
     email.style.border = "1px solid red";
+    alert("Please enter a valid email");
     isValid = false;
   }
   if (!validatePhoneNumber(number.value)) {
     number.style.border = "1px solid red";
+    alert("Please enter a valid phone number. [+country code][10 digits]");
     isValid = false;
   }
 

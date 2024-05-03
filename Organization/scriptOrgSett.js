@@ -131,6 +131,7 @@ updateButton.addEventListener("click", function (event) {
   const area = document.getElementById("area");
   const governorate = document.getElementById("governorate");
   const type = document.getElementById("type");
+  const address = document.getElementById("address");
 
   document.getElementById("fullName").style.border = "";
   document.getElementById("lastName").style.border = "";
@@ -142,6 +143,7 @@ updateButton.addEventListener("click", function (event) {
   area.style.border = "";
   governorate.style.border = "";
   type.style.border = "";
+  address.style.border = "";
 
   const nameRegex = /^[A-Za-z\s]+$/;
   if (!nameRegex.test(firstName)) {

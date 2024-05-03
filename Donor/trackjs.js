@@ -57,7 +57,7 @@ if (reffrom === "sched") {
     title.textContent = localStorage.getItem("title");
     photo.src = localStorage.getItem("photo");
     boxdate.textContent = "Date Fulfilled: " + day + "-" + month + "-" + year;
-    boxpatient.textContent = "Patient Name: " + localStorage.getItem("patient");
+    boxpatient.textContent =  localStorage.getItem("patient");
     box.style.display = "";
   } else {
     const box = document.getElementById("teacherbox");

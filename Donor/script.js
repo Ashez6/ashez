@@ -202,6 +202,7 @@ updateButton.addEventListener("click", function (event) {
       r += "Please enter the subjects that you can teach.<br>";
     }
   }
+  const profile = document.getElementById("profile1");
 
   if (r != "") {
     const newDiv = document.createElement("div");
@@ -248,7 +249,6 @@ updateButton.addEventListener("click", function (event) {
       '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You are currently a donor who is not a teacher or a doctor. </div>';
   }
   newDiv.style.marginTop = "5%";
-  const profile = document.getElementById("profile");
   if (profile.hasChildNodes()) {
     profile.removeChild(profile.firstChild);
   }

@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
 
 </head>
@@ -118,7 +119,7 @@
               </div>
               <br />
               <div class="row">
-                <input type="file" class="btn photobtn" />
+                <input type="file" id="file-here" class="btn photobtn" />
               </div>
             </div>
           </div>
@@ -134,7 +135,7 @@
                     <label for="fullName">Title</label>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control" id="title"
                       placeholder="Enter title of your donation"
                     />
                   </div>
@@ -143,7 +144,7 @@
                     <label for="usage">Usage</label>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control" id="usage"
                       placeholder="Enter usage here"
                     />
                   </div>
@@ -154,7 +155,7 @@
                     <input
                       type="number"
                       min="0"
-                      class="form-control"
+                      class="form-control" id="quantity"
                       style="height: 50px; width: 250px"
                       placeholder="Enter the quantity required"
                     />
@@ -164,11 +165,11 @@
                     <label for="type">Type</label>
                     <br />
                     <select
-                      class="form-select"
+                      class="form-select" id="type"
                       style="height: 50px; width: 250px"
                       id="type-select"
                     >
-                      <option value="Type" selected>Type</option>
+                      <option value="" selected>Type</option>
                       <option value="Medications">Medications</option>
                       <option value="Medical Equipment">
                         Medical Equipment
@@ -185,6 +186,9 @@
                     style="margin-left: 550px"
                   >
                     Post Request
+                    <div id="append-here">
+
+                    </div>
                   </button>
                 </form>
               </div>

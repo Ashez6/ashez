@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
 
 </head>
@@ -117,7 +118,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id="file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -135,7 +136,7 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                
@@ -143,8 +144,8 @@
                 <div class="form-group" >
                     <label for="username">Type</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Unisex"selected>Type</option>
+                    <select class="form-select" id="type" style="height: 50px; width: 250px;" >
+                        <option value=""selected>Type</option>
                         <option value="School Books" >School Books</option>
                         <option value="Stationary" >Stationary</option>
 
@@ -156,12 +157,15 @@
                 <label for="username">Quantity</label>
                 <br>
                 
-                <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
+                <input type="number" min="0" class="form-control" id="quantity" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
             </div>
             <br>
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+                <div id = "append-here"></div>
+
               </form>
+
             </div>
             <div class="tab-pane" id="security">
               <h6>SECURITY SETTINGS</h6>

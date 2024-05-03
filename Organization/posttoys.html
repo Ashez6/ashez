@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
 
 </head>
@@ -117,7 +118,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id="file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -135,15 +136,15 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
 
                 <div class="form-group" >
                     <label for="username">Select the age group in which the toy is for</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Age" selected>Age</option>
+                    <select class="form-select" id="age" style="height: 50px; width: 250px;" >
+                        <option value="" selected>Age</option>
                         <option value="0-4" >0-4</option>
                         <option value="5-11">5-11</option>
                         <option value="12-18">12-18</option>
@@ -156,8 +157,8 @@
                 <div class="form-group" >
                     <label for="username">Select the gender which the toy is for</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="gender" selected>gender</option>
+                    <select class="form-select" id="gender" style="height: 50px; width: 250px;" >
+                        <option value="" selected>gender</option>
                         <option value="Male" >Male</option>
                         <option value="Female">Female</option>
                         <option value="Unisex">Unisex</option>
@@ -170,7 +171,7 @@
                     <label for="username">Quantity</label>
                     <br>
                     
-                    <input type="number" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
+                    <input type="number" id="quantity" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
                 </div>
                 <br>
                 
@@ -178,8 +179,8 @@
                 <div class="form-group" >
                     <label for="username">Select the category of the toy requested</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Unisex"selected>category</option>
+                    <select class="form-select" id="category" style="height: 50px; width: 250px;" >
+                        <option value=""selected>category</option>
                         <option value="gender" >Dolls</option>
                         <option value="Male" >Outdoor</option>
                         <option value="Female">Sports</option>
@@ -194,6 +195,7 @@
             <br>
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+              <div id="append-here"></div>
               </form>
             </div>
             <div class="tab-pane" id="security">

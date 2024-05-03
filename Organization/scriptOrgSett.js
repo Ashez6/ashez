@@ -1,105 +1,120 @@
-
 const confirmButton = document.getElementById("confirm-button");
 
-let count2 = 0;
-
 confirmButton.addEventListener("click", (e) => {
+  let errorMessage = "";
   const oldPass = document.getElementById("old-pass");
   const newPass1 = document.getElementById("new-pass1");
   const newPass2 = document.getElementById("new-pass2");
-  const newDiv = document.createElement("div");
-  newDiv.id = "new-div";
-  const addText = document.getElementById("add-confirm");
-  addText.appendChild(newDiv);
 
   oldPass.style.border = "";
   newPass1.style.border = "";
   newPass2.style.border = "";
 
   if (oldPass.value == "" || newPass1.value == "" || newPass2.value == "") {
-    addText.removeChild(document.getElementById("new-div"));
-    if (count2 == 1) count2--;
     if (oldPass.value == "") {
-      alert("please enter the old password");
-      oldPass.style.border = "3px solid red";
+      errorMessage += "Please enter the old password.<br>";
+      oldPass.style.border = "1px solid red";
     }
     if (newPass1.value == "") {
-      alert("please enter the new password");
-      newPass1.style.border = "3px solid red";
+      errorMessage += "Please enter the new password<br>";
+      newPass1.style.border = "1px solid red";
     }
     if (newPass2.value == "") {
-      alert("please enter the confirmation for the new password");
-      newPass2.style.border = "3px solid red";
+      errorMessage += "Please enter the confirmation for the new password<br>";
+      newPass2.style.border = "1px solid red";
     }
   } else {
     if (
       newPass1.value == newPass2.value &&
       !(newPass1.value == newPass2.value && newPass2.value == oldPass.value)
     ) {
-      if (count2 == 0) {
-        newDiv.style.color = "green";
-        newDiv.innerText = "Confirmed";
-        addText.appendChild(newDiv);
-        count2++;
-      }
     } else {
       if (newPass1.value != newPass2.value) {
-        addText.removeChild(document.getElementById("new-div"));
-        if (count2 == 1) count2--;
-        alert("please enter matching new password values");
+        errorMessage += "Please enter matching new password values<br>";
       }
       if (newPass1.value == newPass2.value && newPass2.value == oldPass.value) {
-        addText.removeChild(document.getElementById("new-div"));
-        if (count2 == 1) count2--;
-        alert("old password can't be new password");
+        errorMessage += "Old password can't be new password<br>";
       }
     }
   }
+
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("add-confirm");
+  newDiv.style.marginTop = "5%";
+
+  if (errorMessage == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
+    newDiv.innerHTML =
+      '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
+      errorMessage +
+      "</div>";
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
+  }
 });
 
-
 const updateButt = document.getElementById("update-button");
-
-let count = 0;
 
 updateButt.addEventListener("click", (e) => {
   const fromTime = document.getElementById("from-time");
   const toTime = document.getElementById("to-time");
-  const newDiv = document.createElement("div");
-  newDiv.id = "new-div";
-  const addText = document.getElementById("add-update");
-  addText.appendChild(newDiv);
 
   fromTime.style.border = "";
   toTime.style.border = "";
 
+  let errorMessage = "";
+
   if (fromTime.value == "" || toTime.value == "") {
-    addText.removeChild(document.getElementById("new-div"));
-    if (count == 1) count--;
     if (fromTime.value == "") {
-      alert("Please enter the 'From Time' ");
-      fromTime.style.border = "3px solid red";
+      errorMessage += "Please enter the 'From Time'<br>";
+      fromTime.style.border = "1px solid red";
     }
     if (toTime.value == "") {
-      alert("please enter the 'To Time'");
-      toTime.style.border = "3px solid red";
-    }
-  } else {
-    if (count == 0) {
-      newDiv.style.color = "green";
-      newDiv.innerText = "Confirmed";
-      addText.appendChild(newDiv);
-      count++;
+      errorMessage += "please enter the 'To Time'<br>";
+      toTime.style.border = "1px solid red";
     }
   }
-});
 
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("add-drop");
+  newDiv.style.marginTop = "5%";
+
+  if (errorMessage == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
+    newDiv.innerHTML =
+      '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
+      errorMessage +
+      "</div>";
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
+  }
+});
 
 const updateButton = document.getElementById("update-profile");
 
 // Profile info validation
-
-let countUpdate = 0;
 
 updateButton.addEventListener("click", function (event) {
   event.preventDefault();
@@ -116,8 +131,6 @@ updateButton.addEventListener("click", function (event) {
   const area = document.getElementById("area");
   const governorate = document.getElementById("governorate");
   const type = document.getElementById("type");
-
-  const fileInput = document.getElementById("fileInput");
 
   document.getElementById("fullName").style.border = "";
   document.getElementById("lastName").style.border = "";
@@ -149,12 +162,11 @@ updateButton.addEventListener("click", function (event) {
     r += "Please enter a username.<br>";
   }
 
-
   if (gender == "") {
     document.getElementById("gender").style.border = "1px solid red";
     r += "Please enter your gender.<br>";
   }
-  
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email) || email == "") {
     document.getElementById("email").style.border = "1px solid red";
@@ -182,35 +194,38 @@ updateButton.addEventListener("click", function (event) {
     r += "Please enter your governorate.<br>";
   }
 
-  
   if (type.value == "") {
     address.style.border = "1px solid red";
     r += "Please enter your organization type .<br>";
   }
 
-  
-  if (r != "") {
-    countUpdate--;
-    const newDiv = document.createElement("div");
-    console.log(r);
+  if (count1 != 1) {
+    r += "Please enter your organization address. <br>";
+  }
+
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("update-prof");
+
+  newDiv.style.marginTop = "5%";
+
+  if (r == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
     newDiv.innerHTML =
       '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
       r +
       "</div>";
-    newDiv.style.marginTop = "5%";
-    const profile = document.getElementById("profile");
-    profile.append(newDiv);
-    return;
-  }
 
-  if (countUpdate == 0) {
-    countUpdate++;
-    const newDiv = document.createElement("div");
-    newDiv.innerHTML =
-        '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> Organization info updated successfully. </div>';
-    
-    newDiv.style.marginTop = "5%";
-    const profile = document.getElementById("profile");
-    profile.append(newDiv);
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
   }
 });

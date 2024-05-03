@@ -1,6 +1,73 @@
 const alertloc=document.getElementById("alertloctrack");
 const urlParams = new URLSearchParams(window.location.search);
-const data = urlParams.get('data');
-if (data === 'example') {
+const reffrom = urlParams.get('reffrom');
+if (reffrom === 'sched') {
     alertloc.innerHTML='<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div> <strong>Success!</strong> Donation Fulfilled. Thanks for your generosity!</div>';
+    const dontype=localStorage.getItem('dontype');
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1; // Months are zero-based, so we add 1
+    var day = currentDate.getDate();
+    if(dontype=='item'){
+        const box=document.getElementById('itembox');
+        const title=document.getElementById('itemtitle');
+        const photo=document.getElementById('itemphoto');
+        const boxdate=document.getElementById('boxdate1');
+        const boxquantity=document.getElementById('boxquantity1');
+        const slot=document.getElementById('day');
+        let time="";
+        const timing=localStorage.getItem('timeslot');
+        if(timing=='morning'){
+            time="10:30 AM";
+        }
+        else if(timing=='afternoon'){
+            time="1:30 PM";
+        }
+        else if(timing=='evening'){
+            time="4:30 PM";
+        }
+        else{
+            time="7:30 PM";
+        }
+        slot.textContent='Wednesday '+ time;
+
+        title.textContent=localStorage.getItem('title');
+        photo.src=localStorage.getItem('photo');
+        boxdate.textContent='Date Fulfilled: '+day+'-'+month+'-'+year;
+        boxquantity.textContent='Quantity Donated: '+localStorage.getItem('quantity');
+        box.style.display="";
+    }
+    else if(dontype='doc'){
+        const box=document.getElementById('docbox');
+        const title=document.getElementById('doctitle');
+        const photo=document.getElementById('docphoto');
+        const boxdate=document.getElementById('boxdate2');
+        const boxpatient=document.getElementById('boxpatient');
+        const eta=document.getElementById('time2');
+        const slot=document.getElementById('day2');
+
+        title.textContent=localStorage.getItem('title');
+        photo.src=localStorage.getItem('photo');
+        boxdate.textContent='Date Fulfilled: '+day+'-'+month+'-'+year;
+        boxpatient.textContent='Patient Name: '+localStorage.getItem('patient');
+        box.style.display="";
+    }
+    else{
+        const box=document.getElementById('teacherbox');
+        const title=document.getElementById('teachertitle');
+        const photo=document.getElementById('teacherphoto');
+        const boxdate=document.getElementById('boxdate3');
+        const boxquantity=document.getElementById('boxquantity3');
+        const boxaddress=document.getElementById('boxaddress');
+        const eta=document.getElementById('time3');
+        const slot=document.getElementById('day3');
+
+        title.textContent=localStorage.getItem('title');
+        photo.src=localStorage.getItem('photo');
+        boxdate.textContent='Date Fulfilled: '+day+'-'+month+'-'+year;
+        boxquantity.textContent='Number of Students: '+localStorage.getItem('quantity');
+        boxaddress.textContent='Address: '+ localStorage.getItem('address');
+        box.style.display="";
+    }
 }
+

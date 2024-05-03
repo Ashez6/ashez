@@ -59,18 +59,24 @@ function matchSelected(selected, Name) {
 
 filterButton.addEventListener("click", applyFilters);
 
-const quantities = document.querySelectorAll(".quantity");
-const fulfill = document.querySelectorAll(".btn-success");
-const errorlocs = document.querySelectorAll(".error");
+const quantities=document.querySelectorAll(".quantity");
+const fulfill=document.querySelectorAll(".btn-success");
+const errorlocs=document.querySelectorAll(".error");
+const titles=document.querySelectorAll(".text-white");
+const photos=document.querySelectorAll("photos");
 
-for (let i = 0; i < fulfill.length; i++) {
-  fulfill[i].addEventListener("click", (e) => {
-    if (quantities[i].value <= 0) {
-      errorlocs[i].innerHTML =
-        '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
-    } else {
-      errorlocs[i].innerHTML = "";
-      window.location.href = "schedule.html";
+for(let i=0;i<fulfill.length;i++){
+  fulfill[i].addEventListener('click',(e)=>{
+    if(quantities[i].value<=0){
+      errorlocs[i].innerHTML='<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+    }
+    else{
+      errorlocs[i].innerHTML="";
+      localStorage.setItem('dontype','item');
+      localStorage.setItem('title',titles[i].textContent);
+      localStorage.setItem('photo',photos[i].src);
+      localStorage.setItem('quantity',quantities[i].value);
+      window.location.href = 'schedule.html';
     }
   });
 }

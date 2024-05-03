@@ -4,6 +4,7 @@ const keywordsInput = document.getElementById('keywords');
 const filter1Checkboxes = document.querySelectorAll('.filter1');
 
 const filterButton = document.getElementById('contact-submit');
+filterButton.addEventListener('click', applyFilters);
 function applyFilters() {
   const keywords = keywordsInput.value.toLowerCase();
   const selected1 = Array.from(filter1Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
@@ -35,11 +36,13 @@ function matchSelected(selected, Name) {
   return false;
 }
 
-filterButton.addEventListener('click', applyFilters);
+
 
 const quantities=document.querySelectorAll(".quantity");
 const fulfill=document.querySelectorAll(".btn-success");
 const errorlocs=document.querySelectorAll(".error");
+const titles=document.querySelectorAll(".text-white");
+const photos=document.querySelectorAll(".photos");
 
 for(let i=0;i<fulfill.length;i++){
   fulfill[i].addEventListener('click',(e)=>{
@@ -48,6 +51,10 @@ for(let i=0;i<fulfill.length;i++){
     }
     else{
       errorlocs[i].innerHTML="";
+      localStorage.setItem('dontype','item');
+      localStorage.setItem('title',titles[i].textContent);
+      localStorage.setItem('photo',photos[i].src);
+      localStorage.setItem('quantity',quantities[i].value);
       window.location.href = 'schedule.html';
     }
   });

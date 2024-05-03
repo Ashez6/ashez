@@ -250,11 +250,7 @@
                     <input type="file" class="btn btn-light" id="fileInput">
                 </div>
 
-                <div class="form-group doc" style="display: none;">
-                  <label for="location">How many clinic locationd would you like to save on the website?</label>
-                  <input type="number" min="1" id="clinicsnum">
-                </div>
-                
+              
                 <div class="form-group doc" style="display: none;">
                   <label for="location">Clinics' Locations</label>
                   <div id = 'map'></div>
@@ -378,7 +374,6 @@
 
 <script>
 
-const clinics=document.getElementById("clinicsnum");
 let count1=0;
 const map = L.map('map').setView([30.083153, 31.663866], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -386,7 +381,7 @@ const map = L.map('map').setView([30.083153, 31.663866], 13);
         }).addTo(map);
 
         map.on('click', function (e) {
-          if(count1<clinics.value){
+          if(count1<1){
             count1++;
             const latlng = e.latlng;
             console.log('Selected location:', latlng);

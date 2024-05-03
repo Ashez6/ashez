@@ -12,10 +12,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -507,86 +511,13 @@
 </footer>
 <!--/ End Footer Area -->
 <script>
-    let count = 0; 
-    const map = L.map('map0').setView([30.083153, 31.663866], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+ const map0 = L.map('map0').setView([31.22, 29.94], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map0);
+    L.marker([31.22, 29.94]).addTo(map0);
 
-        map.on('click', function (e) {
-        if (count == 0) {
-        count++
-        const latlng = e.latlng;
-        console.log('Selected location:', latlng);
-
-        const marker = L.marker(latlng).addTo(map).bindPopup('Hello, Leaflet!');
-
-        marker.on('click', function () {
-          count--
-            map.removeLayer(marker); 
-        }
-      
-      
-      )
-        };   
-});
-
-        const searchControl = L.Control.geocoder({
-        defaultMarkGeocode: false, 
-}).addTo(map);
-
-// Listen for a result (location) selection
-searchControl.on('markgeocode', function (e) {
-    latlng = e.geocode.center;
-    console.log('Selected location:', latlng);
-    map.setView(latlng, 13)
-
-  });
-
-    let count2 = 0; 
-    const map2 = L.map('map1').setView([30.083153, 31.663866], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map2);
-
-        map2.on('click', function (e) {
-        if (count2 == 0) {
-        count2++
-        const latlng2 = e.latlng;
-        console.log('Selected location:', latlng2);
-
-        const marker2 = L.marker(latlng2).addTo(map2).bindPopup('Hello, Leaflet!');
-
-        marker2.on('click', function () {
-          count2--
-            map2.removeLayer(marker2); 
-        }
-      
-      
-      )
-        };   
-});
-
-        const searchControl2 = L.Control.geocoder({
-        defaultMarkGeocode: false, 
-}).addTo(map2);
-
-// Listen for a result (location) selection
-searchControl2.on('markgeocode', function (e) {
-    latlng2 = e.geocode.center;
-    console.log('Selected location:', latlng2);
-    map2.setView(latlng2, 13)
-
-  });
-
-
-
-
-
-  
-
-
-
+    const map1 = L.map('map1').setView([31.22, 29.94], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map1);
+    L.marker([31.22, 29.94]).addTo(map1);
   </script>
 
 

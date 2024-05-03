@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   const teacherElements = document.querySelectorAll(".teach-elem");
+  const doctorElements = document.querySelectorAll(".doc-elem");
+
   const type = localStorage.getItem("type");
 
   if (type == "teacher") {
     for (let i = 0; i < 3; i++) {
       teacherElements[i].style.display = "";
+    }
+  }
+
+  if (type == "doctor") {
+    for (let i = 0; i < 2; i++) {
+      doctorElements[i].style.display = "";
     }
   }
 });
@@ -497,4 +505,38 @@ const CloseDonation19 = document.getElementsByClassName("close-donation")[18];
 CloseDonation19.addEventListener("click", (e) => {
   viewDonation19Screen.style.display = "none";
   viewDonation19Screen.style.visibility = "hidden";
+});
+
+//View Donation 20
+
+const viewDonation20 = document.getElementById("vdonation20");
+const viewDonation20Screen = document.getElementById("vdonation20-screen");
+
+viewDonation20.addEventListener("click", (e) => {
+  viewDonation20Screen.style.visibility = "visible";
+  viewDonation20Screen.style.display = "";
+});
+
+const CloseDonation20 = document.getElementsByClassName("close-donation")[19];
+
+CloseDonation20.addEventListener("click", (e) => {
+  viewDonation20Screen.style.display = "none";
+  viewDonation20Screen.style.visibility = "hidden";
+});
+
+//View Donation 21
+
+const viewDonation21 = document.getElementById("vdonation21");
+const viewDonation21Screen = document.getElementById("vdonation21-screen");
+
+viewDonation21.addEventListener("click", (e) => {
+  viewDonation21Screen.style.visibility = "visible";
+  viewDonation21Screen.style.display = "";
+});
+
+const CloseDonation21 = document.getElementsByClassName("close-donation")[20];
+
+CloseDonation21.addEventListener("click", (e) => {
+  viewDonation21Screen.style.display = "none";
+  viewDonation21Screen.style.visibility = "hidden";
 });

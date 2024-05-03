@@ -12,3 +12,7 @@ const back=document.getElementById("backbtn");
 back.addEventListener('click',(e)=>{
     window.history.back();
 });
+
+console.log(localStorage.getItem('title'));
+console.log(localStorage.getItem('photo'));
+console.log(localStorage.getItem('patient'));

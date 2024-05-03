@@ -13,6 +13,7 @@ for (let i = 0; i < 3; i++) {
     localStorage.setItem("photo", photos[i].getAttribute("src"));
     localStorage.setItem("address", addresses[i].textContent);
     localStorage.setItem("quantity", noOfStudents[i].textContent);
+    window.location.href = "schedprobono.html";
   });
 }
 

@@ -43,70 +43,104 @@ const fulfill = document.querySelectorAll(".btn-success");
 const titles = document.querySelectorAll(".text-white");
 const sector = document.querySelectorAll(".text-primary");
 const photos = document.querySelectorAll(".photos");
-let qcounter = 0;
+
 const quantity = document.querySelectorAll(".quantity");
-let pcounter = 0;
-const patient = document.querySelectorAll(".quantity");
-let tcounter = 0;
+
+const patient = document.querySelectorAll(".patient");
+
 const students = document.querySelectorAll(".no-of-studs");
 const address = document.querySelectorAll(".address");
-// const errorlocs = document.querySelectorAll(".error");
+const errorlocs = document.querySelectorAll(".error");
 
 for (let i = 0; i < fulfill.length; i++) {
   fulfill[i].addEventListener("click", (e) => {
-      // errorlocs[i].innerHTML =
-      //  '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
-      // errorlocs[i].innerHTML = "";
-
+      
       switch (sector[i].textContent) {
         case "Medical Supplies":
-          localStorage.setItem('title',titles[i]);
-          localStorage.setItem('photo',photos[i].getAttribute("src"));
-          localStorage.setItem('quantity',quantity[qcounter]);
-          qcounter++;
-          window.location.href = "schedule.html";
+          if(quantity[i-3].value<=0){
+            errorlocs[i-3].innerHTML =
+               '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+          }
+          else{
+            errorlocs[i-3].innerHTML = "";
+            localStorage.setItem('title',titles[i].textContent);
+            localStorage.setItem('dontype',"item");
+            localStorage.setItem('photo',photos[i].getAttribute("src"));
+            localStorage.setItem('quantity',quantity[i-3].value);
+            window.location.href = "schedule.html";
+          }
           break;
         case "School Supplies":
-          localStorage.setItem('title',titles[i]);
-          localStorage.setItem('photo',photos[i].getAttribute("src"));
-          localStorage.setItem('quantity',quantity[qcounter]);
-          qcounter++;
-          window.location.href = "schedule.html";
+          if(quantity[i].value<=0){
+            errorlocs[i].innerHTML =
+               '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+          }
+          else{
+            localStorage.setItem('dontype',"item");
+            errorlocs[i].innerHTML = "";
+            localStorage.setItem('title',titles[i].textContent);
+            localStorage.setItem('photo',photos[i].getAttribute("src"));
+            localStorage.setItem('quantity',quantity[i].value);
+            window.location.href = "schedule.html";
+          }
           break;
         case "Clothes":
-            localStorage.setItem('title',titles[i]);
+          if(quantity[i].value<=0){
+            errorlocs[i].innerHTML =
+               '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+          }
+          else{
+            errorlocs[i].innerHTML = "";
+            localStorage.setItem('dontype',"item");
+            localStorage.setItem('title',titles[i].textContent);
             localStorage.setItem('photo',photos[i].getAttribute("src"));
-            localStorage.setItem('quantity',quantity[qcounter]);
-            qcounter++;
+            localStorage.setItem('quantity',quantity[i].value);
+            
             window.location.href = "schedule.html";
+          }
             break;
         case "Toys":
-            localStorage.setItem('title',titles[i]);
+          if(quantity[i].value<=0){
+            errorlocs[i].innerHTML =
+               '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+          }
+          else{
+            errorlocs[i].innerHTML = "";
+            localStorage.setItem('dontype',"item");
+            localStorage.setItem('title',titles[i].textContent);
             localStorage.setItem('photo',photos[i].getAttribute("src"));
-            localStorage.setItem('quantity',quantity[qcounter]);
-            qcounter++;
+            localStorage.setItem('quantity',quantity[i].value);
+           
             window.location.href = "schedule.html";
+          }
             break;
         case "Food":
-            localStorage.setItem('title',titles[i]);
+          if(quantity[i-3].value<=0 ){
+            errorlocs[i-3].innerHTML =
+               '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+          }
+          else{
+            errorlocs[i-3].innerHTML = "";
+            localStorage.setItem('dontype',"item");
+            localStorage.setItem('title',titles[i].textContent);
             localStorage.setItem('photo',photos[i].getAttribute("src"));
-            localStorage.setItem('quantity',quantity[qcounter]);
-            qcounter++;
+            localStorage.setItem('quantity',quantity[i-3].value);
             window.location.href = "schedule.html";
+          }
             break;
-        case "Pro-bono Teaching":
-            localStorage.setItem('title',titles[i]);
+        case "Pro-Bono Teaching":
+          
+            localStorage.setItem('title',titles[i].textContent);
             localStorage.setItem('photo',photos[i].getAttribute("src"));
-            localStorage.setItem('quantity',students[tcounter]);
-            localStorage.setItem('address',address[tcounter]);
-            tcounter++;
+            localStorage.setItem('quantity',students[i-24].value);
+            localStorage.setItem('address',address[i-24].textContent);
             window.location.href = "schedprobono.html";
             break;
-        case "Pro-bono cases":
-            localStorage.setItem('title',titles[i]);
+        case "Pro-Bono Cases":
+            localStorage.setItem('dontype',"doc");
+            localStorage.setItem('title',titles[i].textContent);
             localStorage.setItem('photo',photos[i].getAttribute("src"));
-            localStorage.setItem('patient',patient[pcounter]);
-            pcounter++;
+            localStorage.setItem('patient',patient[i-27].textContent);
             window.location.href = "schedprobono.html";
             break;
       

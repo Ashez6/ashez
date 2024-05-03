@@ -12,6 +12,7 @@ fulfill1.addEventListener("click", (e) => {
     document.getElementById("patient1").innerText
   );
   localStorage.setItem("dontype","doc");
+  window.location.href = "schedprobono.html";
 });
 
 fulfill2.addEventListener("click", (e) => {
@@ -25,6 +26,7 @@ fulfill2.addEventListener("click", (e) => {
     document.getElementById("patient2").innerText
   );
   localStorage.setItem("dontype","doc");
+  window.location.href = "schedprobono.html";
 });
 
 //Filter

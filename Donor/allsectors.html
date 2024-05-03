@@ -9,6 +9,15 @@
     <!-- Favicon -->
     <link rel="icon" href="img/ashez_transparent.png">
 		
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 		<!-- Title -->
@@ -43,7 +52,22 @@
     <link rel="stylesheet" href="../popout.css">
     <link rel="stylesheet" href="../alert.css">
 
+<style>
+        #map {
+        min-height: 180px;
+        margin-bottom: 5%;
+        }
 
+        #map1 {
+        min-height: 180px;
+        margin-bottom: 5%;
+        }
+
+        #map2 {
+        min-height: 180px;
+        margin-bottom: 5%;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Area -->
@@ -637,6 +661,66 @@
                             </div>
                             <div class="job-right my-4 flex-shrink-0">
                                 <a href="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation16">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 teach-elem" style="display: none;">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" >
+                                    <img src="../img/Pi-symbol_(updated).svg" class="img-holder" alt="boots">
+                                </div>
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Trigonometry</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="bi bi-book"></i> Pro-bono Classes
+                                        </li>
+                                         
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id = "vdonation17">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 teach-elem" style="display: none;">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" >
+                                    <img src="../img/coder-png-source-code-icon-1600.png" class="img-holder" alt="developer symbol">
+                                </div>
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Advanced Algorithms</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="bi bi-book"></i> Pro-bono Classes
+                                        </li>
+                                         
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id = "vdonation18">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30 teach-elem" style="display: none;" >
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" >
+                                    <img src="../img/Pi-symbol_(updated).svg" class="img-holder" alt="pi">
+                                </div>
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Calculus</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="bi bi-book"></i> Pro-bono Classes
+                                        </li>
+                                         
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id = "vdonation19">View Details</a>
                             </div>
                         </div>
 
@@ -1882,6 +1966,155 @@
     </div>
 </div>
 
+<!--view donation 17-->
+
+<div class="container pop-out" id = "vdonation17-screen">   
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/Pi-symbol_(updated).svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Trigonometry Class Needed</h3>
+                                <span class="text-primary">Pro-bono Teaching</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Mathematics</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Number Of Students:</span> 10</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span>6 El Gezira Street, Zamalek, Cairo, Egypt</li>
+                                <div id="map2" class="leaf-map"></div>
+
+
+                              
+                                <a href = "schedprobono.html" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!--view donation 18-->
+
+<div class="container pop-out" id = "vdonation18-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/coder-png-source-code-icon-1600.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Advanced Algorithms</h3>
+                                <span class="text-primary">Pro-bono Teaching</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Computer Science</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Number Of Students:</span> 12</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span>18 El-Horreya Street, Smouha, Alexandria, Egypt</li>
+                                <div id="map1" ></div>
+
+                                <a href = "schedprobono.html" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!--view donation 19-->
+
+<div class="container pop-out" id = "vdonation19-screen">
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../img/Pi-symbol_(updated).svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Calculus</h3>
+                                <span class="text-primary">Pro-bono Teaching</span>
+                            </div>
+                            <ul class="list-unstyled mb-1-9">
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Subject:</span> Math</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Number Of Students:</span> 12</li>
+                                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span>14 El Nasr Street, Maadi, Cairo, Egypt</li>
+                                <div id="map"></div>
+
+
+                                <a href = "schedprobono.html" class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px;" >Fulfill</a>  
+                            
+                            </ul>
+                            <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
 
 
 
@@ -1940,6 +2173,20 @@
     <!--/ End Copyright -->
 </footer>
 <!--/ End Footer Area -->
+
+<script>
+     const map = L.map('map').setView([29.96, 31.25], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    L.marker([29.96, 31.25]).addTo(map).bindPopup('Hello, Leaflet!');
+
+    const map1 = L.map('map1').setView([31.22, 29.94], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map1);
+    L.marker([31.22, 29.94]).addTo(map1).bindPopup('Hello, Leaflet!');
+
+    const map2 = L.map('map2').setView([30.05, 31.22], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map2);
+    L.marker([30.05, 31.22]).addTo(map2).bindPopup('Hello, Leaflet!');
+</script>
 <script src="all.js"></script>
 
 <!-- jquery Min JS -->

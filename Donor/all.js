@@ -1,40 +1,49 @@
-const keywordsInput = document.getElementById('keywords');
-const filterButton = document.getElementById('contact-submit');
+document.addEventListener("DOMContentLoaded", (e) => {
+  const teacherElements = document.querySelectorAll(".teach-elem");
+  const type = localStorage.getItem("type");
+
+  if (type == "teacher") {
+    for (let i = 0; i < 3; i++) {
+      teacherElements[i].style.display = "";
+    }
+  }
+});
+
+const keywordsInput = document.getElementById("keywords");
+const filterButton = document.getElementById("contact-submit");
 function applyFilters() {
   const keywords = keywordsInput.value.toLowerCase();
 
   // Filter logic here
-  const jobBoxes = document.querySelectorAll('.job-box');
-  jobBoxes.forEach(jobBox => {
-      const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
-      const shouldDisplay = matchKeywords(keywords, Name) ;
-      jobBox.style.display = shouldDisplay ? "" : "none";
+  const jobBoxes = document.querySelectorAll(".job-box");
+  jobBoxes.forEach((jobBox) => {
+    const Name = jobBox.querySelector(".job-content").textContent.toLowerCase();
+    const shouldDisplay = matchKeywords(keywords, Name);
+    jobBox.style.display = shouldDisplay ? "" : "none";
   });
 }
 
 function matchKeywords(keywords, text) {
-  return keywords === '' || text.includes(keywords);
+  return keywords === "" || text.includes(keywords);
 }
 
+filterButton.addEventListener("click", applyFilters);
 
-filterButton.addEventListener('click', applyFilters);
+const quantities = document.querySelectorAll(".quantity");
+const fulfill = document.querySelectorAll(".btn-success");
+const errorlocs = document.querySelectorAll(".error");
 
-const quantities=document.querySelectorAll(".quantity");
-const fulfill=document.querySelectorAll(".btn-success");
-const errorlocs=document.querySelectorAll(".error");
-
-for(let i=0;i<fulfill.length;i++){
-  fulfill[i].addEventListener('click',(e)=>{
-    if(quantities[i].value<=0){
-      errorlocs[i].innerHTML='<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
-    }
-    else{
-      errorlocs[i].innerHTML="";
-      window.location.href = 'schedule.html';
+for (let i = 0; i < fulfill.length; i++) {
+  fulfill[i].addEventListener("click", (e) => {
+    if (quantities[i].value <= 0) {
+      errorlocs[i].innerHTML =
+        '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Cannot donate zero items!</div>';
+    } else {
+      errorlocs[i].innerHTML = "";
+      window.location.href = "schedule.html";
     }
   });
 }
-
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
@@ -339,7 +348,6 @@ CloseDonation10.addEventListener("click", (e) => {
   viewDonation10Screen.style.visibility = "hidden";
 });
 
-
 const viewDonation11 = document.getElementById("vdonation11"); //
 const viewDonation11Screen = document.getElementById("vdonation11-screen");
 
@@ -372,8 +380,7 @@ CloseDonation12.addEventListener("click", (e) => {
   viewDonation12Screen.style.visibility = "hidden";
 });
 
-
-//View Donation 1
+//View Donation 13
 
 const viewDonation13 = document.getElementById("vdonation13"); //
 const viewDonation13Screen = document.getElementById("vdonation13-screen");
@@ -390,8 +397,7 @@ CloseDonation13.addEventListener("click", (e) => {
   viewDonation13Screen.style.visibility = "hidden";
 });
 
-
-//View Donation 2
+//View Donation 14
 
 const viewDonation14 = document.getElementById("vdonation14"); //
 const viewDonation14Screen = document.getElementById("vdonation14-screen");
@@ -408,8 +414,7 @@ CloseDonation14.addEventListener("click", (e) => {
   viewDonation14Screen.style.visibility = "hidden";
 });
 
-
-//View Donation 3
+//View Donation 15
 
 const viewDonation15 = document.getElementById("vdonation15"); //
 const viewDonation15Screen = document.getElementById("vdonation15-screen");
@@ -426,9 +431,9 @@ CloseDonation15.addEventListener("click", (e) => {
   viewDonation15Screen.style.visibility = "hidden";
 });
 
-//View Donation 4
+//View Donation 16
 
-const viewDonation16 = document.getElementById("vdonation16"); //
+const viewDonation16 = document.getElementById("vdonation16");
 const viewDonation16Screen = document.getElementById("vdonation16-screen");
 
 viewDonation16.addEventListener("click", (e) => {
@@ -441,4 +446,55 @@ const CloseDonation16 = document.getElementsByClassName("close-donation")[15];
 CloseDonation16.addEventListener("click", (e) => {
   viewDonation16Screen.style.display = "none";
   viewDonation16Screen.style.visibility = "hidden";
+});
+
+//View Donation 17
+
+const viewDonation17 = document.getElementById("vdonation17");
+const viewDonation17Screen = document.getElementById("vdonation17-screen");
+
+viewDonation17.addEventListener("click", (e) => {
+  viewDonation17Screen.style.visibility = "visible";
+  viewDonation17Screen.style.display = "";
+});
+
+const CloseDonation17 = document.getElementsByClassName("close-donation")[16];
+
+CloseDonation17.addEventListener("click", (e) => {
+  viewDonation17Screen.style.display = "none";
+  viewDonation17Screen.style.visibility = "hidden";
+});
+
+//View Donation 18
+
+const viewDonation18 = document.getElementById("vdonation18");
+const viewDonation18Screen = document.getElementById("vdonation18-screen");
+
+viewDonation18.addEventListener("click", (e) => {
+  viewDonation18Screen.style.visibility = "visible";
+  viewDonation18Screen.style.display = "";
+});
+
+const CloseDonation18 = document.getElementsByClassName("close-donation")[17];
+
+CloseDonation18.addEventListener("click", (e) => {
+  viewDonation18Screen.style.display = "none";
+  viewDonation18Screen.style.visibility = "hidden";
+});
+
+//View Donation 19
+
+const viewDonation19 = document.getElementById("vdonation19");
+const viewDonation19Screen = document.getElementById("vdonation19-screen");
+
+viewDonation19.addEventListener("click", (e) => {
+  viewDonation19Screen.style.visibility = "visible";
+  viewDonation19Screen.style.display = "";
+});
+
+const CloseDonation19 = document.getElementsByClassName("close-donation")[18];
+
+CloseDonation19.addEventListener("click", (e) => {
+  viewDonation19Screen.style.display = "none";
+  viewDonation19Screen.style.visibility = "hidden";
 });

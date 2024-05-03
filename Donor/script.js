@@ -26,18 +26,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
 });
 
-const confirmButton = document.getElementById("confirm-button");
+//Change Password Screen
 
-let count = 0;
+const confirmButton = document.getElementById("confirm-button");
 
 confirmButton.addEventListener("click", (e) => {
   const oldPass = document.getElementById("old-pass");
   const newPass1 = document.getElementById("new-pass1");
   const newPass2 = document.getElementById("new-pass2");
-  const newDiv = document.createElement("div");
-  newDiv.id = "new-div";
   const addText = document.getElementById("add-confirm");
-  addText.appendChild(newDiv);
 
   let r = "";
 
@@ -46,8 +43,6 @@ confirmButton.addEventListener("click", (e) => {
   newPass2.style.border = "";
 
   if (oldPass.value == "" || newPass1.value == "" || newPass2.value == "") {
-    addText.removeChild(document.getElementById("new-div"));
-    if (count == 1) count--;
     if (oldPass.value == "") {
       r += "Please enter the old password.<br>";
       oldPass.style.border = "1px solid red";
@@ -62,39 +57,41 @@ confirmButton.addEventListener("click", (e) => {
     }
   } else {
     if (
-      newPass1.value == newPass2.value &&
-      !(newPass1.value == newPass2.value && newPass2.value == oldPass.value)
-    ) {
-      if (count == 0) {
-        newDiv.style.color = "green";
-        newDiv.innerHTML =
-          '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
-        addText.appendChild(newDiv);
-        count++;
-      }
-    } else {
+      !(
+        newPass1.value == newPass2.value &&
+        !(newPass1.value == newPass2.value && newPass2.value == oldPass.value)
+      )
+    )
       if (newPass1.value != newPass2.value) {
-        addText.removeChild(document.getElementById("new-div"));
-        if (count == 1) count--;
         r += "please enter matching new password values.<br>";
       }
-      if (newPass1.value == newPass2.value && newPass2.value == oldPass.value) {
-        addText.removeChild(document.getElementById("new-div"));
-        if (count == 1) count--;
-        r += "old password can't be new password. <br>";
-      }
+    if (newPass1.value == newPass2.value && newPass2.value == oldPass.value) {
+      r += "old password can't be new password. <br>";
     }
   }
 
-  if (r != "") {
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("add-confirm");
+
+  if (r == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
     newDiv.innerHTML =
       '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
       r +
       "</div>";
-    newDiv.style.marginTop = "5%";
-    addText.appendChild(newDiv);
 
-    return;
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
   }
 });
 
@@ -149,7 +146,7 @@ updateButton.addEventListener("click", function (event) {
   const phoneRegex = /^\+?\d{10,}$/;
   if (!phoneRegex.test(phoneNumber) || phoneNumber == "") {
     document.getElementById("phone").style.border = "1px solid red";
-    r += "Please enter a valid phone number.<br>";
+    r += "Please enter a valid phone number. [+country code][10 digits]<br>";
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

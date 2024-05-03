@@ -23,7 +23,8 @@ confirm.addEventListener('click',(e)=>{
     }
     else{
         div.innerHTML='';
-        window.location.href = 'track.html?data=example';
+        localStorage.setItem('timeslot',document.getElementById("time-slot-select").value);
+        window.location.href = 'track.html?reffrom=sched';
     }
 });
 
@@ -31,3 +32,7 @@ const back=document.getElementById("backbtn");
 back.addEventListener('click',(e)=>{
     window.history.back();
 });
+
+console.log(localStorage.getItem('title'));
+console.log(localStorage.getItem('photo'));
+console.log(localStorage.getItem('quantity'));

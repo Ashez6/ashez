@@ -43,6 +43,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
         <style>
           #map {
@@ -129,7 +130,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id = "file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -147,19 +148,19 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                 <div class="form-group" style="margin-top: 2%;">
-                    <label for="username">Number Of Students</label>
+                    <label for="username" >Number Of Students</label>
                     <br>
                     
-                    <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter number of students">
+                    <input type="number" min="0" class="form-control" id = "number-studs" style="height: 50px; width: 250px;" placeholder="Enter number of students">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="username">Address</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter address here">
+                    <input type="text" class="form-control" id="address" aria-describedby="usernameHelp" placeholder="Enter address here">
                   </div>
                   <br>
 
@@ -171,12 +172,13 @@
 
                   <div class="form-group">
                     <label for="username">Subject</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter Subject here">
+                    <input type="text" class="form-control" id="subject" aria-describedby="usernameHelp" placeholder="Enter Subject here">
                   </div>
                   <br>
                 
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+                <div id = "append-here"></div>
               </form>
             </div>
             <div class="tab-pane" id="security">
@@ -329,6 +331,7 @@
   
     });
   
+
   
   </script>
 

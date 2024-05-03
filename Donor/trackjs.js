@@ -29,7 +29,7 @@ if (reffrom === 'sched') {
         else{
             time="7:30 PM";
         }
-        slot.textContent='Wednesday '+ time;
+        slot.textContent='Monday '+ time;
 
         title.textContent=localStorage.getItem('title');
         photo.src=localStorage.getItem('photo');
@@ -37,14 +37,19 @@ if (reffrom === 'sched') {
         boxquantity.textContent='Quantity Donated: '+localStorage.getItem('quantity');
         box.style.display="";
     }
-    else if(dontype='doc'){
+    else if(dontype=='doc'){
         const box=document.getElementById('docbox');
         const title=document.getElementById('doctitle');
         const photo=document.getElementById('docphoto');
         const boxdate=document.getElementById('boxdate2');
         const boxpatient=document.getElementById('boxpatient');
-        const eta=document.getElementById('time2');
-        const slot=document.getElementById('day2');
+        const date=document.getElementById('day1');
+        const time=document.getElementById('time1');
+        const dure=document.getElementById('dure1');
+        
+        date.textContent=localStorage.getItem('date');
+        time.textContent=localStorage.getItem('time');
+        dure.textContent=localStorage.getItem('dhours')+'h '+localStorage.getItem('dminutes')+'m';
 
         title.textContent=localStorage.getItem('title');
         photo.src=localStorage.getItem('photo');
@@ -59,8 +64,13 @@ if (reffrom === 'sched') {
         const boxdate=document.getElementById('boxdate3');
         const boxquantity=document.getElementById('boxquantity3');
         const boxaddress=document.getElementById('boxaddress');
-        const eta=document.getElementById('time3');
-        const slot=document.getElementById('day3');
+        const date=document.getElementById('day2');
+        const time=document.getElementById('time2');
+        const dure=document.getElementById('dure2');
+
+        date.textContent=localStorage.getItem('date');
+        time.textContent=localStorage.getItem('time');
+        dure.textContent=localStorage.getItem('dhours')+'h '+localStorage.getItem('dminutes')+'m';
 
         title.textContent=localStorage.getItem('title');
         photo.src=localStorage.getItem('photo');

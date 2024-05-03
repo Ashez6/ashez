@@ -11,6 +11,7 @@ fulfill1.addEventListener("click", (e) => {
     "patient",
     document.getElementById("patient1").innerText
   );
+  localStorage.setItem("dontype","doc");
 });
 
 fulfill2.addEventListener("click", (e) => {
@@ -23,6 +24,7 @@ fulfill2.addEventListener("click", (e) => {
     "patient",
     document.getElementById("patient2").innerText
   );
+  localStorage.setItem("dontype","doc");
 });
 
 //Filter

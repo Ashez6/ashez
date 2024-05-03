@@ -53,7 +53,7 @@ for(let i=0;i<fulfill.length;i++){
       errorlocs[i].innerHTML="";
       localStorage.setItem('dontype','item');
       localStorage.setItem('title',titles[i].textContent);
-      localStorage.setItem('photo',photos[i].src);
+      localStorage.setItem('photo',photos[i].getAttribute("src"));
       localStorage.setItem('quantity',quantities[i].value);
       window.location.href = 'schedule.html';
     }

@@ -42,7 +42,7 @@ const quantities=document.querySelectorAll(".quantity");
 const fulfill=document.querySelectorAll(".btn-success");
 const errorlocs=document.querySelectorAll(".error");
 const titles=document.querySelectorAll(".text-white");
-const photos=document.querySelectorAll("photos");
+const photos=document.querySelectorAll(".photos");
 
 for(let i=0;i<fulfill.length;i++){
   fulfill[i].addEventListener('click',(e)=>{
@@ -53,7 +53,7 @@ for(let i=0;i<fulfill.length;i++){
       errorlocs[i].innerHTML="";
       localStorage.setItem('dontype','item');
       localStorage.setItem('title',titles[i].textContent);
-      localStorage.setItem('photo',photos[i].src);
+      localStorage.setItem('photo',photos[i].getAttribute("src"));
       localStorage.setItem('quantity',quantities[i].value);
       window.location.href = 'schedule.html';
     }

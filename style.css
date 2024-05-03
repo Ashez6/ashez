@@ -176,6 +176,12 @@ body {
   height: 100%;
 }
 
+#left-arrow {
+  font-size: 4rem;
+  color: var(--navy);
+  align-self: center;
+}
+
 .delete-button:before {
   content: "";
   position: absolute;

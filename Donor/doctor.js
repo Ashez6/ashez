@@ -1,62 +1,85 @@
+const fulfill1 = document.getElementById("fullfill1");
+const fulfill2 = document.getElementById("fullfill2");
 
+fulfill1.addEventListener("click", (e) => {
+  localStorage.setItem("title", document.getElementById("title1").innerText);
+  localStorage.setItem(
+    "photo",
+    document.getElementById("photo1").getAttribute("src")
+  );
+  localStorage.setItem(
+    "patient",
+    document.getElementById("patient1").innerText
+  );
+});
 
-
-
-
-
-
-
-
-
-
+fulfill2.addEventListener("click", (e) => {
+  localStorage.setItem("title", document.getElementById("title2").innerText);
+  localStorage.setItem(
+    "photo",
+    document.getElementById("photo2").getAttribute("src")
+  );
+  localStorage.setItem(
+    "patient",
+    document.getElementById("patient2").innerText
+  );
+});
 
 //Filter
 
-const keywordsInput = document.getElementById('keywords');
-const filter1Checkboxes = document.querySelectorAll('.filter1');
-const filter2Checkboxes = document.querySelectorAll('.filter2');
-const filter3Checkboxes = document.querySelectorAll('.filter3');
-const filter4Checkboxes = document.querySelectorAll('.filter4');
+const keywordsInput = document.getElementById("keywords");
+const filter1Checkboxes = document.querySelectorAll(".filter1");
+const filter2Checkboxes = document.querySelectorAll(".filter2");
+const filter3Checkboxes = document.querySelectorAll(".filter3");
+const filter4Checkboxes = document.querySelectorAll(".filter4");
 
-
-const filterButton = document.getElementById('contact-submit');
+const filterButton = document.getElementById("contact-submit");
 function applyFilters() {
   const keywords = keywordsInput.value.toLowerCase();
-  const selected1 = Array.from(filter1Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
-  const selected2 = Array.from(filter2Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
-  const selected3 = Array.from(filter3Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
-  const selected4 = Array.from(filter4Checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value.toLowerCase());
-  
+  const selected1 = Array.from(filter1Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
+  const selected2 = Array.from(filter2Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
+  const selected3 = Array.from(filter3Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
+  const selected4 = Array.from(filter4Checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value.toLowerCase());
 
   // Filter logic here
-  const jobBoxes = document.querySelectorAll('.job-box');
-  jobBoxes.forEach(jobBox => {
-      const Name = jobBox.querySelector('.job-content').textContent.toLowerCase();
-      const shouldDisplay = matchKeywords(keywords, Name) && matchSelected(selected1, Name)&& matchSelected(selected2, Name)&& matchSelected(selected3, Name) && matchSelected(selected4, Name) ;
-      jobBox.style.display = shouldDisplay ? "" : "none";
+  const jobBoxes = document.querySelectorAll(".job-box");
+  jobBoxes.forEach((jobBox) => {
+    const Name = jobBox.querySelector(".job-content").textContent.toLowerCase();
+    const shouldDisplay =
+      matchKeywords(keywords, Name) &&
+      matchSelected(selected1, Name) &&
+      matchSelected(selected2, Name) &&
+      matchSelected(selected3, Name) &&
+      matchSelected(selected4, Name);
+    jobBox.style.display = shouldDisplay ? "" : "none";
   });
 }
 
 function matchKeywords(keywords, text) {
-  return keywords === '' || text.includes(keywords);
+  return keywords === "" || text.includes(keywords);
 }
 
 function matchSelected(selected, Name) {
-  if(selected.length === 0){
+  if (selected.length === 0) {
     return true;
   }
-  for(let i=0;i<selected.length;i++){
-    if(Name.includes(selected[i])){
+  for (let i = 0; i < selected.length; i++) {
+    if (Name.includes(selected[i])) {
       return true;
     }
   }
   return false;
 }
 
-filterButton.addEventListener('click', applyFilters);
-
-
-
+filterButton.addEventListener("click", applyFilters);
 
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
@@ -124,5 +147,3 @@ CloseDonation4.addEventListener("click", (e) => {
   viewDonation4Screen.style.display = "none";
   viewDonation4Screen.style.visibility = "hidden";
 });
-
-

@@ -19,10 +19,10 @@ function handleFileSelect(event, i) {
 let errorMessage = "";
 
 function checkInput(inputElement) {
-  inputElement.style.border = ""; // Reset the border style
+  inputElement.style.border = "";
   if (inputElement.value === "") {
-    inputElement.style.border = "1px solid red"; // Set the border to red
-    errorMessage += `Please enter the ${inputElement.id}.<br>`; // Append the error message
+    inputElement.style.border = "1px solid red";
+    errorMessage += `Please enter the ${inputElement.id}.<br>`;
   }
 }
 
@@ -44,7 +44,12 @@ postReq.addEventListener("click", (e) => {
   checkInput(gender);
   checkInput(season);
   checkInput(material);
-  checkInput(quantity);
+
+  quantity.style.border = "";
+  if (quantity.value <= 0) {
+    quantity.style.border = "1px solid red";
+    errorMessage += `Please enter the ${quantity.id}.<br>`;
+  }
 
   const fileInput = document.getElementById("file-here");
   if (!fileInput.value) {

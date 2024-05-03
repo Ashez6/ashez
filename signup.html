@@ -77,7 +77,10 @@
     <label for="verification-file" id="verificationLabel" style="display: none; margin-bottom: 10px;">Upload your documents of verification:</label>
     <input type="file" id="verification-file" style="display: none; margin-left: 8rem; margin-bottom: 10px;" />
     <input type="button" class="fadeIn fourth" value="Sign Up" style="cursor: pointer" id="sign-up-donor"/>
-    </form>
+    <div id="formFooter">
+      <a class="underlineHover" href="index.html">Already have an account</a>
+</div>
+  </form>
   </section>
  <!-- Sign Up Organization Form -->
  <section id="signUpOrgForm" style="display: none;">
@@ -129,6 +132,9 @@
 
         <input type="button" class="fadeIn fourth" value="Sign Up" style="cursor: pointer" id="sign-up-org"/>
     
+        <div id="formFooter">
+          <a class="underlineHover" href="index.html">Already have an account</a>
+  </div>
       </form>
  </section>
 
@@ -168,6 +174,8 @@ searchControl.on('markgeocode', function (e) {
     map.setView(latlng, 13)
 
   });
+
+  
 
 
 

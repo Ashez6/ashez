@@ -39,6 +39,8 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
+
 		
 
 </head>
@@ -117,7 +119,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id = "file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -135,20 +137,20 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="username">Patient Name</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter patient name here">
+                    <input type="text" class="form-control" id="name" aria-describedby="usernameHelp" placeholder="Enter patient name here">
                   </div>
                   <br>
 
                 <div class="form-group" >
                     <label for="username">Select patient blood type</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Age" selected>Blood Type</option>
+                    <select class="form-select" id ="blood"  style="height: 50px; width: 250px;" >
+                        <option value="" selected>Blood Type</option>
                         <option value="A+" >A+</option>
                         <option value="A-">A-</option>
                         <option value="B+">B+</option>
@@ -165,6 +167,7 @@
          
 
             <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+            <div id = "append-here"></div>
             </form>
             </div>
             <div class="tab-pane" id="security">

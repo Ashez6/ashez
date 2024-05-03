@@ -1,97 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule Donation</title>
-    <link rel="stylesheet" href="../lists.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../lists.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
     <!-- Favicon -->
-    <link rel="icon" href="img/ashez_transparent.png">
-		
+    <link rel="icon" href="img/ashez_transparent.png" />
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nice-select.css" />
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
     <!-- icofont CSS -->
-    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/icofont.css" />
     <!-- Slicknav -->
-    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css" />
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/owl-carousel.css" />
     <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/datepicker.css" />
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
     <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/magnific-popup.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+      integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY="
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="../popout.css">
-
-</head>
-<body>
-    
-    <div style="margin-left: 1%;margin-top: 1%;margin-bottom: 3%;">
-        <a  class="btn d-block w-100 d-sm-inline-block btn-danger delete-button" style="max-height: 50px; max-width: 200px; color: white;" id="backbtn"><i class="bi bi-caret-left-fill"></i> Back to Donations</a>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../popout.css" />
+  </head>
+  <body>
+    <div style="margin-left: 1%; margin-top: 1%; margin-bottom: 3%">
+      <a
+        class="btn d-block w-100 d-sm-inline-block btn-danger delete-button"
+        style="max-height: 50px; max-width: 200px; color: white"
+        id="backbtn"
+        ><i class="bi bi-caret-left-fill"></i> Back to Donations</a
+      >
     </div>
-    
+
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8" style="display: flex;justify-content: center;">
-            <h3 style="display: flex;justify-content: center;text-align: center;color:  #0f1035;">Please Select Preferred Day and Time Slot for the Donation</h3>
-        </div>
-        <div class="col-lg-2"></div>
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8" style="display: flex; justify-content: center">
+        <h3
+          style="
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: #0f1035;
+          "
+        >
+          Please Select Preferred Day and Time Slot for the Donation
+        </h3>
+      </div>
+      <div class="col-lg-2"></div>
     </div>
-    <br>
-    
+    <br />
 
-    <section style="margin-bottom: 5%;">
-
-        <div class="row" style="justify-content: center;margin-bottom: 20px;">
-            <div class="col-lg-7" style="display: flex; justify-content: center;">
-                <label for="date-picker" style="font-size: 20px; color: #0f1035; margin-top: 0.5%; margin-right: 2%;">Select Date:</label>
-                <input type="date" id="date-picker" class="date-picker" value="2024-06-14">
-            </div>
+    <section style="margin-bottom: 5%">
+      <div class="row" style="justify-content: center; margin-bottom: 20px">
+        <div class="col-lg-7" style="display: flex; justify-content: center">
+          <label
+            for="date-picker"
+            style="
+              font-size: 20px;
+              color: #0f1035;
+              margin-top: 0.5%;
+              margin-right: 2%;
+            "
+            >Select Date:</label
+          >
+          <input
+            type="date"
+            id="date-picker"
+            class="date-picker"
+            value="2024-06-14"
+          />
         </div>
-        
+      </div>
 
-        <div class="row" style="justify-content: center;margin-bottom: 20px;">
-            <div class="col-lg-7" style="display: flex;  justify-content: center;">
-                <label for="time-picker" style="font-size: 20px; color: #0f1035;margin-top: 0.5%;margin-right: 2%;">Select Preferred Start Time:</label>
-                <input type="time" id="time-picker" class="time-picker" value="09:00">
-            </div>
+      <div class="row" style="justify-content: center; margin-bottom: 20px">
+        <div class="col-lg-7" style="display: flex; justify-content: center">
+          <label
+            for="time-picker"
+            style="
+              font-size: 20px;
+              color: #0f1035;
+              margin-top: 0.5%;
+              margin-right: 2%;
+            "
+            >Select Preferred Start Time:</label
+          >
+          <input
+            type="time"
+            id="time-picker"
+            class="time-picker"
+            value="09:00"
+          />
         </div>
+      </div>
 
-        <div class="row" style="justify-content: center; margin-bottom: 20px;">
-            <div class="col-lg-7" style="display: flex; justify-content: center;">
-                <label for="duration-picker" style="font-size: 20px; color: #0f1035; margin-top: 0.5%; margin-right: 2%;">Select Duration of Session/Appointement (hours:minutes):</label>
-                <input type="number" id="duration-hours" class="duration-input" min="0" max="24" step="1" style="width: 60px; height: 40px; margin-right: 5px;" value="1"> hours
-                <input type="number" id="duration-minutes" class="duration-input" min="0" max="59" step="1" style="width: 60px; height: 40px; margin-left: 10px;" value="0"> minutes
-            </div>
+      <div class="row" style="justify-content: center; margin-bottom: 20px">
+        <div class="col-lg-7" style="display: flex; justify-content: center">
+          <label
+            for="duration-picker"
+            style="
+              font-size: 20px;
+              color: #0f1035;
+              margin-top: 0.5%;
+              margin-right: 2%;
+            "
+            >Select Duration of Session/Appointement (hours:minutes):</label
+          >
+          <input
+            type="number"
+            id="duration-hours"
+            class="duration-input"
+            min="0"
+            max="24"
+            step="1"
+            style="width: 60px; height: 40px; margin-right: 5px"
+            value="1"
+          />
+          hours
+          <input
+            type="number"
+            id="duration-minutes"
+            class="duration-input"
+            min="0"
+            max="59"
+            step="1"
+            style="width: 60px; height: 40px; margin-left: 10px"
+            value="0"
+          />
+          minutes
         </div>
-        
-        
+      </div>
 
-        <div style="justify-content: center;margin-bottom: 5%;">
-            <h6 style="text-align: center;">Once confirming, the requesting organisation will be notified of your fulfillment of their request.<br> </h6>
-            <br>
-            <a class="btn d-block w-100 d-sm-inline-block btn-success green-button" style="max-height: 50px; max-width: 300px; margin-left: 478px; color: white;" id="confirmbtn">Confirm Donation</a>
-        </div>
-        
-        
+      <div style="justify-content: center; margin-bottom: 5%">
+        <h6 style="text-align: center">
+          Once confirming, the requesting organisation will be notified of your
+          fulfillment of their request.<br />
+        </h6>
+        <br />
+        <a
+          class="btn d-block w-100 d-sm-inline-block btn-success green-button"
+          style="
+            max-height: 50px;
+            max-width: 300px;
+            margin-left: 40%;
+            color: white;
+          "
+          id="confirmbtn"
+          >Confirm Donation</a
+        >
+      </div>
     </section>
-    
-    
+
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>
     <!-- jquery Migrate JS -->
@@ -135,7 +220,5 @@
 
     <script src="home.js"></script>
     <script src="schedprobono.js"></script>
-    
-    
-</body>
+  </body>
 </html>

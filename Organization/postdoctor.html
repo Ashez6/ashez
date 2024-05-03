@@ -44,6 +44,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
         <style>
           #map {
@@ -131,7 +132,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id="file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -149,26 +150,26 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="username">Patient Name</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter Patient name here">
+                    <input type="text" class="form-control" id="name" aria-describedby="usernameHelp" placeholder="Enter Patient name here">
                   </div>
                   <br>
                   <div class="form-group" style="margin-top: 2%;">
                     <label for="username">Patient Age</label>
                     <br>
                     
-                    <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Enter patient age">
+                    <input type="number" min="0" class="form-control" id="age" style="height: 50px; width: 250px;" placeholder="Enter patient age">
                 </div>
                 <br>
                   <div class="form-group" >
                     <label for="username">Patient Gender</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Gender"selected>Gender</option>
+                    <select class="form-select" id="gender" style="height: 50px; width: 250px;" >
+                        <option value=""selected>Gender</option>
                         <option value="Female" >Female</option>
                         <option value="Male" >Male</option>
 
@@ -180,14 +181,14 @@
                     <label for="username">Patient Weight(KG)</label>
                     <br>
                     
-                    <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Weight">
+                    <input type="number" min="0" id="weight" class="form-control" style="height: 50px; width: 250px;" placeholder="Weight">
                 </div>
                 <br>
                
 
                 <div class="form-group">
                     <label for="username">Address</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter address here">
+                    <input type="text" class="form-control" id="address" aria-describedby="usernameHelp" placeholder="Enter address here">
                   </div>
                   <br>
 
@@ -201,18 +202,19 @@
 
                   <div class="form-group">
                     <label for="username">Medical Speciality</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter Speciality here">
+                    <input type="text" class="form-control" id="specialty" aria-describedby="usernameHelp" placeholder="Enter Speciality here">
                   </div>
                   <br>
                   <div class="form-group">
                     <label for="username">Case Description</label>
-                    <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter case description here">
+                    <input type="text" class="form-control" id="description" aria-describedby="usernameHelp" placeholder="Enter case description here">
                   </div>
                   <br>
 
 
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+             <div id="append-here"></div>
               </form>
             </div>
             <div class="tab-pane" id="security">

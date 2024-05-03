@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="../popout.css">
+        <link rel="stylesheet" href="../alert.css">
 		
 
 </head>
@@ -117,7 +118,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <input type="file" class="btn photobtn">
+                    <input type="file" id = "file-here" class="btn photobtn">
                 </div>
                                
           </div>
@@ -135,7 +136,7 @@
               <form >
                 <div class="form-group">
                   <label for="username">Title</label>
-                  <input type="text" class="form-control" id="fullName" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
+                  <input type="text" class="form-control" id="title" aria-describedby="usernameHelp" placeholder="Enter title of your donation">
                 </div>
                 <br>
                
@@ -144,7 +145,7 @@
                     <label for="username">Enter the quantity Required(KG for fruits and vegetables/Amount for the rest)</label>
                     <br>
                     
-                    <input type="number" min="0" class="form-control" style="height: 50px; width: 250px;" placeholder="Quantity">
+                    <input type="number" min="0" id="quantity" class="form-control" style="height: 50px; width: 250px;" placeholder="Quantity">
                 </div>
                 <br>
                 
@@ -152,8 +153,8 @@
                 <div class="form-group" >
                     <label for="username">Select the category of the toy requested</label>
                     <br>
-                    <select class="form-select" style="height: 50px; width: 250px;" >
-                        <option value="Unisex"selected>category</option>
+                    <select class="form-select" id="category" style="height: 50px; width: 250px;" >
+                        <option value=""selected>category</option>
                         <option value="Fruits and vegetables" >Fruits and vegetables</option>
                         <option value="Canned Foods" >Canned Foods</option>
                         <option value="Fresh Meals">Fresh Meals</option>
@@ -164,7 +165,10 @@
             <br>
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
+                <div id = "append-here"></div>
+
               </form>
+
             </div>
             <div class="tab-pane" id="security">
               <h6>SECURITY SETTINGS</h6>

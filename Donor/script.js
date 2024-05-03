@@ -99,7 +99,6 @@ const updateButton = document.getElementById("update-profile");
 
 // Profile info validation
 
-let countUpdate = 0;
 let teacherClick = false;
 let doctorClick = false;
 updateButton.addEventListener("click", function (event) {
@@ -205,7 +204,6 @@ updateButton.addEventListener("click", function (event) {
   }
 
   if (r != "") {
-    countUpdate--;
     const newDiv = document.createElement("div");
     console.log(r);
 

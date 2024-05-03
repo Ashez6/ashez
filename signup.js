@@ -197,10 +197,12 @@ orgSignUpButt.addEventListener("click", function (event) {
   area.style.border = "";
   governorate.style.border = "";
 
+  let errorMessage = "";
+
   let isValid = true;
 
   if (orgVerificationFileInput.files.length === 0) {
-    alert("Please upload your verification file.");
+    errorMessage += "Please upload your verification file.<br>";
     orgVerificationFileInput.style.border = "1px solid red";
     isValid = false;
   } else {
@@ -208,72 +210,122 @@ orgSignUpButt.addEventListener("click", function (event) {
   }
 
   if (firstName.value == "") {
+    errorMessage += "Please enter your first name.<br>";
+
     firstName.style.border = "1px solid red";
     isValid = false;
   }
   if (lastName.value == "") {
+    errorMessage += "Please enter your last name.<br>";
+
     lastName.style.border = "1px solid red";
     isValid = false;
   }
 
   if (username.value == "") {
+    errorMessage += "Please enter a username.<br>";
+
     username.style.border = "1px solid red";
     isValid = false;
   }
 
   if (password.value == "") {
+    errorMessage += "Please enter a password.<br>";
+
     password.style.border = "1px solid red";
     isValid = false;
   }
   if (orgName.value == "") {
+    errorMessage += "Please enter the organization's name.<br>";
     orgName.style.border = "1px solid red";
     isValid = false;
   }
   if (orgType.value == "") {
+    errorMessage += "Please enter the organization's type.<br>";
+
     orgType.style.border = "1px solid red";
     isValid = false;
   }
   if (address.value == "") {
+    errorMessage += "Please enter the organization's address.<br>";
     address.style.border = "1px solid red";
     isValid = false;
   }
   if (area.value == "") {
+    errorMessage += "Please enter the organization's area.<br>";
+
     area.style.border = "1px solid red";
     isValid = false;
   }
   if (governorate.value == "") {
+    errorMessage += "Please enter the organization's governorate.<br>";
+
     governorate.style.border = "1px solid red";
     isValid = false;
   }
 
   if (!validateName(firstName.value)) {
+    errorMessage +=
+      "First name must be provided and not contain any symbol.<br>";
     firstName.style.border = "1px solid red";
     isValid = false;
   }
   if (!validateName(lastName.value)) {
+    errorMessage +=
+      "Last name must be provided and not contain any symbol.<br>";
     lastName.style.border = "1px solid red";
     isValid = false;
   }
   if (!validateEmail(email.value)) {
+    errorMessage += "A valid email must be provided.<br>";
     email.style.border = "1px solid red";
-    alert("Please enter a valid email");
     isValid = false;
   }
   if (!validatePhoneNumber(number.value)) {
     number.style.border = "1px solid red";
-    alert("Please enter a valid phone number. [+country code][10 digits]");
+    errorMessage +=
+      "Please enter a valid phone number. [+country code][10 digits].<br>";
     isValid = false;
   }
 
   if (gender.value == "") {
+    errorMessage += "Please enter your gender. <br>";
     gender.style.border = "1px solid red";
     isValid = false;
+  }
+  if (count == 0) {
+    errorMessage += "Please add your organization's pin on the map. <br>";
+    isValid = false;
+  }
+
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("popup-here");
+
+  if (errorMessage == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
+    newDiv.innerHTML =
+      '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
+      errorMessage +
+      "</div>";
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
   }
 
   if (!isValid) {
     event.preventDefault();
   } else {
-    alert("Your account has been created!");
-    window.location.href = "./Organization/homepageorg.html";
+    alert("Account Created!");
+    window.location.href = "index.html";
   }
 });

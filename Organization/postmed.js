@@ -16,6 +16,70 @@ function handleFileSelect(event, i) {
   reader.readAsDataURL(file);
 }
 
+let errorMessage = "";
+
+function checkInput(inputElement) {
+  inputElement.style.border = "";
+  if (inputElement.value === "") {
+    inputElement.style.border = "1px solid red";
+    errorMessage += `Please enter the ${inputElement.id}.<br>`;
+  }
+}
+
+const postReq = document.getElementById("update-profile");
+
+postReq.addEventListener("click", (e) => {
+  const title = document.getElementById("title");
+  const type = document.getElementById("type");
+  const quantity = document.getElementById("quantity");
+  const usage = document.getElementById("usage");
+  errorMessage = "";
+
+  checkInput(title);
+  checkInput(type);
+  checkInput(usage);
+
+
+  
+
+  quantity.style.border = "";
+  if (quantity.value <= 0) {
+    quantity.style.border = "1px solid red";
+    errorMessage += `Please enter the ${quantity.id}.<br>`;
+  }
+
+  const fileInput = document.getElementById("file-here");
+  if (!fileInput.value) {
+    errorMessage += "Please upload a photo.<br>";
+    e.preventDefault();
+  }
+
+  const newDiv = document.createElement("div");
+  const appendH = document.getElementById("append-here");
+
+  if (errorMessage == "") {
+    newDiv.innerHTML =
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+
+    appendH.appendChild(newDiv);
+  } else {
+    newDiv.innerHTML =
+      '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
+      errorMessage +
+      "</div>";
+
+    if (appendH.hasChildNodes()) {
+      appendH.removeChild(appendH.firstChild);
+    }
+    appendH.appendChild(newDiv);
+  }
+});
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const typeSelect = document.getElementById("type-select");
 

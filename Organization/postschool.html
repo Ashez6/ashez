@@ -42,6 +42,41 @@
         <link rel="stylesheet" href="../alert.css">
 		
 
+        <style>
+          .book-elem{
+            display: none;
+          }
+          .nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 27px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  margin-bottom: 16px;
+}
+        </style>
 </head>
 <body>
  <!-- Header Area -->
@@ -146,49 +181,44 @@
                 <div class="form-group" >
                     <label for="username">Type</label>
                     <br>
-                    <select class="form-select" id="type" style="height: 50px; width: 250px;" >
+                    <select class="form-select nice-select" id="type" style="height: 50px; width: 250px; margin-right: 100%;" >
                         <option value=""selected>Type</option>
                         <option value="School Books" >School Books</option>
                         <option value="Stationary" >Stationary</option>
 
                     </select>
                 </div>
-                <br><br>
+                <div class="form-group" style="margin-top: 2%;">
+                  <label for="username">Quantity</label>
+                  <br>
+                  
+                  <input type="number" min="0" class="form-control" id="quantity" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
+              </div>
+              <br>
 
-                <div class="form-group">
+
+                <div class="form-group book-elem" >
                   <label for="username">Book name</label>
                   <input type="text" class="form-control" id="bname" aria-describedby="usernameHelp" placeholder="Enter the book name">
                 </div>
-                <br>
-                <div class="form-group">
+                <div class="form-group book-elem">
                   <label for="username">Author</label>
                   <input type="text" class="form-control" id="author" aria-describedby="usernameHelp" placeholder="Enter the author of your requested book">
                 </div>
-                <br>
-                <div class="form-group">
+                <div class="form-group book-elem">
                   <label for="username">Language</label>
                   <input type="text" class="form-control" id="language" aria-describedby="usernameHelp" placeholder="Enter the language of your requested book">
                 </div>
-                <br>
-                <div class="form-group">
+                <div class="form-group book-elem">
                   <label for="username">Edition</label>
                   <input type="text" class="form-control" id="edition" aria-describedby="usernameHelp" placeholder="Enter the edition of your requested book">
                 </div>
-                <br>
-                <div class="form-group">
+                <div class="form-group book-elem">
                   <label for="username">Short Summary</label>
                   <input type="text" class="form-control" id="summary" aria-describedby="usernameHelp" placeholder="Enter a short summary of your requested book">
-                </div>
-                <br>
+                </div>            
             
-            
-            <div class="form-group" style="margin-top: 2%;">
-                <label for="username">Quantity</label>
-                <br>
-                
-                <input type="number" min="0" class="form-control" id="quantity" style="height: 50px; width: 250px;" placeholder="Enter the quantity Required">
-            </div>
-            <br>
+           
 
                 <button type="button" class="btn btn-primary" id = "update-profile" style="margin-left: 550px;">Post Request</button>
                 <div id = "append-here"></div>
@@ -303,6 +333,11 @@
 </footer>
 <!--/ End Footer Area -->
 
+<script>
+function goBack() {
+  history.back();
+}
+</script>
 <!-- jquery Min JS -->
 <script src="postschool.js"></script>
 
@@ -344,7 +379,7 @@
 <!-- Bootstrap JS -->
 <script src="js/bootstrap.min.js"></script>
 <!-- Main JS -->
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
 
 
 

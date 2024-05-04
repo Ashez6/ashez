@@ -183,6 +183,10 @@ updateButton.addEventListener("click", function (event) {
       cases.style.border = "1px solid red";
       r += "Please enter your the number of cases you can take.<br>";
     }
+
+    if (count1 == 0) {
+      r += "Please pin your clinic's address.<br>";
+    }
   }
 
   if (type == "teacher") {
@@ -213,7 +217,7 @@ updateButton.addEventListener("click", function (event) {
       r +
       "</div>";
     newDiv.style.marginTop = "5%";
-    const profile = document.getElementById("profile");
+
     if (profile.hasChildNodes()) {
       profile.removeChild(profile.firstChild);
     }
@@ -227,7 +231,6 @@ updateButton.addEventListener("click", function (event) {
     newDiv.innerHTML =
       '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     newDiv.style.marginTop = "5%";
-    const profile = document.getElementById("profile");
 
     if (profile.hasChildNodes()) {
       profile.removeChild(profile.firstChild);

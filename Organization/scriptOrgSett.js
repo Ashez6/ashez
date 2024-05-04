@@ -197,7 +197,7 @@ updateButton.addEventListener("click", function (event) {
   }
 
   if (type.value == "") {
-    address.style.border = "1px solid red";
+    type.style.border = "1px solid red";
     r += "Please enter your organization type .<br>";
   }
 

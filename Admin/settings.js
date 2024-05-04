@@ -6,7 +6,6 @@ confirmButton.addEventListener("click", (e) => {
   const oldPass = document.getElementById("old-pass");
   const newPass1 = document.getElementById("new-pass1");
   const newPass2 = document.getElementById("new-pass2");
-  const addText = document.getElementById("add-confirm");
 
   let r = "";
 

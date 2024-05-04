@@ -165,6 +165,11 @@ const aybetngan2 = document.querySelectorAll(".pop3");
 const aybetngan3 = document.querySelectorAll(".pop4");
 const aybetngan4 = document.querySelectorAll(".pop5");
 const textboxerror = document.querySelectorAll(".textboxs-error");
+const quantity1 = document.querySelectorAll(".quantity1");
+const quantity2 = document.querySelectorAll(".quantity2");
+const number4 = document.querySelectorAll(".number4");
+const amount5 = document.querySelectorAll(".amount5");
+
 const save = document.querySelectorAll(".green-button");
 divloc.append(newdiv);
 const titlechange = document.querySelectorAll(".title");
@@ -172,7 +177,7 @@ const outertitle = document.querySelectorAll(".text-center")
 save[0].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan0.length;i++){
-    if(aybetngan0[i].value==""){
+    if(aybetngan0[i].value==""  | quantity1[0].value=="0" | quantity1[0].value==""){
       flag = false;
       break;
     }
@@ -184,13 +189,13 @@ save[0].addEventListener("click",(e)=>{
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     outertitle[0].textContent=titlechange[0].value;
     }else{
-      textboxerror[0].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter data in all required fields!</div>';
+      textboxerror[0].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields! </div>';
     }
 })
 save[1].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan1.length;i++){
-    if(aybetngan1[i].value==""){
+    if(aybetngan1[i].value==""  | quantity2[0].value=="0" | quantity2[0].value=="0"){
       flag = false;
       break;
     }
@@ -226,7 +231,7 @@ save[2].addEventListener("click",(e)=>{
 save[3].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan3.length;i++){
-    if(aybetngan3[i].value==""){
+    if(aybetngan3[i].value==""  | number4[0].value=="0" | number4[0].value=="0"){
       flag = false;
       break;
     }
@@ -238,14 +243,14 @@ save[3].addEventListener("click",(e)=>{
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     outertitle[3].textContent=titlechange[3].value;
     }else{
-      textboxerror[3].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter data in all required fields!</div>';
+      textboxerror[3].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields!</div>';
     }
     
 })
 save[4].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan4.length;i++){
-    if(aybetngan4[i].value==""){
+    if(aybetngan4[i].value==""  | amount5[0].value=="0" | amount5[0].value=="0"){
       flag = false;
       break;
     }
@@ -257,7 +262,7 @@ save[4].addEventListener("click",(e)=>{
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
     outertitle[4].textContent=titlechange[4].value;
     }else{
-      textboxerror[4].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter data in all required fields!</div>';
+      textboxerror[4].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields!</div>';
     }
 })
 

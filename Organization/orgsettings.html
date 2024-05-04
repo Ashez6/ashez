@@ -375,7 +375,7 @@
               attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
-          const defMarker = L.marker([30.05, 31.22]).addTo(map).bindPopup('Hello, Leaflet!');
+          const defMarker = L.marker([30.05, 31.22]).addTo(map);
 
   
           defMarker.on('click', function () {
@@ -392,7 +392,7 @@
           const latlng = e.latlng;
           console.log('Selected location:', latlng);
   
-          const marker = L.marker(latlng).addTo(map).bindPopup('Hello, Leaflet!');
+          const marker = L.marker(latlng).addTo(map);
   
           // Listen for the marker's click event
           marker.on('click', function () {

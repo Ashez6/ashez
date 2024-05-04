@@ -98,9 +98,6 @@ body{
         padding: 15px 20px;
         border-bottom: 1px solid #e8eef1;
     }
-    .inbox-message ul li:hover, .inbox-message ul li:focus {
-        background: #eff6f9;
-    }
     .inbox-message .message-avatar {
         position: absolute;
         left: 30px;

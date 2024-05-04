@@ -39,485 +39,575 @@
     <link rel="stylesheet" href="../popout.css">
 
 
+    <style>
+        #map {
+             width: 100%;
+             height: 200px;
+             margin-bottom: 10%;
+         }
+         #map1 {
+             width: 100%;
+             height: 200px;
+             margin-bottom: 10%;
+         }
+         #map2 {
+             width: 100%;
+             height: 200px;
+             margin-bottom: 10%;
+         }
+         #map3 {
+             width: 100%;
+             height: 200px;
+             margin-bottom: 10%;
+         }
+         
+         </style>    
 </head>
-<body>
-    <!-- Header Area -->
-    <header class="header" >
-        <!-- Header Inner -->
-        <div class="header-inner" >
-            <div class="container" >
-                <div class="inner"  >
-                    <div class="row">
-                        <i class="icofont-arrow-left" id = "left-arrow" onclick="goBack()"></i>
-
-                        <div class="col-lg-3 col-md-3 col-12">
-                            <!-- Start Logo -->
-                            <div class="logo">
-                            <a href="homepage.html"><img src="img/ASHEZ.png" alt="#"></a>
-                            </div>
-                            <!-- End Logo -->
-                        </div>
-                        <div class="col-lg-6 col-md-9 col-12">
-                            <!-- Main Menu -->
-                            <div class="main-menu">
-                                <nav class="navigation">
-                                    <ul class="nav menu" >
-                                        <li ><a href="homepage.html">Home</i></a>
-                                        </li>
-                                        <li ><a href="javascript:void(0)">Donate <i class="icofont-rounded-down"></i></a> 
-                                            <ul class="dropdown" id = "dropdown-change">
-                                            <li>
-                                                <a href="allsectors.html">All</a>
-                                                <a href="medicalsector.html">Medical Supplies</a>
-                                                <a href="schoolsector.html">School Supplies</a>
-                                                <a href="clothessector.html">Clothes</a>
-                                                <a href="foodsector.html">Food</a>
-                                                <a href="bloodsector.html">Blood</a>
-                                                <a href="toyssector.html">Toys</a>
-                                            </ul>
-                                        </li>
-                                        <li><a href="track.html">Track Donations </a>
-                                        </li>
-                                        <li><a href="aboutus.html">About Us</a></li>
-
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!--/ End Main Menu -->
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-12" id = "icon-column">
-                            <div class="icon-container">
-                                <nav class="navigation">
-                                    <ul class="nav menu" style="display: flex; align-items: center;" >
-                                        <li ><a href="notifications.html"><i class="bi bi-bell ashez-icon" id = "bell-icon"></i></a></li>
-                                        <li ><a href="donorsettings.html" ><i class="bi bi-gear ashez-icon" id = "settings-gear"></i></a></li>
-                                        <a href="../index.html" class="btn d-block w-100 d-sm-inline-block btn-light delete-button" style="max-width: 96px; max-height: 45px;" id="log-out" >Logout</a>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Header Inner -->
-    </header>
-    <!-- End Header Area -->
 
 
-    <section class="sector-title">
-        <div class="container">
-            <div class="row" style="display: flex; justify-content: center;">
-                <!-- <div class="col-lg-10 mx-auto mb-4"> -->
-                <div class="col-lg-7">
-                   <div class="text" style="display: flex; justify-content: center;">
-                       <h7>Registered Organizations</h7>
-                   </div>
+
+
+<section class="sector-title">
+    <div class="container">
+        <div class="row" style="display: flex; justify-content: center;">
+            <!-- <div class="col-lg-10 mx-auto mb-4"> -->
+            <div class="col-lg-7">
+               <div class="text" style="display: flex; justify-content: center;">
+                   <h7>Registered Organizations</h7>
                </div>
            </div>
-        </div>
-    </section>
-    <br><br>
-                        <div class="filter-result">
-                            <br><br>
-                            
-                            <section>
-                                <div class="container">
-                                    <div class="row">
-                                         
-                                        </div>
+       </div>
+    </div>
+</section>
+<div id="deldiv">
+
+</div>
+
+
+<br><br>
+                    <div class="filter-result">
+                        <br><br>
+                        
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                     
                                     </div>
-                            
-                                    <div class="row">
-                                        <div class="col-lg-10 mx-auto">
-                                            <div class="career-search mb-60">
-                                                <form action="#" class="career-form mb-60">
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-lg-3 my-3">
-                                                            <div class="input-group position-relative">
-                                                                <input type="text" class="form-control" placeholder="Enter Your Keywords" id="keywords" >
-                                                            </div>
-                                                        </div>
-                                                  
-                                                        
-                                                        
-                                                        <div class="custom-dropdown col-md-6 col-lg-3 my-3">
-                                                            <div class="select-container">
-                                                              <div class="dropdown-label">Governerate</div>
-                                                              <div class="dropdown-options">
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter1" value="Cairo">
-                                                                  <span>Cairo</span>
-                                                                </label>
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter1" value="Alexandria">
-                                                                  <span>Alexandria</span>
-                                                              
-                                                              </div>
-                                                            </div>
-                                                        </div>
+                                </div>
                         
-                                                        <div class="custom-dropdown col-md-6 col-lg-2 my-3">
-                                                            <div class="select-container">
-                                                              <div class="dropdown-label">Area</div>
-                                                              <div class="dropdown-options">
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter2" value="Downtown">
-                                                                  <span>Downtown</span>
-                                                                </label>
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter2" value="Somoha">
-                                                                  <span>Somoha</span>
-                                                                </label>
-    
-                                                                <label class="option">
-                                                                    <input type="checkbox" class="filter2" value="Zamalek">
-                                                                    <span>Zamalek</span>
-                                                                  </label>
-                                                                  <label class="option">
-                                                                    <input type="checkbox" class="filter2" value="Elmontaza">
-                                                                    <span>Elmontaza</span>
-                                                                  </label>
-                                                              </div>
-                                                            </div>
+                                <div class="row">
+                                    <div class="col-lg-10 mx-auto">
+                                        <div class="career-search mb-60">
+                                            <form action="#" class="career-form mb-60">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3 my-3">
+                                                        <div class="input-group position-relative">
+                                                            <input type="text" class="form-control" placeholder="Enter Your Keywords" id="keywords" >
                                                         </div>
-    
-                                                        <div class="custom-dropdown col-md-6 col-lg-2 my-3">
-                                                            <div class="select-container">
-                                                              <div class="dropdown-label">Type</div>
-                                                              <div class="dropdown-options">
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter3" value="School Supplies">
-                                                                  <span>School Supplies</span>
-                                                                </label>
-                                                                <label class="option">
-                                                                  <input type="checkbox" class="filter3" value="Orphanage">
-                                                                  <span>Orphanage</span>
-                                                                </label>
-    
-                                                                <label class="option">
-                                                                    <input type="checkbox" class="filter3" value="Hospital">
-                                                                    <span>Hospital</span>
-                                                                  </label>
-                                                                  
-                                                              </div>
-                                                            </div>
-                                                        </div>
-                        
-    
-    
-    
-                                                       
-     
-                                                        <div class="col-md-6 col-lg-2 my-3">
-                                                            <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit" >
-                                                                Search
-                                                            </button>
-                                                        </div>
-                                                        
                                                     </div>
-                                                </form>
-                             <br>
-    
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org1">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-    
-                                    <div class="img-container">
-                                    <img src="../Admin/img/d2.jpg" alt="" class="img-icon" >
-                                
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Dream Builders Foundation</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="icofont-world"></i> Cairo 
-                                                <i class="icofont-location-pin"></i> Downtown
-                                                <i class="icofont-home"></i> School Supplies 
-                                            <li class="mr-md-4">
-                                             
-                                        </ul>
-                                      
-                                    </div>
-                                </div>
-                                </div>
-                                
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation1">View Details</a>
+                                              
+                                                    
+                                                    
+                                                    <div class="custom-dropdown col-md-6 col-lg-3 my-3">
+                                                        <div class="select-container">
+                                                          <div class="dropdown-label">Governerate</div>
+                                                          <div class="dropdown-options">
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter1" value="Cairo">
+                                                              <span>Cairo</span>
+                                                            </label>
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter1" value="Alexandria">
+                                                              <span>Alexandria</span>
+                                                          
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="custom-dropdown col-md-6 col-lg-2 my-3">
+                                                        <div class="select-container">
+                                                          <div class="dropdown-label">Area</div>
+                                                          <div class="dropdown-options">
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter2" value="Downtown">
+                                                              <span>Downtown</span>
+                                                            </label>
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter2" value="Somoha">
+                                                              <span>Somoha</span>
+                                                            </label>
+
+                                                            <label class="option">
+                                                                <input type="checkbox" class="filter2" value="Zamalek">
+                                                                <span>Zamalek</span>
+                                                              </label>
+                                                              <label class="option">
+                                                                <input type="checkbox" class="filter2" value="Elmontaza">
+                                                                <span>Elmontaza</span>
+                                                              </label>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="custom-dropdown col-md-6 col-lg-2 my-3">
+                                                        <div class="select-container">
+                                                          <div class="dropdown-label">Type</div>
+                                                          <div class="dropdown-options">
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter3" value="School Supplies">
+                                                              <span>School Supplies</span>
+                                                            </label>
+                                                            <label class="option">
+                                                              <input type="checkbox" class="filter3" value="Orphanage">
+                                                              <span>Orphanage</span>
+                                                            </label>
+
+                                                            <label class="option">
+                                                                <input type="checkbox" class="filter3" value="Hospital">
+                                                                <span>Hospital</span>
+                                                              </label>
+                                                              
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                    
+
+
+
+                                                   
+ 
+                                                    <div class="col-md-6 col-lg-2 my-3">
+                                                        <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit" >
+                                                            Search
+                                                        </button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </form>
+                         <br>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org1">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+
+                                <div class="img-container">
+                                <img src="../Admin/img/d2.jpg" alt="" class="img-icon" >
+                            
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Dream Builders Foundation</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Cairo 
+                                            <i class="icofont-location-pin"></i> Downtown
+                                            <i class="icofont-home"></i> School Supplies 
+                                        <li class="mr-md-4">
+                                         
+                                    </ul>
+                                  
                                 </div>
                             </div>
-    
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org2">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
-                                    <img src="../Admin/img/d3.png" alt="" class="img-icon" >
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Bright Horizons Aid Society</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="icofont-world"></i> Alexandria
-                                                <i class="icofont-location-pin"></i> Somoha
-                                                <i class="icofont-home"></i> School Supplies 
-                                            <li class="mr-md-4">
-                                             
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation2">View Details</a>
+                            </div>
+                            
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation1">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org2">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
+                                <img src="../Admin/img/d3.png" alt="" class="img-icon" >
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Bright Horizons Aid Society</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Alexandria
+                                            <i class="icofont-location-pin"></i> Somoha
+                                            <i class="icofont-home"></i> School Supplies 
+                                        <li class="mr-md-4">
+                                         
+                                    </ul>
+                                    
                                 </div>
                             </div>
-    
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org3">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
-                                    <img src="../Admin/img/d1.jpg" alt="" class="img-icon">
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Gratitude Gateway Foundation</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="icofont-world"></i> Cairo 
-                                                <i class="icofont-location-pin"></i> Zamalek
-                                                <i class="icofont-home"></i> Orphanage 
-                                            <li class="mr-md-4">
-                                             
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation3">View Details</a>
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation2">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org3">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
+                                <img src="../Admin/img/d1.jpg" alt="" class="img-icon">
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Gratitude Gateway Foundation</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Cairo 
+                                            <i class="icofont-location-pin"></i> Zamalek
+                                            <i class="icofont-home"></i> Orphanage 
+                                        <li class="mr-md-4">
+                                         
+                                    </ul>
                                 </div>
                             </div>
-    
-                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org4">
-                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
-                                    <img src="../Admin/img/d5.jpg" alt="" class="img-icon">
-                                    <div class="job-content">
-                                        <h5 class="text-center text-md-left">Healing Hands Aid</h5>
-                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                                            <li class="mr-md-4">
-                                                <i class="icofont-world"></i> Alexandria
-                                                <i class="icofont-location-pin"></i> Elmontaza
-                                                <i class="icofont-home"></i> Hospital
-                                            <li class="mr-md-4">
-                                             
-                                        </ul>
-                                      
-                                    </div>
-                                </div>
-                                <div class="job-right my-4 flex-shrink-0">
-                                    <a href="javascript:void(0)" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation4">View Details</a>
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation3">View Details</a>
+                            </div>
+                        </div>
+
+                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30" id="org4">
+                            <div class="job-left my-4 d-md-flex align-items-center flex-wrap img-container">
+                                <img src="../Admin/img/d5.jpg" alt="" class="img-icon">
+                                <div class="job-content">
+                                    <h5 class="text-center text-md-left">Healing Hands Aid</h5>
+                                    <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                        <li class="mr-md-4">
+                                            <i class="icofont-world"></i> Alexandria
+                                            <i class="icofont-location-pin"></i> Elmontaza
+                                            <i class="icofont-home"></i> Hospital
+                                        <li class="mr-md-4">
+                                         
+                                    </ul>
+                                  
                                 </div>
                             </div>
-    
+                            <div class="job-right my-4 flex-shrink-0">
+                                <a href="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-light" id="vdonation4">View Details</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--view donation 1-->
+
+<div class="container pop-out" id = "vdonation1-screen"> 
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../Admin/img/d2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Dream Builders Foundation</h3>
+                                <span class="text-primary">Registered Organization</span>
+                            </div>
+                            <br>
+                            <div class="row"> 
+                                <div class="col-lg-8"> 
+                                    <ul class="list-unstyled mb-1-9 " > 
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01135879082</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> dreambuilders@gmail.com</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 7 Talaat Harb Street , Downtown Cairo,Egypt</li>
+                                       
+
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
+                          
+
+                            </div>
+                            
+                    
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
     
+    </div>
+</div>
+
+<!--view donation 2-->
+
+<div class="container pop-out" id = "vdonation2-screen"> 
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../admin/img/d3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Bright Horizons Aid Society</h3>
+                                <span class="text-primary">Registered Organization</span>
+                            </div>
+                            <br>
+                            <div class="row"> 
+                                <div class="col-lg-8"> 
+                                    <ul class="list-unstyled mb-1-9 " > 
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01289760123</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> brighthorizons@gmail.com</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 18 El-Horreya Street,Smouha,Alexandria,Egypt</li>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map1"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
+
+                            </div>
+                            
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<!--view donation 3-->
+
+<div class="container pop-out" id = "vdonation3-screen"> 
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../Admin/img/d1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Gratitude Gateway Foundation</h3>
+                                <span class="text-primary">Registered Organization</span>
+                            </div>
+                            <br>
+                            <div class="row"> 
+                                <div class="col-lg-8"> 
+                                    <ul class="list-unstyled mb-1-9 " > 
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01198601236</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> gratitudegateway@gmail.com</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 6 El Gezira Street,Zamalek,Cairo,Egypt</li>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map2"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
+              
+
+                            </div>
+                            
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+<!--view donation 4-->
+
+<div class="container pop-out" id = "vdonation4-screen"> 
+    <div class="row">
+        <div class="col-lg-12 mb-4 mb-sm-5">
+            <div class="card card-style1 border-1" style="border: 1px solid black;">
+                <div class="row">
+                    <div class="col-lg-11">
+                    </div>
+                    <div class="col-lg-1" style="display: flex;justify-content: center;">
+                        <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
+                    </div>
+                </div>
+                <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                    
+                    <div class="row align-items-center" style="gap: 1rem;">
+                        
+                        <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
+                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
+                                    <img class="img-holder" src="../Admin/img/d5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 px-xl-10">
+                            <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                <h3 class="h2 text-white mb-0">Healing Hands Aid</h3>
+                                <span class="text-primary">Registered Organization</span>
+                            </div>
+                            <br>
+                            <div class="row"> 
+                                <div class="col-lg-8"> 
+                                    <ul class="list-unstyled mb-1-9 " > 
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01278901236</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> healinghands@gmail.com</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 123 El Montaza Street, Alexandria,Egypt</li>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul class="list-unstyled mb-1-9">
+                                                                        
+                                        <div class="form-group">
+
+                                            <div id = "map3"></div>
+                                          </div>
+                                          <br>
+                        
+                                     </ul>
+                                    
+                                </div>
             
-                </div>
-            </div>
-    
-        </div>
-    
-    </section>
-    
-    <!--view donation 1-->
-    
-    <div class="container pop-out" id = "vdonation1-screen"> 
-        <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
-                <div class="card card-style1 border-1" style="border: 1px solid black;">
-                    <div class="row">
-                        <div class="col-lg-11">
-                        </div>
-                        <div class="col-lg-1" style="display: flex;justify-content: center;">
-                            <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
-                        </div>
-                    </div>
-                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                        
-                        <div class="row align-items-center" style="gap: 1rem;">
+
+                            </div>
                             
-                            <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
-                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
-                                        <img class="img-holder" src="../Admin/img/d2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 px-xl-10">
-                                <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                    <h3 class="h2 text-white mb-0">Dream Builders Foundation</h3>
-                                    <span class="text-primary">Registered Organization</span>
-                                </div>
-                                <br>
-                                <div class="row"> 
-                                    <div class="col-lg-8"> 
-                                        <ul class="list-unstyled mb-1-9 " > 
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01135879082</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> dreambuilders@gmail.com</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 7 Talaat Harb Street , Downtown Cairo,Egypt</li>
-                                    </div>
-                   
-    
-                                </div>
-                                
-                        
-                            </div>
+                    
                         </div>
                     </div>
                 </div>
             </div>
-        
         </div>
+    
     </div>
+</div>
+
+
+<script>
+
+  
+  
+    const map = L.map('map').setView([30.045648769723908, 31.23675169473278], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
     
-    <!--view donation 2-->
+            const latlng =[30.045648769723908, 31.23675169473278];
+            console.log('Selected location:', latlng);
     
-    <div class="container pop-out" id = "vdonation2-screen"> 
-        <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
-                <div class="card card-style1 border-1" style="border: 1px solid black;">
-                    <div class="row">
-                        <div class="col-lg-11">
-                        </div>
-                        <div class="col-lg-1" style="display: flex;justify-content: center;">
-                            <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
-                        </div>
-                    </div>
-                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                        
-                        <div class="row align-items-center" style="gap: 1rem;">
-                            
-                            <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
-                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
-                                        <img class="img-holder" src="../Admin/img/d3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 px-xl-10">
-                                <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                    <h3 class="h2 text-white mb-0">Bright Horizons Aid Society</h3>
-                                    <span class="text-primary">Registered Organization</span>
-                                </div>
-                                <br>
-                                <div class="row"> 
-                                    <div class="col-lg-8"> 
-                                        <ul class="list-unstyled mb-1-9 " > 
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01289760123</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> brighthorizons@gmail.com</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 18 El-Horreya Street,Smouha,Alexandria,Egypt</li>
-                                    </div>
-                                
+            const marker = L.marker(latlng).addTo(map).bindPopup(' 7 Talaat Harb Street , Downtown Cairo,Egypt');
+
     
-                                </div>
-                                
-                        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    </script>
+
+
+
+
+<script>
+
+  
+    const map1 = L.map('map1').setView([31.21799764770058, 29.94234199001446], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map1);
+    
+            const latlng1 =[31.21799764770058, 29.94234199001446];
+            console.log('Selected location:', latlng1);
+    
+            const marker1 = L.marker(latlng1).addTo(map1).bindPopup('18 El-Horreya Street,Smouha,Alexandria,Egypt');
+
+    
+    
+    </script>
+    
+
+
+    <script>
+
+  
+        const map2 = L.map('map2').setView([30.06188542601274, 31.218938454752227], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map2);
         
-        </div>
-    </div>
-    
-    
-    
-    <!--view donation 3-->
-    
-    <div class="container pop-out" id = "vdonation3-screen"> 
-        <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
-                <div class="card card-style1 border-1" style="border: 1px solid black;">
-                    <div class="row">
-                        <div class="col-lg-11">
-                        </div>
-                        <div class="col-lg-1" style="display: flex;justify-content: center;">
-                            <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
-                        </div>
-                    </div>
-                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                        
-                        <div class="row align-items-center" style="gap: 1rem;">
-                            
-                            <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
-                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
-                                        <img class="img-holder" src="../Admin/img/d1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 px-xl-10">
-                                <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                    <h3 class="h2 text-white mb-0">Gratitude Gateway Foundation</h3>
-                                    <span class="text-primary">Registered Organization</span>
-                                </div>
-                                <br>
-                                <div class="row"> 
-                                    <div class="col-lg-8"> 
-                                        <ul class="list-unstyled mb-1-9 " > 
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01198601236</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> gratitudegateway@gmail.com</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 6 El Gezira Street,Zamalek,Cairo,Egypt</li>
-                                    </div>
-                  
-    
-                                </div>
-                                
-                        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                const latlng2 =[30.06188542601274, 31.218938454752227];
+                console.log('Selected location:', latlng2);
         
-        </div>
-    </div>
+                const marker2 = L.marker(latlng2).addTo(map2).bindPopup('6 El Gezira Street,Zamalek,Cairo,Egypt');
     
-    
-    <!--view donation 4-->
-    
-    <div class="container pop-out" id = "vdonation4-screen"> 
-        <div class="row">
-            <div class="col-lg-12 mb-4 mb-sm-5">
-                <div class="card card-style1 border-1" style="border: 1px solid black;">
-                    <div class="row">
-                        <div class="col-lg-11">
-                        </div>
-                        <div class="col-lg-1" style="display: flex;justify-content: center;">
-                            <i class="bi bi-x-square-fill xbutton close-donation" id="close-donation-1"></i>
-                        </div>
-                    </div>
-                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                        
-                        <div class="row align-items-center" style="gap: 1rem;">
-                            
-                            <div class="col-lg-4 mb-4 mb-lg-0" style="display: flex;justify-content: center;">
-                                <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="border: 1px solid;">
-                                        <img class="img-holder" src="../Admin/img/d5.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 px-xl-10">
-                                <div class="bg-secondary py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                    <h3 class="h2 text-white mb-0">Healing Hands Aid</h3>
-                                    <span class="text-primary">Registered Organization</span>
-                                </div>
-                                <br>
-                                <div class="row"> 
-                                    <div class="col-lg-8"> 
-                                        <ul class="list-unstyled mb-1-9 " > 
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01278901236</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> healinghands@gmail.com</li>
-                                            <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 123 El Montaza Street, Alexandria,Egypt</li>
-                                    </div>
-                
-    
-                                </div>
-                                
-                        
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         
-        </div>
-    </div>
+        
+        </script>
+
+<script>
+
+  
+            const map3 = L.map('map3').setView([31.288146971919964, 30.015282449306987], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map3);
+    
+            const latlng3 =[31.288146971919964, 30.015282449306987];
+            console.log('Selected location:', latlng3);
+    
+            const marker3 = L.marker(latlng3).addTo(map3).bindPopup('123 El Montaza Street, Alexandria,Egypt');
+
+    
+    
+    </script>
     
 
 

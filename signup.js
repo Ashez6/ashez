@@ -67,8 +67,9 @@ verificationFileInput.addEventListener("change", function () {
   }
 });
 
+// Donor Sign-Up
+
 donorSignUpButt.addEventListener("click", function (event) {
-  const genderSelect = document.getElementById("gender1");
   const firstName = document.getElementById("first-name1");
   const lastName = document.getElementById("last-name1");
   const username = document.getElementById("username1");
@@ -84,6 +85,8 @@ donorSignUpButt.addEventListener("click", function (event) {
 
   let isValid = true;
 
+  let errorMessage = "";
+
   firstName.style.border = "";
   lastName.style.border = "";
   username.style.border = "";
@@ -93,54 +96,56 @@ donorSignUpButt.addEventListener("click", function (event) {
   address.style.border = "";
   area.style.border = "";
   governorate.style.border = "";
+  gender.style.border = "";
 
-  if (firstName.value == "") {
+  if (!validateName(firstName.value)) {
+    errorMessage += "First name must be provided and not contain any symbol.\n";
     firstName.style.border = "1px solid red";
     isValid = false;
   }
-  if (lastName.value == "") {
+  if (!validateName(lastName.value)) {
+    errorMessage += "Last name must be provided and not contain any symbol.\n";
     lastName.style.border = "1px solid red";
     isValid = false;
   }
 
   if (username.value == "") {
+    errorMessage += "Please enter a username.\n";
     username.style.border = "1px solid red";
     isValid = false;
   }
 
   if (password.value == "") {
+    errorMessage += "Please enter a password.\n";
     password.style.border = "1px solid red";
     isValid = false;
   }
+
   if (address.value == "") {
+    errorMessage += "Please enter your address.\n";
     address.style.border = "1px solid red";
     isValid = false;
   }
   if (area.value == "") {
+    errorMessage += "Please enter your area.\n";
     area.style.border = "1px solid red";
     isValid = false;
   }
   if (governorate.value == "") {
+    errorMessage += "Please enter the your governorate.\n";
     governorate.style.border = "1px solid red";
-    isValid = false;
-  }
-  if (!validateName(firstName.value)) {
-    firstName.style.border = "1px solid red";
-    isValid = false;
-  }
-  if (!validateName(lastName.value)) {
-    lastName.style.border = "1px solid red";
     isValid = false;
   }
 
   if (!validateEmail(email.value)) {
     email.style.border = "1px solid red";
     isValid = false;
-    alert("Please enter a valid email");
+    errorMessage += "Please enter a valid email\n";
   }
   if (!validatePhoneNumber(number.value)) {
     number.style.border = "1px solid red";
-    alert("Please enter a valid phone number. [+country code][10 digits]");
+    errorMessage +=
+      "Please enter a valid phone number. [+country code][10 digits]\n";
     isValid = false;
   }
 
@@ -149,7 +154,7 @@ donorSignUpButt.addEventListener("click", function (event) {
       donorTypeSelect.value === "doctor") &&
     verificationFileInput.files.length === 0
   ) {
-    alert("Please upload your verification file.");
+    errorMessage += "Please upload your verification file.";
     isValid = false;
   }
 
@@ -159,12 +164,15 @@ donorSignUpButt.addEventListener("click", function (event) {
   }
 
   if (!isValid) {
+    alert(errorMessage);
     event.preventDefault();
   } else {
     alert("Your account has been created!");
-    window.location.href = "./Donor/homepage.html";
+    window.location.href = "index.html";
   }
 });
+
+//ORG SIGN-UP
 
 const orgSignUpButt = document.getElementById("sign-up-org");
 const orgVerificationFileInput = document.getElementById(
@@ -201,129 +209,92 @@ orgSignUpButt.addEventListener("click", function (event) {
 
   let isValid = true;
 
+  if (!validateName(firstName.value)) {
+    errorMessage += "First name must be provided and not contain any symbol.\n";
+    firstName.style.border = "1px solid red";
+    isValid = false;
+  }
+  if (!validateName(lastName.value)) {
+    errorMessage += "Last name must be provided and not contain any symbol.\n";
+    lastName.style.border = "1px solid red";
+    isValid = false;
+  }
+
   if (orgVerificationFileInput.files.length === 0) {
-    errorMessage += "Please upload your verification file.<br>";
+    errorMessage += "Please upload your verification file.\n";
     orgVerificationFileInput.style.border = "1px solid red";
     isValid = false;
   } else {
     orgVerificationFileInput.style.border = ""; // reset border if validation passes
   }
 
-  if (firstName.value == "") {
-    errorMessage += "Please enter your first name.<br>";
-
-    firstName.style.border = "1px solid red";
-    isValid = false;
-  }
-  if (lastName.value == "") {
-    errorMessage += "Please enter your last name.<br>";
-
-    lastName.style.border = "1px solid red";
-    isValid = false;
-  }
-
   if (username.value == "") {
-    errorMessage += "Please enter a username.<br>";
+    errorMessage += "Please enter a username.\n";
 
     username.style.border = "1px solid red";
     isValid = false;
   }
 
   if (password.value == "") {
-    errorMessage += "Please enter a password.<br>";
+    errorMessage += "Please enter a password.\n";
 
     password.style.border = "1px solid red";
     isValid = false;
   }
   if (orgName.value == "") {
-    errorMessage += "Please enter the organization's name.<br>";
+    errorMessage += "Please enter the organization's name.\n";
     orgName.style.border = "1px solid red";
     isValid = false;
   }
   if (orgType.value == "") {
-    errorMessage += "Please enter the organization's type.<br>";
+    errorMessage += "Please enter the organization's type.\n";
 
     orgType.style.border = "1px solid red";
     isValid = false;
   }
   if (address.value == "") {
-    errorMessage += "Please enter the organization's address.<br>";
+    errorMessage += "Please enter the organization's address.\n";
     address.style.border = "1px solid red";
     isValid = false;
   }
   if (area.value == "") {
-    errorMessage += "Please enter the organization's area.<br>";
+    errorMessage += "Please enter the organization's area.\n";
 
     area.style.border = "1px solid red";
     isValid = false;
   }
   if (governorate.value == "") {
-    errorMessage += "Please enter the organization's governorate.<br>";
+    errorMessage += "Please enter the organization's governorate.\n";
 
     governorate.style.border = "1px solid red";
     isValid = false;
   }
 
-  if (!validateName(firstName.value)) {
-    errorMessage +=
-      "First name must be provided and not contain any symbol.<br>";
-    firstName.style.border = "1px solid red";
-    isValid = false;
-  }
-  if (!validateName(lastName.value)) {
-    errorMessage +=
-      "Last name must be provided and not contain any symbol.<br>";
-    lastName.style.border = "1px solid red";
-    isValid = false;
-  }
   if (!validateEmail(email.value)) {
-    errorMessage += "A valid email must be provided.<br>";
+    errorMessage += "A valid email must be provided.\n";
     email.style.border = "1px solid red";
     isValid = false;
   }
   if (!validatePhoneNumber(number.value)) {
     number.style.border = "1px solid red";
     errorMessage +=
-      "Please enter a valid phone number. [+country code][10 digits].<br>";
+      "Please enter a valid phone number. [+country code][10 digits].\n";
     isValid = false;
   }
 
   if (gender.value == "") {
-    errorMessage += "Please enter your gender. <br>";
+    errorMessage += "Please enter your gender. \n";
     gender.style.border = "1px solid red";
     isValid = false;
   }
   if (count == 0) {
-    errorMessage += "Please add your organization's pin on the map. <br>";
+    errorMessage += "Please add your organization's pin on the map.\n";
     isValid = false;
-  }
-
-  const newDiv = document.createElement("div");
-  const appendH = document.getElementById("popup-here");
-
-  if (errorMessage == "") {
-    newDiv.innerHTML =
-      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
-
-    if (appendH.hasChildNodes()) {
-      appendH.removeChild(appendH.firstChild);
-    }
-
-    appendH.appendChild(newDiv);
-  } else {
-    newDiv.innerHTML =
-      '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!<br></strong>' +
-      errorMessage +
-      "</div>";
-
-    if (appendH.hasChildNodes()) {
-      appendH.removeChild(appendH.firstChild);
-    }
-    appendH.appendChild(newDiv);
   }
 
   if (!isValid) {
     event.preventDefault();
+    alert(errorMessage);
   } else {
     alert("Account Created!");
     window.location.href = "index.html";

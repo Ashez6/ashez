@@ -45,7 +45,9 @@ function validateName(name) {
 const donorSignUpButt = document.getElementById("sign-up-donor");
 const donorTypeSelect = document.getElementById("donor-type");
 const verificationFileInput = document.getElementById("verification-file");
+const verificationFileInput2 = document.getElementById("verification-file2");
 const verificationLabel = document.getElementById("verificationLabel");
+const verificationLabel2 = document.getElementById("verificationLabel2");
 
 donorTypeSelect.addEventListener("change", function () {
   if (
@@ -53,10 +55,14 @@ donorTypeSelect.addEventListener("change", function () {
     donorTypeSelect.value === "doctor"
   ) {
     verificationFileInput.style.display = "block";
+    verificationFileInput2.style.display = "block";
     verificationLabel.style.display = "block";
+    verificationLabel2.style.display = "block";
   } else {
     verificationFileInput.style.display = "none";
+    verificationFileInput2.style.display = "none";
     verificationLabel.style.display = "none";
+    verificationLabel2.style.display = "none";
   }
 });
 
@@ -178,6 +184,9 @@ const orgSignUpButt = document.getElementById("sign-up-org");
 const orgVerificationFileInput = document.getElementById(
   "org-verification-file"
 );
+const orgVerificationFileInput2 = document.getElementById(
+  "org-verification-file2"
+);
 
 orgSignUpButt.addEventListener("click", function (event) {
   const firstName = document.getElementById("first-name2");
@@ -226,6 +235,13 @@ orgSignUpButt.addEventListener("click", function (event) {
     isValid = false;
   } else {
     orgVerificationFileInput.style.border = ""; // reset border if validation passes
+  }
+  if (orgVerificationFileInput2.files.length === 0) {
+    errorMessage += "Please upload your verification file.\n";
+    orgVerificationFileInput2.style.border = "1px solid red";
+    isValid = false;
+  } else {
+    orgVerificationFileInput2.style.border = ""; // reset border if validation passes
   }
 
   if (username.value == "") {

@@ -75,8 +75,10 @@
         <option value="doctor">Doctor</option>
         <option value="neither">Neither</option>
     </select>
-    <label for="verification-file" id="verificationLabel" style="display: none; margin-bottom: 10px;">Upload your documents of verification:</label>
+    <label for="verification-file" id="verificationLabel" style="display: none; margin-bottom: 10px;">Upload your bachelor's certificate:</label>
     <input type="file" id="verification-file" style="display: none; margin-left: 8rem; margin-bottom: 10px;" />
+    <label for="verification-file" id="verificationLabel2" style="display: none; margin-bottom: 10px;">Upload proof of employement:</label>
+    <input type="file" id="verification-file2" style="display: none; margin-left: 8rem; margin-bottom: 10px;" />
     <input type="button" class="fadeIn fourth" value="Sign Up" style="cursor: pointer" id="sign-up-donor"/>
     <div id="formFooter">
       <a class="underlineHover" href="index.html">Already have an account</a>
@@ -122,9 +124,12 @@
         <input type="text" id="area2" placeholder="Area*" required />
         <label for="governorate1">Governorate:</label>
         <input type="text" id="governorate2" placeholder="Governorate*" required />
-        <label for="org-verification-file">Upload your documents of verification:</label>
+        <label for="org-verification-file">Upload your organization's business license: </label>
         <br>
         <input type="file" id="org-verification-file" multiple style="margin-left: 4rem;">
+        <br>
+        <label for="org-verification-file2">Upload proof of employement in the organization: </label>
+        <input type="file" id="org-verification-file2" multiple style="margin-left: 4rem;">
         <br>
         <label for="map">Select your Organization location on the map below</label>
         <br>

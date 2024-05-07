@@ -158,13 +158,15 @@ donorSignUpButt.addEventListener("click", function (event) {
   if (
     (donorTypeSelect.value === "teacher" ||
       donorTypeSelect.value === "doctor") &&
-    verificationFileInput.files.length === 0
+       (verificationFileInput.files.length === 0 || verificationFileInput2.files.length === 0)
+
   ) {
     errorMessage += "Please upload your verification file.";
     isValid = false;
   }
 
   if (gender.value == "null") {
+    errorMessage += "Please enter your gender. \n";
     gender.style.border = "1px solid red";
     isValid = false;
   }
@@ -172,7 +174,12 @@ donorSignUpButt.addEventListener("click", function (event) {
   if (!isValid) {
     alert(errorMessage);
     event.preventDefault();
-  } else {
+  }else if(donorTypeSelect.value === "teacher" ||
+  donorTypeSelect.value === "doctor") {
+    alert("Your pro bono account has been created and waiting for admin verification, for now you could sign in as a regular donor!");
+    window.location.href = "index.html";
+  }
+   else {
     alert("Your account has been created!");
     window.location.href = "index.html";
   }
@@ -312,7 +319,7 @@ orgSignUpButt.addEventListener("click", function (event) {
     event.preventDefault();
     alert(errorMessage);
   } else {
-    alert("Account Created!");
+    alert("Your account has been created and waiting for admin verification!");
     window.location.href = "index.html";
   }
 });

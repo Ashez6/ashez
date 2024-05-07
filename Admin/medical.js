@@ -77,7 +77,7 @@ const accept1 = document.getElementById("accept1");
   const acc = document.getElementById("doctor1");
   viewDonation1Screen.remove();
   acc.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
 
 });
 
@@ -87,7 +87,7 @@ const reject1 = document.getElementById("reject1");
   const rej= document.getElementById("doctor1");
   viewDonation1Screen.remove();
   rej.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
 
 });
 
@@ -100,7 +100,7 @@ const accept2 = document.getElementById("accept2");
   const acc = document.getElementById("doctor2");
   viewDonation2Screen.remove();
   acc.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
 
 });
 
@@ -110,7 +110,7 @@ const reject2 = document.getElementById("reject2");
   const rej= document.getElementById("doctor2");
   viewDonation2Screen.remove();
   rej.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
 
 });
 
@@ -121,7 +121,7 @@ const accept3 = document.getElementById("accept3");
   const acc = document.getElementById("doctor3");
   viewDonation3Screen.remove();
   acc.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
 
 });
 
@@ -131,7 +131,7 @@ const reject3 = document.getElementById("reject3");
   const rej= document.getElementById("doctor3");
   viewDonation3Screen.remove();
   rej.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
 
 });
 
@@ -143,7 +143,7 @@ const accept4 = document.getElementById("accept4");
   const acc = document.getElementById("doctor4");
   viewDonation4Screen.remove();
   acc.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is accepted and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
 
 });
 
@@ -153,7 +153,7 @@ const reject4 = document.getElementById("reject4");
   const rej= document.getElementById("doctor4");
   viewDonation4Screen.remove();
   rej.remove();
-  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Medical Request is rejected and removed from pending requests  .</div>';
+  newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
 
 });
 

@@ -82,6 +82,17 @@ for(let i=0;i<fulfill.length;i++){
   });
 }
 
+function handleEnterKey(e){ 
+  if(e.keyCode == 13){ // enter pressed
+      try{
+          applyFilters();
+
+      }catch(err){
+          console.log(err.message); 
+      }
+  }
+}
+
 // View Donation 1
 const viewDonation1 = document.getElementById("vdonation1"); //
 const viewDonation1Screen = document.getElementById("vdonation1-screen");

@@ -21,8 +21,19 @@ function matchKeywords(keywords, text) {
 }
 
 
+function handleEnterKey(e){ 
+  if(e.keyCode == 13){ // enter pressed
+      try{
+          applyFilters();
+
+      }catch(err){
+          console.log(err.message); 
+      }
+  }
+}
 
 filterButton.addEventListener('click', applyFilters);
+
 
 
 const savebtns=document.querySelectorAll(".btn-success");

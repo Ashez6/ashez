@@ -36,6 +36,17 @@ function matchSelected(selected, Name) {
   return false;
 }
 
+function handleEnterKey(e){ 
+  if(e.keyCode == 13){ // enter pressed
+      try{
+          applyFilters();
+
+      }catch(err){
+          console.log(err.message); 
+      }
+  }
+}
+
 filterButton.addEventListener('click', applyFilters);
 
 const quantities=document.querySelectorAll(".quantity");

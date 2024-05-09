@@ -183,7 +183,7 @@ updateButton.addEventListener("click", function (event) {
 
   if (address.value == "") {
     address.style.border = "1px solid red";
-    r += "Please enter your address.<br>";
+    r += "Please enter your organisation address.<br>";
   }
 
   if (area.value == "") {
@@ -202,7 +202,7 @@ updateButton.addEventListener("click", function (event) {
   }
 
   if (count1 != 1) {
-    r += "Please enter your organization address. <br>";
+    r += "Please choose organisation's location from the map. <br>";
   }
 
   const newDiv = document.createElement("div");

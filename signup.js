@@ -319,7 +319,7 @@ orgSignUpButt.addEventListener("click", function (event) {
     event.preventDefault();
     alert(errorMessage);
   } else {
-    alert("Your account has been created and waiting for admin verification!");
+    alert("Your account has been created and waiting for admin verification! Check your mail frequently for confirmation of access.");
     window.location.href = "index.html";
   }
 });

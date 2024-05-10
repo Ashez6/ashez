@@ -1,18 +1,68 @@
-const confirm=document.getElementById("confirmbtn");
-confirm.addEventListener('click',(e)=>{
-    localStorage.setItem("date",document.getElementById("date-picker").value);
-    localStorage.setItem("time",document.getElementById("time-picker").value);
-    localStorage.setItem("dhours",document.getElementById("duration-hours").value);
-    localStorage.setItem("dminutes",document.getElementById("duration-minutes").value);
-    window.location.href = 'track.html?reffrom=sched';
-    
+const confirm = document.getElementById("confirmbtn");
+confirm.addEventListener('click', (e) => {
+    const datePicker = document.getElementById("date-picker");
+    const timePicker = document.getElementById("time-picker");
+    const durationHours = document.getElementById("duration-hours");
+    const durationMinutes = document.getElementById("duration-minutes");
+    const div1 = document.getElementById("date-alert");
+    const div2 = document.getElementById("time-alert");
+    const div3 = document.getElementById("duration-alert");
+
+    const selectedDate = new Date(datePicker.value + "T" + timePicker.value);
+    let flag=false;
+    const currentDate=new Date();
+
+    div2.innerHTML="";
+    div1.innerHTML="";
+    div3.innerHTML="";
+    if(selectedDate.getFullYear()<currentDate.getFullYear()){
+        div1.innerHTML="Please select a valid date.";
+        confirm.disabled = true;
+        flag=true;
+    }
+    else if(selectedDate.getFullYear()==currentDate.getFullYear()){
+        if(selectedDate.getMonth()<currentDate.getMonth()){
+            div1.innerHTML="Please select a valid date.";
+            confirm.disabled = true;
+            flag=true;
+        }
+        else if(selectedDate.getMonth()==currentDate.getMonth()){
+            if(selectedDate.getDate()<currentDate.getDate()){
+                div1.innerHTML="Please select a valid date.";
+                confirm.disabled = true;
+                flag=true;
+            }
+            else if(selectedDate.getDate()==currentDate.getDate()){
+                if(selectedDate.getTime()<=currentDate.getTime()){
+                    div2.innerHTML="Please select a valid timing.";
+                    confirm.disabled = true;
+                    flag=true;
+                }
+            }
+        }
+    }
+
+
+    if( durationHours.value < 0 || durationHours.value>24
+            || durationMinutes.value<0 || durationMinutes.value>59 )
+    {
+        div3.innerHTML="Please select a valid duration."
+        confirm.disabled = true;
+        flag=true;
+    }
+
+    if(!flag){
+        localStorage.setItem("date", datePicker.value);
+        localStorage.setItem("time", timePicker.value);
+        localStorage.setItem("dhours", durationHours.value);
+        localStorage.setItem("dminutes", durationMinutes.value);
+        window.location.href = 'track.html?reffrom=sched';
+    }
+
+
 });
 
-const back=document.getElementById("backbtn");
-back.addEventListener('click',(e)=>{
+const back = document.getElementById("backbtn");
+back.addEventListener('click', (e) => {
     window.history.back();
 });
-
-console.log(localStorage.getItem('title'));
-console.log(localStorage.getItem('photo'));
-console.log(localStorage.getItem('patient'));

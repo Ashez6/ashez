@@ -134,7 +134,7 @@ updateButton.addEventListener("click", function (event) {
   }
   if (!nameRegex.test(lastName)) {
     document.getElementById("lastName").style.border = "1px solid red";
-    r += "Last name must be provided and not contain only letters.<br>";
+    r += "Last name must be provided and contain only letters.<br>";
   }
 
   if (username == "") {

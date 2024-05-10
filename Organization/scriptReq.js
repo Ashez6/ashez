@@ -206,7 +206,7 @@ save[0].addEventListener("click",(e)=>{
 save[1].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan1.length;i++){
-    if(aybetngan1[i].value==""  | quantity2[0].value=="0" | quantity2[0].value=="0"){
+    if(aybetngan1[i].value==""  | quantity2[0].value=="0" | quantity2[0].value==""){
       flag = false;
       break;
     }
@@ -224,7 +224,7 @@ save[1].addEventListener("click",(e)=>{
 save[2].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan2.length;i++){
-    if(aybetngan2[i].value==""){
+    if(aybetngan2[i].value=="" | quantity2[1].value=="0" | quantity2[1].value=="" | quantity2[2].value=="0" | quantity2[2].value==""){
       flag = false;
       break;
     }
@@ -242,7 +242,7 @@ save[2].addEventListener("click",(e)=>{
 save[3].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan3.length;i++){
-    if(aybetngan3[i].value==""  | number4[0].value=="0" | number4[0].value=="0"){
+    if(aybetngan3[i].value==""  | number4[0].value=="0" | number4[0].value==""){
       flag = false;
       break;
     }
@@ -261,7 +261,7 @@ save[3].addEventListener("click",(e)=>{
 save[4].addEventListener("click",(e)=>{
   let flag = true;
   for(let i=0;i<aybetngan4.length;i++){
-    if(aybetngan4[i].value==""  | amount5[0].value=="0" | amount5[0].value=="0"){
+    if(aybetngan4[i].value==""  | amount5[0].value=="0" | amount5[0].value==""){
       flag = false;
       break;
     }

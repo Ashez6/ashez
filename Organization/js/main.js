@@ -33,7 +33,7 @@ Version:	1.1
 [End Activation Code]
 =========================================*/
 function goBack() {
-  history.back();
+  window.history.back();
 }
 
 (function ($) {

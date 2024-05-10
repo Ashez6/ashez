@@ -12,9 +12,20 @@ confirm.addEventListener('click', (e) => {
     let flag=false;
     const currentDate=new Date();
 
+    const threeMonthsFromNow = new Date();
+    threeMonthsFromNow.setMonth(currentDate.getMonth() + 3);
+
     div2.innerHTML="";
     div1.innerHTML="";
     div3.innerHTML="";
+
+    if(selectedDate>threeMonthsFromNow){
+        div1.innerHTML = "Please select a date within the next 3 months.";
+        confirm.disabled = true;
+        flag = true;
+    }
+
+
     if(selectedDate.getFullYear()<currentDate.getFullYear()){
         div1.innerHTML="Please select a valid date.";
         confirm.disabled = true;
@@ -65,4 +76,16 @@ confirm.addEventListener('click', (e) => {
 const back = document.getElementById("backbtn");
 back.addEventListener('click', (e) => {
     window.history.back();
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const datePicker = document.getElementById("date-picker");
+    const today = new Date();
+    const todayFormatted = today.toISOString().split("T")[0];
+    datePicker.setAttribute("min", todayFormatted);
+    const threeMonthsFromNow=new Date();
+    threeMonthsFromNow.setMonth(today.getMonth() + 3);
+    datePicker.setAttribute("max", threeMonthsFromNow.toISOString().split("T")[0]);
+
 });

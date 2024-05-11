@@ -56,7 +56,7 @@ postReq.addEventListener("click", (e) => {
 
   if (errorMessage == "") {
     newDiv.innerHTML =
-      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Your Request has been posted successfully!</div>';
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Your Request has been posted successfully! <br><br><a href="required.html" style="margin-left: 0%;color: green;font-weight: 600;"><u>Go to required donations <i class="fa fa-long-arrow-right"></i> </u></a></div>';
 
     if (appendH.hasChildNodes()) {
       appendH.removeChild(appendH.firstChild);

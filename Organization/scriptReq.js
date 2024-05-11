@@ -198,6 +198,7 @@ save[0].addEventListener("click",(e)=>{
     popout[0].style.visibility="hidden";
     textboxerror[0].innerHTML ="";
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    window.scrollTo(0, 0);
     outertitle[0].textContent=titlechange[0].value;
     }else{
       textboxerror[0].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields! </div>';
@@ -216,6 +217,7 @@ save[1].addEventListener("click",(e)=>{
     popout[1].style.visibility="hidden";
     textboxerror[1].innerHTML ="";
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    window.scrollTo(0, 0);
     outertitle[1].textContent=titlechange[1].value;
     }else{
       textboxerror[1].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter data in all required fields!</div>';
@@ -234,6 +236,7 @@ save[2].addEventListener("click",(e)=>{
     popout[2].style.visibility="hidden";
     textboxerror[2].innerHTML ="";
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    window.scrollTo(0, 0);
     outertitle[2].textContent=titlechange[2].value;
     }else{
       textboxerror[2].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter data in all required fields!</div>';
@@ -252,6 +255,7 @@ save[3].addEventListener("click",(e)=>{
     popout[3].style.visibility="hidden";
     textboxerror[3].innerHTML ="";
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    window.scrollTo(0, 0);
     outertitle[3].textContent=titlechange[3].value;
     }else{
       textboxerror[3].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields!</div>';
@@ -271,6 +275,7 @@ save[4].addEventListener("click",(e)=>{
     popout[4].style.visibility="hidden";
     textboxerror[4].innerHTML ="";
     newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!</div>';
+    window.scrollTo(0, 0);
     outertitle[4].textContent=titlechange[4].value;
     }else{
       textboxerror[4].innerHTML = '<div class="alert alert-danger alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-times-circle"></i></div><strong>Failure!</strong> Please enter valid data in all required fields!</div>';

@@ -50,6 +50,7 @@ for(let i=0;i<savebtns.length;i++){
       popout[i].style.display="none";
       popout[i].style.visibility="hidden";
       divloc.append(newdiv);
+      window.scrollTo(0, 0);
     }
   });
 }

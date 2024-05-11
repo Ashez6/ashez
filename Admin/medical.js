@@ -78,7 +78,7 @@ const accept1 = document.getElementById("accept1");
   viewDonation1Screen.remove();
   acc.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 const reject1 = document.getElementById("reject1");
@@ -88,7 +88,7 @@ const reject1 = document.getElementById("reject1");
   viewDonation1Screen.remove();
   rej.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -101,7 +101,7 @@ const accept2 = document.getElementById("accept2");
   viewDonation2Screen.remove();
   acc.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 const reject2 = document.getElementById("reject2");
@@ -111,7 +111,7 @@ const reject2 = document.getElementById("reject2");
   viewDonation2Screen.remove();
   rej.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -122,7 +122,7 @@ const accept3 = document.getElementById("accept3");
   viewDonation3Screen.remove();
   acc.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 const reject3 = document.getElementById("reject3");
@@ -132,7 +132,7 @@ const reject3 = document.getElementById("reject3");
   viewDonation3Screen.remove();
   rej.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -144,7 +144,7 @@ const accept4 = document.getElementById("accept4");
   viewDonation4Screen.remove();
   acc.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is accepted and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 
 const reject4 = document.getElementById("reject4");
@@ -154,6 +154,6 @@ const reject4 = document.getElementById("reject4");
   viewDonation4Screen.remove();
   rej.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Doctor Request is rejected and removed from pending requests  .</div>';
-
+  window.scrollTo(0,0);
 });
 

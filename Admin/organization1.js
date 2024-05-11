@@ -84,7 +84,7 @@ const accept1 = document.getElementById("accept1");
   viewDonation1Screen.remove();
   hope.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been accepted and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const delete1= document.getElementById("delete1");
@@ -94,6 +94,7 @@ const delete1= document.getElementById("delete1");
   viewDonation1Screen.remove();
   hope.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been rejected and removed from requesting list.</div>';
+  window.scrollTo(0,0);
 
 });
 
@@ -105,7 +106,7 @@ const accept2 = document.getElementById("accept2");
   viewDonation2Screen.remove();
   ser.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been accepted and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const delete2 = document.getElementById("delete2");
@@ -115,7 +116,7 @@ const delete2 = document.getElementById("delete2");
   viewDonation2Screen.remove();
   ser.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been rejected and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const accept3 = document.getElementById("accept3");
@@ -125,7 +126,7 @@ const accept3 = document.getElementById("accept3");
   viewDonation3Screen.remove();
   heart.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been accepted and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const delete3 = document.getElementById("delete3");
@@ -135,7 +136,7 @@ const delete3 = document.getElementById("delete3");
   viewDonation3Screen.remove();
   heart.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been rejected and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const accept4 = document.getElementById("accept4");
@@ -145,7 +146,7 @@ const accept4 = document.getElementById("accept4");
   viewDonation4Screen.remove();
   harmony.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been accepted and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });
 
 const delete4 = document.getElementById("delete4");
@@ -155,5 +156,5 @@ const delete4 = document.getElementById("delete4");
   viewDonation4Screen.remove();
   harmony.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Organization has been rejected and removed from requesting list.</div>';
-
+  window.scrollTo(0,0);
 });

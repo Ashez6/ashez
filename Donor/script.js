@@ -197,9 +197,9 @@ updateButton.addEventListener("click", function (event) {
       speciality.style.border = "1px solid red";
       r += "Please enter your speciality.<br>";
     }
-    if (cases.value == "") {
+    if (cases.value <= 0) {
       cases.style.border = "1px solid red";
-      r += "Please enter your the number of cases you can take.<br>";
+      r += "Please enter the number of cases you can take.<br>";
     }
 
     if (count1 == 0) {
@@ -214,9 +214,9 @@ updateButton.addEventListener("click", function (event) {
     classes.style.border = "";
     subjects.style.border = "";
 
-    if (classes.value == "") {
+    if (classes.value <= 0) {
       classes.style.border = "1px solid red";
-      r += "Please enter your the number of classes.<br>";
+      r += "Please enter the number of classes you can take.<br>";
     }
 
     if (subjects.value == "") {

@@ -80,7 +80,7 @@ const delete1 = document.getElementById("delete1");
   viewDonation1Screen.remove();
   del.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -92,7 +92,7 @@ const delete2 = document.getElementById("delete2");
   viewDonation2Screen.remove();
   del.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -103,7 +103,7 @@ const delete3 = document.getElementById("delete3");
   viewDonation3Screen.remove();
   del.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
-
+  window.scrollTo(0,0);
 });
 
 
@@ -114,7 +114,7 @@ const delete4 = document.getElementById("delete4");
   viewDonation4Screen.remove();
   del.remove();
   newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donor Account  has been deleted successfully.</div>';
-
+  window.scrollTo(0,0);
 });
 
 

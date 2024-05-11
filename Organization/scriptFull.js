@@ -1,5 +1,6 @@
 const divloc=document.getElementById("savepop");
 const newdiv=document.createElement("div");
+savepop.append(newdiv);
 
 const keywordsInput = document.getElementById('keywords');
 const filterButton = document.getElementById('contact-submit');
@@ -62,8 +63,9 @@ const jobBox = document.querySelectorAll(".job-box");
 
 for (let i = 0; i < deleteButts.length; i++) {
   deleteButts[i].addEventListener("click", (e) => {
-    newdiv.innerHTML="";
+    newdiv.innerHTML='<div class="alert alert-success alert-white rounded" id="successful"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Donation Deleted Succesfully!</div>';
     jobBox[i].remove();
+    window.scrollTo(0,0);
   });
 }
 

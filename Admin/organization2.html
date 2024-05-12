@@ -84,19 +84,32 @@
                             <!-- End Logo -->
                         </div>
                         <div class="col-lg-6 col-md-9 col-12">
-                            <!-- Main Menu -->
-                            <div class="main-menu">
-                                <nav class="navigation" style="align-self: flex-start;">
-                                    <ul class="nav menu" >
-                                        <li ><a href="admin_home.html">Home</i></a>
-                                        </li>
-                                     
-                            
-                                            </ul>
-                               
-                                </nav>
-                            </div>
-                            <!--/ End Main Menu -->
+                               <!-- Main Menu -->
+                       <div class="main-menu">
+                        <nav class="navigation" style="align-self: flex-start;">
+                            <ul class="nav menu" >
+                                <li ><a href="admin_home.html">Home</a>
+                                </li>
+                                <li ><a href="javascript:void(0)">Donors <i class="icofont-rounded-down"></i></a> 
+                                    <ul class="dropdown" id = "dropdown-change">
+                                    <li>
+                                        <a href="teaching.html">Teaching requests</a>
+                                        <a href="medical.html">Doctors requests</a>
+                                        <a href="registered donors.html">Registered donors</a>
+                                    </ul>
+
+                                    <li class="active" ><a href="javascript:void(0)">Organizations <i class="icofont-rounded-down"></i></a> 
+                                        <ul class="dropdown" id = "dropdown-change">
+                                        <li>
+                                            <a href="organization2.html">Registered Organizations</a>
+                                            <a href="organization1.html">Requesting Organizations</a>
+                                        </ul>
+                                </li>
+                            </ul>
+                       
+                        </nav>
+                    </div>
+                    <!--/ End Main Menu -->
                         </div>
                         <div class="col-lg-3 col-md-3 col-12" id = "icon-column">
                             <div class="icon-container">
@@ -185,8 +198,8 @@
                                                               <span>Downtown</span>
                                                             </label>
                                                             <label class="option">
-                                                              <input type="checkbox" class="filter2" value="Somoha">
-                                                              <span>Somoha</span>
+                                                              <input type="checkbox" class="filter2" value="Smouha">
+                                                              <span>Smouha</span>
                                                             </label>
 
                                                             <label class="option">
@@ -194,8 +207,8 @@
                                                                 <span>Zamalek</span>
                                                               </label>
                                                               <label class="option">
-                                                                <input type="checkbox" class="filter2" value="Elmontaza">
-                                                                <span>Elmontaza</span>
+                                                                <input type="checkbox" class="filter2" value="Elmontazah">
+                                                                <span>Elmontazah</span>
                                                               </label>
                                                           </div>
                                                         </div>
@@ -272,7 +285,7 @@
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="icofont-world"></i> Alexandria
-                                            <i class="icofont-location-pin"></i> Somoha
+                                            <i class="icofont-location-pin"></i> smouha
                                             <i class="icofont-home"></i> School
                                         <li class="mr-md-4">
                                          
@@ -313,7 +326,7 @@
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="icofont-world"></i> Alexandria
-                                            <i class="icofont-location-pin"></i> Elmontaza
+                                            <i class="icofont-location-pin"></i> Elmontazah
                                             <i class="icofont-home"></i> Hospital
                                         <li class="mr-md-4">
                                          
@@ -564,7 +577,7 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Type:</span> Hospital</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01278901236</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> healinghands@gmail.com</li>
-                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 123 El Montaza Street, Alexandria,Egypt</li>
+                                        <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> 123 El Montazah Street, Alexandria,Egypt</li>
                                         <a href ="javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; max-width: 300px;" id="delete4">Delete Organization</a> 
                                 </div>
                                 <div class="col-lg-4">
@@ -662,7 +675,7 @@
             const latlng3 =[31.288146971919964, 30.015282449306987];
             console.log('Selected location:', latlng3);
     
-            const marker3 = L.marker(latlng3).addTo(map3).bindPopup('123 El Montaza Street, Alexandria,Egypt');
+            const marker3 = L.marker(latlng3).addTo(map3).bindPopup('123 El Montazah Street, Alexandria,Egypt');
 
     
     

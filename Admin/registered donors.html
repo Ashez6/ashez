@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="../popout.css">
     <link rel="stylesheet" href="../alert.css">
     
-
 </head>
 <body>
     <!-- Header Area -->
@@ -49,8 +48,6 @@
         <div class="container" >
             <div class="inner"  >
                 <div class="row">
-                    <i class="icofont-arrow-left" id = "left-arrow" onclick="goBack()"></i>
-
                     <div class="col-lg-3 col-md-3 col-12">
                         <!-- Start Logo -->
                         <div class="logo">
@@ -63,10 +60,24 @@
                         <div class="main-menu">
                             <nav class="navigation" style="align-self: flex-start;">
                                 <ul class="nav menu" >
-                                    <li ><a href="admin_home.html">Home</i></a>
+                                    <li ><a href="admin_home.html">Home</a>
                                     </li>
-                                    
+                                    <li class="active"><a href="javascript:void(0)">Donors <i class="icofont-rounded-down"></i></a> 
+                                        <ul class="dropdown" id = "dropdown-change">
+                                        <li>
+                                            <a href="teaching.html">Teaching requests</a>
+                                            <a href="medical.html">Doctors requests</a>
+                                            <a href="registered donors.html">Registered donors</a>
                                         </ul>
+
+                                        <li ><a href="javascript:void(0)">Organizations <i class="icofont-rounded-down"></i></a> 
+                                            <ul class="dropdown" id = "dropdown-change">
+                                            <li>
+                                                <a href="organization2.html">Registered Organizations</a>
+                                                <a href="organization1.html">Requesting Organizations</a>
+                                            </ul>
+                                    </li>
+                                </ul>
                            
                             </nav>
                         </div>
@@ -95,7 +106,7 @@
         <div class="row">
             <!-- <div class="col-lg-10 mx-auto mb-4"> -->
             
-           </div>
+           
        </div>
     </div>
 </section>
@@ -206,14 +217,6 @@
                         </div>
 
                     </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-</section>
 
 <!--view donation 1-->
 
@@ -252,7 +255,7 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> bettygomez@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01278956348</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span>  Fifth Settlement</li>
-                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:-0.1% ; max-width: 300px;" id="delete1" >Delete Account</a>  
+                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:5% ; max-width: 300px;" id="delete1" >Delete Account</a>  
 
                                     </ul>
                                         </div>
@@ -309,7 +312,7 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> samtarley@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01278363348</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> Nasr City</li>
-                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:-0.1% ; max-width: 300px;" id="delete2" >Delete Account</a>  
+                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:5% ; max-width: 300px;" id="delete2" >Delete Account</a>  
 
                                     </ul>
                                         </div>
@@ -361,11 +364,11 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> mariajames@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 01098263789</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> Maadi </li>
-                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:-0.1% ; max-width: 300px;" id="delete3" >Delete Account</a>  
+                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:5% ; max-width: 300px;" id="delete3" >Delete Account</a>  
 
                                     </ul>
                                         </div>
-                                    </div>>
+                                    </div>
                                   
                              
                             
@@ -416,11 +419,11 @@
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> marilynsnow@gmail.com</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Phone number:</span> 011838920182</li>
                                         <li class="mb-2 mb-xl-3 display-28 margin1"><span class="display-26 text-secondary me-2 font-weight-600">Address:</span> Rehab </li>
-                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:-0.1% ; max-width: 300px;" id="delete4" >Delete Account</a>  
+                                        <a href = "javascript:void(0);" class="btn d-block w-100 d-sm-inline-block btn-success delete-button margin1" style="max-height: 50px; margin-left:5% ; max-width: 300px;" id="delete4" >Delete Account</a>  
 
                                     </ul>
                                         </div>
-                                    </div>>
+                                    </div>
                                   
                              
                             

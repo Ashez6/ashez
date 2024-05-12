@@ -260,17 +260,20 @@ updateButton.addEventListener("click", function (event) {
   if (teacherClick && fileInput.files.length > 0) {
     localStorage.setItem("type", "teacher");
     newDiv.innerHTML =
-      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a teacher!</div>';
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediately as a teacher!</div>';
     setTimeout(function () {
       location.reload();
     }, 4000);
   } else if (doctorClick && fileInput.files.length > 0) {
     localStorage.setItem("type", "doctor");
     newDiv.innerHTML =
-      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediatly as a doctor!</div>';
+      '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You have been verified by the admin immediately as a doctor!</div>';
     setTimeout(function () {
       location.reload();
     }, 4000);
+  } else if ((teacherClick || doctorClick) && fileInput.files.length <= 0) {
+    newDiv.innerHTML =
+      '<div class="alert alert-info alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-info-circle"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You did not upload a document, Therefore you are currently a donor who is not a teacher or a doctor. </div>';
   } else {
     newDiv.innerHTML =
       '<div class="alert alert-success alert-white rounded"><button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><div class="icon"><i class="fa fa-check"></i></div><strong>Success!</strong> Changes has been saved successfully!<br> You are currently a donor who is not a teacher or a doctor. </div>';

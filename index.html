@@ -6,8 +6,78 @@
     <title>Ashez</title>
     <link rel="icon" href="Donor/img/ashez_transparent.png" />
     <link rel="stylesheet" href="main.css" />
+    <style>
+      .cheat-sheet {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        z-index: 1000;
+        max-width: 250px;
+      }
+      .cheat-sheet h3 {
+        margin-top: 0;
+        text-align: center;
+      }
+      .cheat-sheet table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .cheat-sheet th, .cheat-sheet td {
+        text-align: left;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+      }
+      .cheat-sheet th {
+        background-color: #f2f2f2;
+      }
+      .cheat-sheet td {
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
+    <div class="cheat-sheet">
+      <h3>Login Cheat Sheet</h3>
+      <table>
+        <tr>
+          <th>Role</th>
+          <th>Username</th>
+          <th>Password</th>
+        </tr>
+        <tr>
+          <td>Admin</td>
+          <td>admin</td>
+          <td>admin1</td>
+        </tr>
+        <tr>
+          <td>Organization</td>
+          <td>org</td>
+          <td>org1</td>
+        </tr>
+        <tr>
+          <td>Regular Donor</td>
+          <td>donor</td>
+          <td>donor1</td>
+        </tr>
+        <tr>
+          <td>Doctor Donor</td>
+          <td>doc</td>
+          <td>doc1</td>
+        </tr>
+        <tr>
+          <td>Teaching Donor</td>
+          <td>teach</td>
+          <td>teach1</td>
+        </tr>
+      </table>
+    </div>
+
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
@@ -37,18 +107,15 @@
             id="login-button"
             style="cursor: pointer;"
           />
-        
         </form>
-        
-        <!-- Remind Passowrd -->
+
+        <!-- Remind Password -->
         <div id="formFooter">
           <a class="underlineHover" href="signup.html">Create an account</a>
         </div>
       </div>
     </div>
   </section>
-
-
 
     <script src="login.js"></script>
   </body>
